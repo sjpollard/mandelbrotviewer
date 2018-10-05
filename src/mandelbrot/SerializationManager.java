@@ -5,7 +5,7 @@ import java.io.*;
 /**
  * Static class used within the PopupManager that allows for Serialization and Deserialization of
  * the FractalDataSerializable. This is then saved to a file which cannot be read by manually, within
- *  TESTING TESTING
+ *
  */
 
 public class SerializationManager {
