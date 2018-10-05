@@ -4,12 +4,13 @@ import java.io.*;
 
 /**
  * Static class used within the PopupManager that allows for Serialization and Deserialization of
- * the FractalDataSerializable. This is then saved to a file which cannot be read by manually, within
- *  JHAWIDUFHYBAHWBCXUHASBUHDBUHABDHUBAWUHBDHBAWUHDBHUABWDUHBNAWHUDBNUHAWBDHUBAWUHBDAWD
+ * the FractalDataSerializable. This is then saved to a file which cannot be read manually. The file
+ * extension is 'fractaldata' so as to not be confused with other more common extensions.
  */
 
 public class SerializationManager {
 
+    /**Deserialization method that uses the ObjectInputStream to extract the saved objects from the file*/
     public static void readFromFile(MandelbrotFrame mandelbrotFrame, String source) {
 
         try {
@@ -25,6 +26,7 @@ public class SerializationManager {
 
     }
 
+    /**Serialization method that uses the ObjectOutputStream to create a serialized file*/
     public static void writeToFile(MandelbrotFrame mandelbrotFrame, String destination) {
 
         try {
