@@ -3,8 +3,16 @@ package mandelbrot;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
+/**
+ * Drawing object that is dedicated to a FractalSet and creates a BufferedImage based on the data
+ * generated within the FractalSet. It is here that the number of iterations taken for each
+ * complex number to break from the Mandelbrot set is used to scale the colour of each corresponding
+ * pixel onscreen. This object can also scale colour based on the histogram method.
+ */
+
 public class FractalDiagram {
 
+    /**BufferedImage which contains the pixel raster to be drawn by the graphics object*/
     BufferedImage fractalImg;
 
     private FractalSet fractalSet;
@@ -12,6 +20,7 @@ public class FractalDiagram {
     private DrawingConditions conditions;
     private int[] histogram;
 
+    /**Constructs a BufferedImage with the same dimensions as the fractals data and passes in references*/
     public FractalDiagram(FractalSet fractalSet, Point location, DrawingConditions conditions) {
 
         this.fractalImg = new BufferedImage(fractalSet.getIterations()[0].length, fractalSet.getIterations().length, BufferedImage.TYPE_INT_RGB);
@@ -21,6 +30,7 @@ public class FractalDiagram {
 
     }
 
+    /**Large scale method that analyses the data found in the FractalSet to assign colour to individual pixels*/
     public void createImage(FractalColours colours) {
 
         fractalImg = new BufferedImage(fractalSet.getIterations()[0].length, fractalSet.getIterations().length, BufferedImage.TYPE_INT_RGB);
@@ -59,6 +69,7 @@ public class FractalDiagram {
 
     }
 
+    /**Forms a cumulative list of the number of pixels that iterate to be less than or equal to each iteration*/
     public int[] fillHistogram(int[][] iterations, int chunkSize, int maxIterations) {
 
         int[] histogram = new int[maxIterations - 1];
@@ -73,6 +84,7 @@ public class FractalDiagram {
 
     }
 
+    /**Based on an input numIterations, looks through the histogram to find the proportional scaling for this pixel*/
     public double calcScale(int[] histogram, int total, int numIterations) {
 
         double scale = 0;
@@ -85,6 +97,7 @@ public class FractalDiagram {
 
     }
 
+    /**Used within createImage() for to add a filled in square to the BufferedImage (to allow for lower resolution)*/
     public void addFilledSquare(int x, int y, int width, Color colour) {
 
         for (int currentY = y; currentY - y < width && currentY < fractalImg.getHeight(); currentY++) {
@@ -99,6 +112,7 @@ public class FractalDiagram {
 
     }
 
+    /**Uses HSV colouring to scale from a beginning colour, through the rainbow and back to itself*/
     public Color scalePalette(Color firstColour, double scale) {
 
         float[] hsbArray = new float[3];
@@ -108,6 +122,7 @@ public class FractalDiagram {
 
     }
 
+    /**If colour palette is turned off, this simply returns the correct scaling between two colours*/
     public Color scaleBetweenColours(double scale, Color edgeColour, Color outerColour) {
 
         Color output;

@@ -2,10 +2,18 @@ package mandelbrot;
 
 import java.io.Serializable;
 
+/**
+ * Reasonably large record that contains information to be Serialized or simply moved through
+ * the program together. This class is used when saving and loading files as it is crucial to
+ * the Serialization process. As well as this, it is used in the stack operations to allow for
+ * undo/redo of user inputs.
+ */
+
 public class FractalDataSerializable implements Serializable {
 
     FractalType type;
 
+    /**Data needed to define a FractalSet*/
     int maxIterations;
     int power;
     int chunkSize;
@@ -14,24 +22,15 @@ public class FractalDataSerializable implements Serializable {
     ComplexNumber zStart;
     ComplexNumber c;
 
+    /**Colours of the fractal*/
     FractalColours colours;
 
+    /**Empty constructor*/
     public FractalDataSerializable() {
 
     }
 
-    public FractalDataSerializable(int maxIterations, int power, int chunkSize, double zoom, ComplexNumber centre, ComplexNumber zStart, ComplexNumber c) {
-
-        this.maxIterations = maxIterations;
-        this.power = power;
-        this.chunkSize = chunkSize;
-        this.zoom = zoom;
-        this.centre = centre;
-        this.zStart = zStart;
-        this.c = c;
-
-    }
-
+    /**Takes all of the important values from the input fractal set and stores them for later access*/
     public FractalDataSerializable(FractalSet fractalSet, FractalColours colours) {
 
         this.type = fractalSet.getType();

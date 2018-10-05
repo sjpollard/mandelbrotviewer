@@ -4,6 +4,15 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
+/**
+ * JPanel that sits within the content of MandelbrotFrame and manages the drawing of fractals.
+ * This object contains the paintComponent() method and so everything is directed towards here
+ * at some point so that it can be drawn. Mainly, this object manages the creation of the
+ * BufferedImages within the FractalDiagrams and also draws extra components on top of the
+ * existing image. These include fractal information and the route of a tracked complex
+ * number.
+ */
+
 @SuppressWarnings("serial")
 public class FractalContainer extends JPanel {
 
@@ -22,6 +31,7 @@ public class FractalContainer extends JPanel {
     public FractalDiagram juliaDiagram;
     public BufferedImage img;
 
+    /**Constructor that sets up ready to contain FractalDiagrams*/
     public FractalContainer () {
 
         super();
@@ -36,6 +46,7 @@ public class FractalContainer extends JPanel {
 
     }
 
+    /**Called within MandelbrotFrame (when the FractalSets have been created) to create the FractalDiagrams*/
     public void setupFractalImages(MandelbrotSet mandelbrotSet) {
 
         this.mandelbrotSet = mandelbrotSet;
@@ -45,6 +56,7 @@ public class FractalContainer extends JPanel {
     }
 
 
+    /**The paint method that is called whenever something visual changes and decides what to draw based on DrawingConditions*/
     @Override
     public void paintComponent(Graphics graphics) {
 
@@ -88,6 +100,7 @@ public class FractalContainer extends JPanel {
 
     }
 
+    /**Method that decides what information should be drawn where*/
     public void drawInfo(Graphics2D g) {
 
         int infoPos;
@@ -117,6 +130,7 @@ public class FractalContainer extends JPanel {
 
     }
 
+    /**Starts the tracking process of a specified pixel onscreen and compiles the data found into a queue*/
     public void track(int x, int y) {
 
         if (conditions.drawMandelbrot && conditions.drawJulia) {
@@ -144,6 +158,7 @@ public class FractalContainer extends JPanel {
 
     }
 
+    /**Methods that use drawString() to output fractal information to the screen*/
     public void drawInfomationStrings(String choice, int infoPos, ComplexNumber centre, ComplexNumber point, double zoom, int power, int pixelArea, int totalArea, Graphics2D g) {
         double percentage;
         double distance;
@@ -163,6 +178,7 @@ public class FractalContainer extends JPanel {
         g.drawString("Total path length: " + Math.round(pathLength * 1000) / 1000.0, infoPos, 140);
     }
 
+    /**Iterates through the queue to connect up the locations travelled to by a tracked complex number*/
     public void drawLines(Graphics2D g) {
 
         if (conditions.drawMandelbrot && conditions.drawJulia && fractalTracked.equals("julia")) g.translate(this.getWidth()/2, 0);
@@ -197,6 +213,7 @@ public class FractalContainer extends JPanel {
 
     }
 
+    /**Draws a straight cross with a specified radius at the location input*/
     public void drawCross(Graphics2D g, int x, int y, int radius) {
 
         g.drawLine(x - radius, y, x + radius, y);
@@ -204,6 +221,7 @@ public class FractalContainer extends JPanel {
 
     }
 
+    /**Draws a tilted cross with a specified radius at the location input*/
     public void drawDiagonalCross(Graphics2D g, int x, int y, int radius) {
 
         g.drawLine(x - radius, y + radius, x + radius, y - radius);
@@ -211,24 +229,17 @@ public class FractalContainer extends JPanel {
 
     }
 
+    /**Returns a colour with random RGB values*/
     public Color randomColour() {
 
        return new Color((float)Math.random(), (float)Math.random(), (float)Math.random());
 
     }
 
+    /**Inverts the RGB values of the input colour and returns the inverted colour*/
     public Color invertColour(Color colour) {
 
         return new Color(255 - colour.getRed(), 255 - colour.getGreen(), 255 - colour.getBlue());
-
-    }
-
-    public Color scaleColour(double scale) {
-
-        int red = (int)(colours.getInner().getRed() * scale);
-        int green = (int)(colours.getInner().getGreen() * scale);
-        int blue = (int)(colours.getInner().getBlue() * scale);
-        return new Color(red, green, blue);
 
     }
 
