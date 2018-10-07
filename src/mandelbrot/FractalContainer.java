@@ -16,20 +16,23 @@ import java.awt.image.BufferedImage;
 @SuppressWarnings("serial")
 public class FractalContainer extends JPanel {
 
-    MandelbrotSet mandelbrotSet;
+    /**Reference to the main Mandelbrot set*/
+    private MandelbrotSet mandelbrotSet;
 
-    String fractalTracked;
+    /**Colours that the fractals should be generated with*/
     FractalColours colours;
     Color inverseColour;
 
+    /**Fields used when tracking a complex number*/
+    private String fractalTracked;
     private DoublyLinkedQueue<ComplexNumber> queue;
     private double pathLength;
     private ComplexNumber first;
     private ComplexNumber last;
+
     public DrawingConditions conditions;
     public FractalDiagram mandelbrotDiagram;
     public FractalDiagram juliaDiagram;
-    public BufferedImage img;
 
     /**Constructor that sets up ready to contain FractalDiagrams*/
     public FractalContainer () {
@@ -241,14 +244,6 @@ public class FractalContainer extends JPanel {
 
         return new Color(255 - colour.getRed(), 255 - colour.getGreen(), 255 - colour.getBlue());
 
-    }
-
-    public BufferedImage getImg() {
-        return img;
-    }
-
-    public void setImg(BufferedImage img) {
-        this.img = img;
     }
 
 }
