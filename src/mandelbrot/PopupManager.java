@@ -61,7 +61,12 @@ public class PopupManager {
         if (jfc.showSaveDialog(mandelbrotFrame) == JFileChooser.APPROVE_OPTION) {
             try {
                 File screenShotPath = new File(jfc.getSelectedFile().getPath() + ".png");
-                ImageIO.write(mandelbrotFrame.diagram.getImg(), "png", screenShotPath);
+                if (mandelbrotFrame.diagram.conditions.drawMandelbrot) {
+                    ImageIO.write(mandelbrotFrame.diagram.mandelbrotDiagram.fractalImg, "png", screenShotPath);
+                }
+                if (mandelbrotFrame.diagram.conditions.drawJulia) {
+                    ImageIO.write(mandelbrotFrame.diagram.juliaDiagram.fractalImg, "png", screenShotPath);
+                }
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -76,6 +81,7 @@ public class PopupManager {
         int reset = JOptionPane.showConfirmDialog(mandelbrotFrame, "Are you sure you want to reset?", "Reset", JOptionPane.YES_NO_OPTION);
         if (reset == JOptionPane.YES_OPTION) {
             mandelbrotFrame.createSet();
+            mandelbrotFrame.diagram.mandelbrotSet = mandelbrotFrame.mandelbrotSet;
             mandelbrotFrame.diagram.mandelbrotDiagram.setFractalSet(mandelbrotFrame.mandelbrotSet);
             mandelbrotFrame.diagram.juliaDiagram.setFractalSet(mandelbrotFrame.mandelbrotSet.juliaSet);
             mandelbrotFrame.maxIterationsLabel.setText("Max iterations: 100");

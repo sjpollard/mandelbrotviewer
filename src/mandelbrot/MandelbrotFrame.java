@@ -77,8 +77,8 @@ public class MandelbrotFrame extends JFrame {
     /**Graphical component*/
     FractalContainer diagram;
 
-    Dimension screenSize;
-    Thread successiveRefiner;
+    private Dimension screenSize;
+    private Thread successiveRefiner;
     int successiveRefinementOption;
 
     /**Constructs a default MandelbrotFrame with max screen size*/

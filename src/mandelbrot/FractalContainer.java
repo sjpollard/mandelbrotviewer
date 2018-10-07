@@ -17,7 +17,7 @@ import java.awt.image.BufferedImage;
 public class FractalContainer extends JPanel {
 
     /**Reference to the main Mandelbrot set*/
-    private MandelbrotSet mandelbrotSet;
+    MandelbrotSet mandelbrotSet;
 
     /**Colours that the fractals should be generated with*/
     FractalColours colours;
@@ -89,7 +89,6 @@ public class FractalContainer extends JPanel {
         if (conditions.drawJulia) {
             g.drawImage(juliaDiagram.fractalImg, juliaDiagram.getLocation().x, juliaDiagram.getLocation().y, this);
         }
-
         if(!queue.isEmpty()) {
 
             drawLines(g);
