@@ -52,7 +52,7 @@ public class MandelbrotSet implements FractalSet {
     /**Iterates through every pixel on screen, calculating the number of iterations*/
     public void iterate(boolean partOfSuccession) {
 
-        pixelArea = 0;
+        if (!partOfSuccession || chunkSize == 16) pixelArea = 0;
 
         for (int y = 0; y < iterations.length; y += chunkSize) {
             for (int x = 0; x < iterations[0].length; x += chunkSize) {
