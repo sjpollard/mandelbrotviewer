@@ -121,13 +121,13 @@ public class FractalContainer extends JPanel {
 
         if (conditions.drawMandelbrot) {
             totalArea = (mandelbrotSet.getIterations().length * mandelbrotSet.getIterations()[1].length) / (mandelbrotSet.getChunkSize() * mandelbrotSet.getChunkSize());
-            drawInfomationStrings("mandelbrot", infoPos, mandelbrotSet.getCentre(), mandelbrotSet.getzStart(), mandelbrotSet.getZoom(), mandelbrotSet.getPower(), mandelbrotSet.getPixelArea(), totalArea, g);
+            drawInformationStrings("mandelbrot", infoPos, mandelbrotSet.getCentre(), mandelbrotSet.getzStart(), mandelbrotSet.getZoom(), mandelbrotSet.getPower(), mandelbrotSet.getPixelArea(), totalArea, g);
         }
 
         if (conditions.drawJulia) {
             infoPos = this.getWidth() - 150;
             totalArea = (mandelbrotSet.juliaSet.getIterations().length * mandelbrotSet.juliaSet.getIterations()[1].length) / (mandelbrotSet.juliaSet.getChunkSize() * mandelbrotSet.juliaSet.getChunkSize());
-            drawInfomationStrings("julia", infoPos, mandelbrotSet.juliaSet.getCentre(), mandelbrotSet.juliaSet.getC(), mandelbrotSet.juliaSet.getZoom(), mandelbrotSet.juliaSet.getPower(), mandelbrotSet.juliaSet.getPixelArea(), totalArea, g);
+            drawInformationStrings("julia", infoPos, mandelbrotSet.juliaSet.getCentre(), mandelbrotSet.juliaSet.getC(), mandelbrotSet.juliaSet.getZoom(), mandelbrotSet.juliaSet.getPower(), mandelbrotSet.juliaSet.getPixelArea(), totalArea, g);
         }
 
     }
@@ -161,7 +161,7 @@ public class FractalContainer extends JPanel {
     }
 
     /**Methods that use drawString() to output fractal information to the screen*/
-    public void drawInfomationStrings(String choice, int infoPos, ComplexNumber centre, ComplexNumber point, double zoom, int power, int pixelArea, int totalArea, Graphics2D g) {
+    public void drawInformationStrings(String choice, int infoPos, ComplexNumber centre, ComplexNumber point, double zoom, int power, int pixelArea, int totalArea, Graphics2D g) {
         double percentage;
         double distance;
         String item;

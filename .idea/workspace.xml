@@ -6,11 +6,10 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07a94fa9-d881-41e7-89b7-5e85502f3a2d" name="Default" comment="Fluff">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/mandelbrotviewer_jar.xml" afterDir="false" />
+    <list default="true" id="07a94fa9-d881-41e7-89b7-5e85502f3a2d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mandelbrotviewer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/mandelbrotviewer.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/images/image_references.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/image_references.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mandelbrot/FractalContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/FractalContainer.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,7 +20,17 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="FractalContainer.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/mandelbrot/FractalContainer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2465">
+              <caret line="147" column="13" lean-forward="true" selection-start-line="147" selection-start-column="13" selection-end-line="147" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -76,18 +85,18 @@
         <option value="$PROJECT_DIR$/src/mandelbrot/DrawingConditions.java" />
         <option value="$PROJECT_DIR$/src/mandelbrot/DoublyLinked.java" />
         <option value="$PROJECT_DIR$/src/mandelbrot/MandelbrotFrame.java" />
-        <option value="$PROJECT_DIR$/src/mandelbrot/FractalContainer.java" />
         <option value="$PROJECT_DIR$/src/mandelbrot/PopupManager.java" />
         <option value="$PROJECT_DIR$/src/mandelbrot/MandelbrotSet.java" />
         <option value="$PROJECT_DIR$/src/images/image_references.txt" />
+        <option value="$PROJECT_DIR$/src/mandelbrot/FractalContainer.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1020" />
-    <option name="y" value="1" />
-    <option name="width" value="907" />
-    <option name="height" value="468" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="592" />
+    <option name="y" value="128" />
+    <option name="width" value="978" />
+    <option name="height" value="698" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -95,6 +104,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -110,19 +121,7 @@
             <path>
               <item name="mandelbrotviewer" type="b2602c69:ProjectViewProjectNode" />
               <item name="mandelbrotviewer" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mandelbrotviewer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mandelbrotviewer" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mandelbrotviewer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mandelbrotviewer" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mandelbrotviewer" type="b2602c69:ProjectViewProjectNode" />
@@ -134,8 +133,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -160,7 +157,7 @@
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="mandelbrotviewer" />
-    <property name="SearchEverywhereHistoryKey" value="reset&#9;PSI&#9;JAVA://mandelbrot.PopupManager#resetValues&#10;st&#9;FILE&#9;file://C:/Users/Sam Pollard/Mandelbrots/Mandelbrot-v15/src/mandelbrot/DoublyLinkedStack.java&#10;q&#9;FILE&#9;file://C:/Users/Sam Pollard/Mandelbrots/Mandelbrot-v15/src/mandelbrot/DoublyLinkedQueue.java&#10;stack&#9;FILE&#9;file://C:/Users/Sam Pollard/Mandelbrots/Mandelbrot-v15/src/mandelbrot/DoublyLinkedStack.java&#10;Doubl&#9;FILE&#9;file://C:/Users/Sam Pollard/Mandelbrots/Mandelbrot-v15/src/mandelbrot/DoublyLinkedStack.java&#10;contr&#9;FILE&#9;file://C:/Users/Sam Pollard/Mandelbrots/Mandelbrot-v15/src/mandelbrot/Controller.java&#10;changeFrac&#9;PSI&#9;JAVA://mandelbrot.MandelbrotFrame#changeFractalDrawn&#10;fractaldraw&#9;PSI&#9;JAVA://mandelbrot.MandelbrotFrame#changeFractalDrawn&#10;frac&#9;FILE&#9;file://C:/Users/Sam Pollard/Mandelbrots/Mandelbrot-v15/src/mandelbrot/FractalContainer.java&#10;fractalDraw&#9;PSI&#9;JAVA://mandelbrot.MandelbrotFrame#changeFractalDrawn&#10;Fra&#9;FILE&#9;file://C:/Users/Sam Pollard/Mandelbrots/Mandelbrot-v15/src/mandelbrot/FractalContainer.java&#10;f&#9;FILE&#9;file://C:/Users/Sam Pollard/Mandelbrots/Mandelbrot-v15/src/mandelbrot/FractalDiagram.java&#10;mandel&#9;PSI&#9;JAVA://mandelbrot.MandelbrotSet&#10;controller&#9;PSI&#9;JAVA://mandelbrot.Controller&#10;colour&#9;PSI&#9;JAVA://mandelbrot.PopupManager#editColour&#10;condi&#9;PSI&#9;JAVA://mandelbrot.FractalContainer#conditions" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/Sam Pollard/Documents/GitHub/mandelbrotviewer/src/mandelbrot/FractalContainer.java&#10;reset&#9;PSI&#9;JAVA://mandelbrot.PopupManager#resetValues&#10;st&#9;FILE&#9;file://C:/Users/Sam Pollard/Mandelbrots/Mandelbrot-v15/src/mandelbrot/DoublyLinkedStack.java&#10;q&#9;FILE&#9;file://C:/Users/Sam Pollard/Mandelbrots/Mandelbrot-v15/src/mandelbrot/DoublyLinkedQueue.java&#10;stack&#9;FILE&#9;file://C:/Users/Sam Pollard/Mandelbrots/Mandelbrot-v15/src/mandelbrot/DoublyLinkedStack.java&#10;Doubl&#9;FILE&#9;file://C:/Users/Sam Pollard/Mandelbrots/Mandelbrot-v15/src/mandelbrot/DoublyLinkedStack.java&#10;contr&#9;FILE&#9;file://C:/Users/Sam Pollard/Mandelbrots/Mandelbrot-v15/src/mandelbrot/Controller.java&#10;changeFrac&#9;PSI&#9;JAVA://mandelbrot.MandelbrotFrame#changeFractalDrawn&#10;fractaldraw&#9;PSI&#9;JAVA://mandelbrot.MandelbrotFrame#changeFractalDrawn&#10;frac&#9;FILE&#9;file://C:/Users/Sam Pollard/Mandelbrots/Mandelbrot-v15/src/mandelbrot/FractalContainer.java&#10;fractalDraw&#9;PSI&#9;JAVA://mandelbrot.MandelbrotFrame#changeFractalDrawn&#10;Fra&#9;FILE&#9;file://C:/Users/Sam Pollard/Mandelbrots/Mandelbrot-v15/src/mandelbrot/FractalContainer.java&#10;f&#9;FILE&#9;file://C:/Users/Sam Pollard/Mandelbrots/Mandelbrot-v15/src/mandelbrot/FractalDiagram.java&#10;mandel&#9;PSI&#9;JAVA://mandelbrot.MandelbrotSet&#10;controller&#9;PSI&#9;JAVA://mandelbrot.Controller&#10;colour&#9;PSI&#9;JAVA://mandelbrot.PopupManager#editColour&#10;condi&#9;PSI&#9;JAVA://mandelbrot.FractalContainer#conditions" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -276,17 +273,17 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="592" y="128" width="978" height="698" extended-state="0" />
+    <editor active="true" />
     <layout>
+      <window_info id="Designer" order="2" />
       <window_info anchor="right" id="Palette" order="3" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32943678" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32943678" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32837406" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32837406" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32943678" />
-      <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3995749" />
@@ -303,10 +300,13 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32943678" />
       <window_info anchor="right" id="Maven Projects" order="3" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32837406" />
@@ -315,16 +315,14 @@
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3995749" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.32943678" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32943678" />
       <window_info id="Capture Tool" order="5" />
@@ -351,7 +349,8 @@
     <MESSAGE value="Fixed error where resetting would break drawInfo" />
     <MESSAGE value="Fixed error where pixel area was incorrect with successive refine on" />
     <MESSAGE value="Fluff" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fluff" />
+    <MESSAGE value="Generated JAR" />
+    <option name="LAST_COMMIT_MESSAGE" value="Generated JAR" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -642,20 +641,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mandelbrot/FractalContainer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="105" column="16" selection-start-line="105" selection-start-column="16" selection-end-line="105" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/images/image_references.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="89" lean-forward="true" selection-start-line="1" selection-start-column="89" selection-end-line="1" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mandelbrot/HelpFrame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="726">
@@ -667,6 +652,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-34">
           <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/images/image_references.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="89" lean-forward="true" selection-start-line="1" selection-start-column="89" selection-end-line="1" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mandelbrot/FractalContainer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2465">
+          <caret line="147" column="13" lean-forward="true" selection-start-line="147" selection-start-column="13" selection-end-line="147" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -689,7 +688,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited />
+          <last-edited>No facets are configured</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
