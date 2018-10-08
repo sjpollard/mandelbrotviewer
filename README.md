@@ -4,4 +4,4 @@
 
 ## Getting started
 
-To run this program, the JDK is needed. If there is no "saves" file present, one needs to be created at the same level as the src folder of the source code so that fractal saving can work. If this is running as a JAR, created a saves folder in the location of the JAR. Saves are generated with the ".fractaldata" file extension. 
+To run this program, the JDK is needed. If there is no "saves" file present, one needs to be created at the same level as the src folder of the source code so that fractal saving can work. If this is running as a JAR, create a saves folder in the location of the JAR. Saves are generated with the ".fractaldata" file extension. 
