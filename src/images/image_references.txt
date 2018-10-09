@@ -1,0 +1,2 @@
+Argand diagram = https://commons.wikimedia.org/wiki/File:Mandelset_hires.png
+Douady rabbit = http://mathworld.wolfram.com/images/eps-gif/DouadysRabbitFractal_1000.gif
