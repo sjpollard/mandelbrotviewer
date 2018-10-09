@@ -12,7 +12,7 @@ import java.awt.*;
 public class InputPanel extends JPanel {
 
     /**Custom components*/
-    private JLabel titleLable;
+    private JLabel titleLabel;
     private JTextField inputField;
 
     /**Constructor that sets up the JPanel with the specified title and default data*/
@@ -20,15 +20,15 @@ public class InputPanel extends JPanel {
 
         super();
 
-        titleLable = new JLabel(title);
+        titleLabel = new JLabel(title);
         inputField = new JTextField(currentValue, 20);
-        titleLable.setFont(MandelbrotFrame.headerFont);
+        titleLabel.setFont(MandelbrotFrame.headerFont);
         inputField.setFont(MandelbrotFrame.normalFont);
 
         this.setBackground(Color.white);
         this.setLayout(new BorderLayout(50, 0));
 
-        this.add(titleLable, BorderLayout.WEST);
+        this.add(titleLabel, BorderLayout.WEST);
         this.add(inputField, BorderLayout.EAST);
 
     }
@@ -36,10 +36,5 @@ public class InputPanel extends JPanel {
     public String getInputFieldText() {
         return inputField.getText();
     }
-
-    public void setInputFieldText(String inputFieldText) {
-        inputField.setText(inputFieldText);
-    }
-
 
 }

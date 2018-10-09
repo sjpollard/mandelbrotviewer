@@ -153,6 +153,7 @@ public class SettingsFrame extends JFrame {
 
     }
 
+    /**Verifies via the RegexManager class, whether all of the inputs can have valid data extrapolated*/
     public boolean entriesValid() {
 
         for (InputPanel item: generalPanelList) {
