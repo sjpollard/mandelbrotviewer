@@ -122,4 +122,10 @@ public class PopupManager {
 
     }
 
+    public static void displayValidationErrorMessage(MandelbrotFrame mandelbrotFrame) {
+
+        JOptionPane.showMessageDialog(mandelbrotFrame, "Invalid input", "Error", JOptionPane.ERROR_MESSAGE);
+
+    }
+
 }
