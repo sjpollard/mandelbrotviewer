@@ -1,7 +1,5 @@
 package mandelbrot;
 
-import java.util.regex.Pattern;
-
 public class RegexManager {
 
     static final String validInteger = "-?[0-9]+";
