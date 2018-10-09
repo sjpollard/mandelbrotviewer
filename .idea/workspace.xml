@@ -7,10 +7,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07a94fa9-d881-41e7-89b7-5e85502f3a2d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/mandelbrot/RegexManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/mandelbrotviewer_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/markdown-navigator/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/markdown-navigator/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/image_references.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/image_references.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mandelbrot/ComplexNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/ComplexNumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mandelbrot/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mandelbrot/DoublyLinked.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/DoublyLinked.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mandelbrot/DoublyLinkedQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/DoublyLinkedQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mandelbrot/DoublyLinkedStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/DoublyLinkedStack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mandelbrot/DrawingConditions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/DrawingConditions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mandelbrot/FractalColours.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/FractalColours.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mandelbrot/FractalContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/FractalContainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mandelbrot/FractalDataSerializable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/FractalDataSerializable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mandelbrot/FractalDiagram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/FractalDiagram.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mandelbrot/FractalSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/FractalSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mandelbrot/FractalType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/FractalType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mandelbrot/HelpFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/HelpFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mandelbrot/InfoItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/InfoItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mandelbrot/InputPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/InputPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mandelbrot/JuliaSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/JuliaSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mandelbrot/MandelbrotFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/MandelbrotFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mandelbrot/MandelbrotSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/MandelbrotSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mandelbrot/MandelbrotViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/MandelbrotViewer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mandelbrot/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/Node.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mandelbrot/PopupManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/PopupManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mandelbrot/RegexManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/RegexManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mandelbrot/SerializationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/SerializationManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mandelbrot/SettingsFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/SettingsFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mandelbrot/SuccessiveRefiner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/SuccessiveRefiner.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,7 +52,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="FractalContainer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mandelbrot/FractalContainer.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -35,7 +66,7 @@
         <entry file="file://$PROJECT_DIR$/src/mandelbrot/RegexManager.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
@@ -43,7 +74,7 @@
       <file leaf-file-name="SettingsFrame.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/mandelbrot/SettingsFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
+            <state relative-caret-position="1063">
               <caret line="182" column="71" selection-start-line="182" selection-start-column="71" selection-end-line="182" selection-end-column="71" />
             </state>
           </provider>
@@ -52,8 +83,8 @@
       <file leaf-file-name="PopupManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mandelbrot/PopupManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="755">
-              <caret line="117" column="13" lean-forward="true" selection-start-line="117" selection-start-column="13" selection-end-line="117" selection-end-column="13" />
+            <state relative-caret-position="1921">
+              <caret line="117" column="13" selection-start-line="117" selection-start-column="13" selection-end-line="117" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -143,19 +174,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="mandelbrotviewer" type="b2602c69:ProjectViewProjectNode" />
               <item name="mandelbrotviewer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mandelbrotviewer" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mandelbrotviewer" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mandelbrotviewer" type="b2602c69:ProjectViewProjectNode" />
@@ -172,6 +196,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -313,17 +339,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
+      <window_info id="Designer" order="6" />
       <window_info anchor="right" id="Palette" order="3" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.125" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="9" weight="0.32943678" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5010395" side_tool="true" weight="0.32933104" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989605" visible="true" weight="0.32731137" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989605" weight="0.32731137" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32943678" />
-      <window_info id="Designer" order="6" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.125" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39794168" />
@@ -335,36 +359,37 @@
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="Image Layers" order="3" />
-      <window_info anchor="right" x="0" y="0" width="434" height="856" id="Documentation" side_tool="true" weight="0.3296875" />
+      <window_info anchor="right" x="0" y="0" width="434" height="856" id="Documentation" order="8" side_tool="true" weight="0.3296875" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="Capture Tool" order="4" />
       <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.32943678" />
       <window_info anchor="right" id="Maven Projects" order="6" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32837406" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32943678" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3995749" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.32943678" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32943678" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="Capture Tool" order="5" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32943678" />
@@ -399,6 +424,13 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/mandelbrot/SettingsFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3094">
+          <caret line="182" column="71" selection-start-line="182" selection-start-column="71" selection-end-line="182" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/mandelbrot/MandelbrotSet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -661,9 +693,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mandelbrot/dasd.cpt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mandelbrot/FractalContainer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -688,7 +717,7 @@
     <entry file="file://$PROJECT_DIR$/src/mandelbrot/RegexManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
@@ -701,14 +730,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mandelbrot/PopupManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="755">
-          <caret line="117" column="13" lean-forward="true" selection-start-line="117" selection-start-column="13" selection-end-line="117" selection-end-column="13" />
+        <state relative-caret-position="1921">
+          <caret line="117" column="13" selection-start-line="117" selection-start-column="13" selection-end-line="117" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mandelbrot/SettingsFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
+        <state relative-caret-position="1063">
           <caret line="182" column="71" selection-start-line="182" selection-start-column="71" selection-end-line="182" selection-end-column="71" />
         </state>
       </provider>
