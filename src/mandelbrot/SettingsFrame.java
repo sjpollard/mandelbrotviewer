@@ -157,12 +157,12 @@ public class SettingsFrame extends JFrame {
     public boolean entriesValid() {
 
         for (InputPanel item: generalPanelList) {
-            if (!RegexManager.matchesInteger(item.getInputFieldText())) return false;
+            if (!RegexManager.matchesUnsignedDouble(item.getInputFieldText())) return false;
         }
-        if (!RegexManager.matchesDouble(mandelbrotPanelList.get(0).getInputFieldText())) return false;
+        if (!RegexManager.matchesUnsignedDouble(mandelbrotPanelList.get(0).getInputFieldText())) return false;
         if (!RegexManager.matchesComplexNumber(mandelbrotPanelList.get(1).getInputFieldText())) return false;
         if (!RegexManager.matchesComplexNumber(mandelbrotPanelList.get(2).getInputFieldText())) return false;
-        if (!RegexManager.matchesDouble(juliaPanelList.get(0).getInputFieldText())) return false;
+        if (!RegexManager.matchesUnsignedDouble(juliaPanelList.get(0).getInputFieldText())) return false;
         if (!RegexManager.matchesComplexNumber(juliaPanelList.get(1).getInputFieldText())) return false;
         if (!RegexManager.matchesComplexNumber(juliaPanelList.get(2).getInputFieldText())) return false;
         return true;
