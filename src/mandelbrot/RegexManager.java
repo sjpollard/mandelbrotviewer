@@ -11,7 +11,7 @@ public class RegexManager {
     /**Regex constants that can be matched with an input string*/
     private static final String validUnsignedInteger = "[0-9]+";
     private static final String validSignedInteger = "[+-]?" + validUnsignedInteger;
-    private static final String validUnsignedDouble = validUnsignedInteger + "(\\.[0-9]+)?";
+    private static final String validUnsignedDouble = validUnsignedInteger + "(\\.[0-9]+)?(E" + validSignedInteger + ")?";
     private static final String validSignedDouble = "[+-]?" + validUnsignedDouble;
     private static final String validComplexNumber = "(" + validSignedDouble + "[+-]" + validUnsignedDouble + "i|" +  validSignedDouble + "i?)";
 
