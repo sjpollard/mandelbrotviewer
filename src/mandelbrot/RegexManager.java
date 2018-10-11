@@ -13,7 +13,7 @@ public class RegexManager {
     private static final String validSignedInteger = "[+-]?" + validUnsignedInteger;
     private static final String validUnsignedDouble = validUnsignedInteger + "(\\.[0-9]+)?";
     private static final String validSignedDouble = "[+-]?" + validUnsignedDouble;
-    private static final String validComplexNumber = "(" + validSignedDouble + "[+-]" + validUnsignedInteger + "i \\|" + validSignedDouble + "\\|" + validSignedDouble+ "i)";
+    private static final String validComplexNumber = "(" + validSignedDouble + "[+-]" + validUnsignedDouble + "i|" +  validSignedDouble + "i?)";
 
     /**Decided whether the string is a valid positive integer*/
     public static boolean matchesUnsignedInteger(String input) {
@@ -29,7 +29,7 @@ public class RegexManager {
 
     }
 
-    /**Decides whether the string is a valid double*/
+    /**Decides whether the string is a valid positive double*/
     public static boolean matchesUnsignedDouble(String input) {
 
         return input.matches(validUnsignedDouble);
