@@ -193,26 +193,25 @@ public class FractalContainer extends JPanel {
         drawDiagonalCross(g, lastPixel[0], lastPixel[1], 4);
         last = first;
         pathLength = 0;
-        while(!queue.isEmpty()){
+        for (ComplexNumber point: queue) {
 
-            ComplexNumber next = queue.remove();
-            pathLength += last.distanceBetween(next);
-            if (fractalTracked.equals("mandelbrot")) nextPixel = mandelbrotSet.complexNumberToPixel(next);
-            else nextPixel = mandelbrotSet.juliaSet.complexNumberToPixel(next);
+            pathLength += last.distanceBetween(point);
+            if (fractalTracked.equals("mandelbrot")) nextPixel = mandelbrotSet.complexNumberToPixel(point);
+            else nextPixel = mandelbrotSet.juliaSet.complexNumberToPixel(point);
 
             g.setColor(inverseColour);
             g.drawLine(lastPixel[0], lastPixel[1], nextPixel[0], nextPixel[1]);
             if (queue.isEmpty()) {
                 g.setColor(inverseColour);
-                if (conditions.readyToDrawCoords) g.drawString(next.toString(3), nextPixel[0], nextPixel[1]);
+                if (conditions.readyToDrawCoords) g.drawString(point.toString(3), nextPixel[0], nextPixel[1]);
                 drawDiagonalCross(g, nextPixel[0], nextPixel[1], 4);
             }
 
-            last = next;
+            last = point;
             lastPixel = nextPixel;
         }
         if (conditions.drawMandelbrot && conditions.drawJulia && fractalTracked.equals("julia")) g.translate(-this.getWidth()/2, 0);
-
+        
     }
 
     /**Draws a straight cross with a specified radius at the location input*/
