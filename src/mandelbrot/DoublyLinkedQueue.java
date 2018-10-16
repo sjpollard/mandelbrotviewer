@@ -7,7 +7,7 @@ package mandelbrot;
  * @param <T>
  */
 
-public class DoublyLinkedQueue<T> implements DoublyLinked<T>{
+public class DoublyLinkedQueue<T> implements DoublyLinked<T>, Iterable<T>{
 
     /**Nodes that reference the two ends of the queue*/
     private Node<T> head;
@@ -76,6 +76,27 @@ public class DoublyLinkedQueue<T> implements DoublyLinked<T>{
     public boolean isEmpty() {
 
         return head == null;
+
+    }
+    
+      @Override
+    public Iterator<T> iterator() {
+
+       return new QueueIterator();
+
+    }
+
+    class QueueIterator implements Iterator<T> {
+
+        @Override
+        public boolean hasNext() {
+            return head != null;
+        }
+
+        @Override
+        public T next() {
+            return DoublyLinkedQueue.this.remove();
+        }
 
     }
 
