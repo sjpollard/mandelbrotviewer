@@ -50,7 +50,7 @@ public class RegexManager {
     /**Decides whether the string is a  complex number*/
     public static boolean matchesComplexNumber(String input) {
 
-        return input.matches(ComplexNumber);
+        return input.matches(complexNumber);
 
     }
 
