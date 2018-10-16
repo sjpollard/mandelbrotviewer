@@ -8,12 +8,16 @@ package mandelbrot;
 
 public class RegexManager {
 
-    /**Regex constants that can be matched with an input string*/
+   /**Regex matching with a positive integer*/
     private static final String unsignedInteger = "[0-9]+";
+    /**Regex matching with a signed integer*/
     private static final String signedInteger = "[+-]?" + unsignedInteger;
+    /**Regex matching with a positive double*/
     private static final String unsignedDouble = unsignedInteger + "(\\.[0-9]+)?(E" + signedInteger + ")?";
+    /**Regex matching with a signed double*/
     private static final String signedDouble = "[+-]?" + unsignedDouble;
-    private static final String ComplexNumber = "(" + signedDouble + "[+-]" + unsignedDouble + "i|" +  signedDouble + "i?)";
+    /**Regex matching with a complex number*/
+    private static final String complexNumber = "(" + signedDouble + "[+-]" + unsignedDouble + "i|" +  signedDouble + "i?)";
 
     /**Decided whether the string is a  positive integer*/
     public static boolean matchesUnsignedInteger(String input) {
