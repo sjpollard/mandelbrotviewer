@@ -197,7 +197,7 @@ public class HelpFrame extends JFrame {
         defaultGlossaryItems = new TreeSet<>();
         fillTreeSet();
 
-        addGlossaryItems(defaultGlossaryItems);
+        searchThroughGlossary();
 
         glossaryScrollTab = new JScrollPane(glossaryTextPane);
         glossaryScrollTab.setBorder(BorderFactory.createLineBorder(Color.white));
@@ -212,7 +212,7 @@ public class HelpFrame extends JFrame {
     }
 
     /**Adds the glossary items currently searched for to the glossary text pane*/
-    public void addGlossaryItems(SortedSet<InfoItem> currentGlossaryItems) {
+    public void addGlossaryItems(DoublyLinkedQueue<InfoItem> currentGlossaryItems) {
 
         StringBuilder contentText = new StringBuilder();
         for (InfoItem item: currentGlossaryItems) contentText.append(item.getBoldTitle()).append(" ").append(item.getExplanation()).append("<br><br>");
@@ -225,7 +225,7 @@ public class HelpFrame extends JFrame {
     public void searchThroughGlossary() {
 
         String searchParameter = searchBar.getText().toLowerCase();
-        SortedSet<InfoItem> searchedItems = new TreeSet<>();
+        DoublyLinkedQueue<InfoItem> searchedItems = new DoublyLinkedQueue<>();
 
         glossaryTextPane.setText("");
 
