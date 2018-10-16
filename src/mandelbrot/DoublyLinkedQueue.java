@@ -1,5 +1,7 @@
 package mandelbrot;
 
+import java.util.Iterator;
+
 /**
  * Dynamic and generic doubly linked queue that uses nodes to implement a FIFO
  * data structure. Implements the DoublyLinked interface, ensuring that it has

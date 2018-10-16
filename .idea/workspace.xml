@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ArtifactsWorkspaceSettings">
-    <artifacts-to-build>
-      <artifact name="mandelbrotviewer:jar" />
-    </artifacts-to-build>
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="07a94fa9-d881-41e7-89b7-5e85502f3a2d" name="Default" comment="Fixed ComplexNumber Regex">
+    <list default="true" id="0c970403-ff6d-4481-9156-a7fb3198209c" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/markdown-exported-files.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/markdown-navigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/markdown-navigator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mandelbrot/RegexManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/RegexManager.java" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,11 +27,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RegexManager.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RegexManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mandelbrot/RegexManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="13" column="120" selection-start-line="13" selection-start-column="120" selection-end-line="13" selection-end-column="120" />
+            <state relative-caret-position="194">
+              <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DoublyLinkedQueue.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/mandelbrot/DoublyLinkedQueue.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1581">
+              <caret line="95" column="8" selection-start-line="95" selection-start-column="8" selection-end-line="95" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -41,7 +48,7 @@
       <file leaf-file-name="MandelbrotSet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mandelbrot/MandelbrotSet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
+            <state relative-caret-position="1717">
               <caret line="101" column="80" selection-start-line="101" selection-start-column="80" selection-end-line="101" selection-end-column="80" />
             </state>
           </provider>
@@ -50,7 +57,7 @@
       <file leaf-file-name="JuliaSet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mandelbrot/JuliaSet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
+            <state relative-caret-position="1530">
               <caret line="90" column="78" selection-start-line="90" selection-start-column="78" selection-end-line="90" selection-end-column="78" />
             </state>
           </provider>
@@ -59,7 +66,7 @@
       <file leaf-file-name="FractalContainer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mandelbrot/FractalContainer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
+            <state relative-caret-position="2992">
               <caret line="178" column="10" selection-start-line="178" selection-start-column="10" selection-end-line="178" selection-end-column="10" />
             </state>
           </provider>
@@ -87,7 +94,7 @@
         <entry file="file://$PROJECT_DIR$/src/mandelbrot/ComplexNumber.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
-              <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+              <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
               <folding>
                 <element signature="e#5567#5568#0" expanded="true" />
                 <element signature="e#5594#5595#0" expanded="true" />
@@ -115,72 +122,8 @@
       </file>
     </leaf>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-        <option value="Concept" />
-      </list>
-    </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>crea</find>
-      <find>reset</find>
-      <find>//</find>
-      <find>/*</find>
-      <find>frameContent</find>
-      <find>Double</find>
-      <find>double</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>/*</replace>
-      <replace>/**</replace>
-      <replace>content</replace>
-      <replace>Float</replace>
-      <replace>float</replace>
-    </replaceStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GradleLocalSettings">
-    <option name="externalProjectsViewState">
-      <projects_view />
-    </option>
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/mandelbrot/dada.form" />
-        <option value="$PROJECT_DIR$/src/mandelbrot/FractalType.java" />
-        <option value="$PROJECT_DIR$/src/mandelbrot/SuccessiveRefiner.java" />
-        <option value="$PROJECT_DIR$/src/mandelbrot/GraphicsComponent.java" />
-        <option value="$PROJECT_DIR$/src/mandelbrot/FractalColours.java" />
-        <option value="$PROJECT_DIR$/src/mandelbrot/DoublyLinkedStack.java" />
-        <option value="$PROJECT_DIR$/src/mandelbrot/DoublyLinkedQueue.java" />
-        <option value="$PROJECT_DIR$/src/mandelbrot/FractalSet.java" />
-        <option value="$PROJECT_DIR$/src/mandelbrot/HelpFrame.java" />
-        <option value="$PROJECT_DIR$/src/mandelbrot/Controller.java" />
-        <option value="$PROJECT_DIR$/src/mandelbrot/Node.java" />
-        <option value="$PROJECT_DIR$/src/mandelbrot/SerializationManager.java" />
-        <option value="$PROJECT_DIR$/src/mandelbrot/FractalDataSerializable.java" />
-        <option value="$PROJECT_DIR$/src/mandelbrot/FractalDiagram.java" />
-        <option value="$PROJECT_DIR$/src/mandelbrot/DrawingConditions.java" />
-        <option value="$PROJECT_DIR$/src/mandelbrot/DoublyLinked.java" />
-        <option value="$PROJECT_DIR$/src/mandelbrot/MandelbrotFrame.java" />
-        <option value="$PROJECT_DIR$/src/images/image_references.txt" />
-        <option value="$PROJECT_DIR$/src/mandelbrot/InputPanel.java" />
-        <option value="$PROJECT_DIR$/src/mandelbrot/PopupManager.java" />
-        <option value="$PROJECT_DIR$/src/mandelbrot/SettingsFrame.java" />
-        <option value="$PROJECT_DIR$/src/mandelbrot/ComplexNumber.java" />
-        <option value="$PROJECT_DIR$/src/mandelbrot/MandelbrotSet.java" />
-        <option value="$PROJECT_DIR$/src/mandelbrot/JuliaSet.java" />
-        <option value="$PROJECT_DIR$/src/mandelbrot/FractalContainer.java" />
-        <option value="$PROJECT_DIR$/src/mandelbrot/MandelbrotViewer.java" />
-        <option value="$PROJECT_DIR$/src/mandelbrot/RegexManager.java" />
-      </list>
-    </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1223" />
@@ -194,6 +137,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -216,41 +161,17 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="472" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="472" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="472" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="472" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="472" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="472" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="472" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="472" />
-    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
-    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
-    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
-    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="mandelbrotviewer" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/Sam Pollard/Documents/GitHub/mandelbrotviewer/src/mandelbrot/FractalContainer.java&#10;reset&#9;PSI&#9;JAVA://mandelbrot.PopupManager#resetValues&#10;st&#9;FILE&#9;file://C:/Users/Sam Pollard/Mandelbrots/Mandelbrot-v15/src/mandelbrot/DoublyLinkedStack.java&#10;q&#9;FILE&#9;file://C:/Users/Sam Pollard/Mandelbrots/Mandelbrot-v15/src/mandelbrot/DoublyLinkedQueue.java&#10;stack&#9;FILE&#9;file://C:/Users/Sam Pollard/Mandelbrots/Mandelbrot-v15/src/mandelbrot/DoublyLinkedStack.java&#10;Doubl&#9;FILE&#9;file://C:/Users/Sam Pollard/Mandelbrots/Mandelbrot-v15/src/mandelbrot/DoublyLinkedStack.java&#10;contr&#9;FILE&#9;file://C:/Users/Sam Pollard/Mandelbrots/Mandelbrot-v15/src/mandelbrot/Controller.java&#10;changeFrac&#9;PSI&#9;JAVA://mandelbrot.MandelbrotFrame#changeFractalDrawn&#10;fractaldraw&#9;PSI&#9;JAVA://mandelbrot.MandelbrotFrame#changeFractalDrawn&#10;frac&#9;FILE&#9;file://C:/Users/Sam Pollard/Mandelbrots/Mandelbrot-v15/src/mandelbrot/FractalContainer.java&#10;fractalDraw&#9;PSI&#9;JAVA://mandelbrot.MandelbrotFrame#changeFractalDrawn&#10;Fra&#9;FILE&#9;file://C:/Users/Sam Pollard/Mandelbrots/Mandelbrot-v15/src/mandelbrot/FractalContainer.java&#10;f&#9;FILE&#9;file://C:/Users/Sam Pollard/Mandelbrots/Mandelbrot-v15/src/mandelbrot/FractalDiagram.java&#10;mandel&#9;PSI&#9;JAVA://mandelbrot.MandelbrotSet&#10;controller&#9;PSI&#9;JAVA://mandelbrot.Controller&#10;colour&#9;PSI&#9;JAVA://mandelbrot.PopupManager#editColour&#10;condi&#9;PSI&#9;JAVA://mandelbrot.FractalContainer#conditions" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Artifacts" />
-    <property name="project.structure.proportion" value="0.15527344" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -265,111 +186,30 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="MandelbrotViewer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="mandelbrot.MandelbrotViewer" />
-      <module name="mandelbrotviewer" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <shortenClasspath name="NONE" />
-    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
     </configuration>
-    <configuration default="true" type="JarApplication" factoryName="JAR Application">
-      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <module name="" />
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
+    <configuration name="&lt;template&gt;" type="JUnit" default="true" selected="false">
       <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
     </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
+    <configuration name="&lt;template&gt;" type="TestNG" default="true" selected="false">
       <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.MandelbrotViewer" />
-      </list>
-    </recent_temporary>
-  </component>
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
-  <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="07a94fa9-d881-41e7-89b7-5e85502f3a2d" name="Default" comment="" />
-      <created>1537862170725</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1537862170725</updated>
-    </task>
-    <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="9" weight="0.32943678" />
+      <window_info anchor="bottom" id="Messages" order="9" sideWeight="0.49895832" weight="0.32943678" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5010395" side_tool="true" weight="0.32933104" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4989605" visible="true" weight="0.32731137" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="10" sideWeight="0.50104165" side_tool="true" visible="true" weight="0.32837406" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989605" weight="0.32731137" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32943678" />
       <window_info id="Designer" order="6" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.24948025" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24947916" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39744952" />
@@ -393,14 +233,14 @@
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32837406" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32943678" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32943678" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32837406" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -418,45 +258,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
     </layout-to-restore>
   </component>
-  <component name="Vcs.Log.History.Properties">
-    <option name="COLUMN_ORDER">
-      <list>
-        <option value="0" />
-        <option value="2" />
-        <option value="3" />
-        <option value="1" />
-      </list>
-    </option>
-  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <ignored-roots>
-      <path value="E:/test" />
-    </ignored-roots>
-    <MESSAGE value="GitHub setup" />
-    <MESSAGE value="Test" />
-    <MESSAGE value="Setup" />
-    <MESSAGE value="Test 2" />
-    <MESSAGE value="Module change" />
-    <MESSAGE value="Annotation of graphical components" />
-    <MESSAGE value="Final draft of annotation" />
-    <MESSAGE value="Fixed error where resetting would break drawInfo" />
-    <MESSAGE value="Fixed error where pixel area was incorrect with successive refine on" />
-    <MESSAGE value="Fluff" />
-    <MESSAGE value="Generated JAR" />
-    <MESSAGE value="Spelling error" />
-    <MESSAGE value="Unused import" />
-    <MESSAGE value="Improved leniency of RegexManager" />
-    <MESSAGE value="Patching past commit to work with SettingsFrame" />
-    <MESSAGE value="Fixed ComplexNumber Regex" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed ComplexNumber Regex" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="10" />
-    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/mandelbrot/SettingsFrame.java">
@@ -641,13 +444,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mandelbrot/DoublyLinkedQueue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mandelbrot/DoublyLinked.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -741,21 +537,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mandelbrot/MandelbrotSet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
+        <state relative-caret-position="1717">
           <caret line="101" column="80" selection-start-line="101" selection-start-column="80" selection-end-line="101" selection-end-column="80" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mandelbrot/JuliaSet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
+        <state relative-caret-position="1530">
           <caret line="90" column="78" selection-start-line="90" selection-start-column="78" selection-end-line="90" selection-end-column="78" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mandelbrot/FractalContainer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
+        <state relative-caret-position="2992">
           <caret line="178" column="10" selection-start-line="178" selection-start-column="10" selection-end-line="178" selection-end-column="10" />
         </state>
       </provider>
@@ -763,7 +559,7 @@
     <entry file="file://$PROJECT_DIR$/src/mandelbrot/ComplexNumber.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
           <folding>
             <element signature="e#5567#5568#0" expanded="true" />
             <element signature="e#5594#5595#0" expanded="true" />
@@ -784,40 +580,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mandelbrot/RegexManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="13" column="120" selection-start-line="13" selection-start-column="120" selection-end-line="13" selection-end-column="120" />
+        <state relative-caret-position="194">
+          <caret line="40" column="5" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mandelbrot/DoublyLinkedQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1581">
+          <caret line="95" column="8" selection-start-line="95" selection-start-column="8" selection-end-line="95" selection-end-column="8" />
         </state>
       </provider>
     </entry>
   </component>
   <component name="masterDetails">
     <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <last-edited>mandelbrotviewer:jar</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.5" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>No facets are configured</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
           <splitter-proportions>
@@ -831,19 +608,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>mandelbrotviewer</last-edited>
+          <last-edited>10</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
