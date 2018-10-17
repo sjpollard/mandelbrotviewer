@@ -81,13 +81,15 @@ public class DoublyLinkedQueue<T> implements DoublyLinked<T>, Iterable<T>{
 
     }
     
-      @Override
+    /**Returns a generic iterator for this class*/
+    @Override
     public Iterator<T> iterator() {
 
        return new QueueIterator();
 
     }
 
+    /**Inner class that allows for the Queue to be iterated through*/
     class QueueIterator implements Iterator<T> {
 
         @Override
