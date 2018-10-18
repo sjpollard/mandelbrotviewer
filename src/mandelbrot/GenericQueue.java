@@ -1,22 +1,21 @@
 package mandelbrot;
 
 import java.util.Iterator;
-
 /**
  * Dynamic and generic doubly linked queue that uses nodes to implement a FIFO
- * data structure. Implements the DoublyLinked interface, ensuring that it has
+ * data structure. Implements the GenericDataStructure interface, ensuring that it has
  * the necessary methods.
  * @param <T>
  */
 
-public class DoublyLinkedQueue<T> implements DoublyLinked<T>, Iterable<T>{
+public class GenericQueue<T> implements GenericDataStructure<T>, Iterable<T>{
 
-    /**Nodes that reference the two ends of the queue*/
-    private Node<T> head;
-    private Node<T> tail;
+    /**DoublyLinkedNodes that reference the two ends of the queue*/
+    private DoublyLinkedNode<T> head;
+    private DoublyLinkedNode<T> tail;
 
     /**Constructs an empty queue*/
-    public DoublyLinkedQueue() {
+    public GenericQueue() {
 
         this.head = null;
         this.tail = null;
@@ -24,7 +23,7 @@ public class DoublyLinkedQueue<T> implements DoublyLinked<T>, Iterable<T>{
     }
 
     /**Constructs a queue containing a single node*/
-    public DoublyLinkedQueue(Node<T> head) {
+    public GenericQueue(DoublyLinkedNode<T> head) {
 
         this.head = head;
         this.tail = head;
@@ -34,7 +33,7 @@ public class DoublyLinkedQueue<T> implements DoublyLinked<T>, Iterable<T>{
     /**Adds a node onto the end of the queue*/
     public void add(T item) {
 
-        Node<T> node = new Node<>(item);
+        DoublyLinkedNode<T> node = new DoublyLinkedNode<>(item);
         if (this.isEmpty()) {
 
             head = node;
@@ -76,11 +75,11 @@ public class DoublyLinkedQueue<T> implements DoublyLinked<T>, Iterable<T>{
 
     /**Checks whether the queue contains any nodes*/
     public boolean isEmpty() {
-
+        
         return head == null;
 
     }
-    
+
     /**Returns a generic iterator for this class*/
     @Override
     public Iterator<T> iterator() {
@@ -99,7 +98,7 @@ public class DoublyLinkedQueue<T> implements DoublyLinked<T>, Iterable<T>{
 
         @Override
         public T next() {
-            return DoublyLinkedQueue.this.remove();
+            return GenericQueue.this.remove();
         }
 
     }
