@@ -225,7 +225,7 @@ public class HelpFrame extends JFrame {
     public void searchThroughGlossary() {
 
         String searchParameter = searchBar.getText().toLowerCase();
-        DoublyLinkedQueue<InfoItem> searchedItems = new DoublyLinkedQueue<>();
+        GenericQueue<InfoItem> searchedItems = new GenericQueue<>();
 
         glossaryTextPane.setText("");
 
