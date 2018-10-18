@@ -6,24 +6,24 @@ package mandelbrot;
  * dynamic data structures.
  * */
 
-public class Node<T> {
+public class DoublyLinkedNode<T> {
 
     /**Generic data type*/
     private T data;
 
     /**References to connected nodes*/
-    private Node<T> next;
-    private Node<T> previous;
+    private DoublyLinkedNode<T> next;
+    private DoublyLinkedNode<T> previous;
 
     /**Constructs a null node*/
-    public Node() {
+    public DoublyLinkedNode() {
 
         this.data = null;
 
     }
 
     /**Constructs a node with the data specified*/
-    public Node(T data) {
+    public DoublyLinkedNode(T data) {
 
         this.data = data;
 
@@ -41,25 +41,25 @@ public class Node<T> {
 
     }
 
-    public Node<T> getNext() {
+    public DoublyLinkedNode<T> getNext() {
 
         return next;
 
     }
 
-    public void setNext(Node<T> next) {
+    public void setNext(DoublyLinkedNode<T> next) {
 
         this.next = next;
 
     }
 
-    public Node<T> getPrevious() {
+    public DoublyLinkedNode<T> getPrevious() {
 
         return previous;
 
     }
 
-    public void setPrevious(Node<T> previous) {
+    public void setPrevious(DoublyLinkedNode<T> previous) {
 
         this.previous = previous;
 
