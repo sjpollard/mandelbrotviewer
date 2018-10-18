@@ -6,7 +6,6 @@ import javax.swing.event.MenuListener;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
-
 /**
  * The main GUI component that contains every other component. This object manages everything visual
  * (including calling the iteration/draw functions) and also handles the interactions with the swing components.
@@ -71,8 +70,8 @@ public class MandelbrotFrame extends JFrame {
     /**Undo/redo components*/
     JButton undoButton;
     JButton redoButton;
-    DoublyLinkedStack<FractalDataSerializable[]> redoStack;
-    DoublyLinkedStack<FractalDataSerializable[]> undoStack;
+    GenericStack<FractalDataSerializable[]> redoStack;
+    GenericStack<FractalDataSerializable[]> undoStack;
 
     /**Graphical component*/
     FractalContainer diagram;
@@ -167,8 +166,8 @@ public class MandelbrotFrame extends JFrame {
 
         undoButton = new JButton("Undo");
         redoButton = new JButton("Redo");
-        undoStack = new DoublyLinkedStack<>();
-        redoStack = new DoublyLinkedStack<>();
+        undoStack = new GenericStack<>();
+        redoStack = new GenericStack<>();
 
         diagram = new FractalContainer();
 
@@ -469,7 +468,7 @@ public class MandelbrotFrame extends JFrame {
 
         FractalDataSerializable[] oldData = {new FractalDataSerializable(mandelbrotSet, diagram.colours), new FractalDataSerializable(mandelbrotSet.juliaSet, diagram.colours)};
         undoStack.add(oldData);
-        if (!redoStack.isEmpty()) redoStack = new DoublyLinkedStack<>();
+        if (!redoStack.isEmpty()) redoStack = new GenericStack<>();
 
     }
 
