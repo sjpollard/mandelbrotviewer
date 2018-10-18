@@ -149,10 +149,10 @@ public class JuliaSet implements FractalSet {
 
     }
 
-    /**Adds the result after each iteration of a complex number to the tracking queue*/
-    public DoublyLinkedQueue<ComplexNumber> fillTrackingQueue(ComplexNumber zStart) {
+     /**Adds the result after each iteration of a complex number to the tracking queue*/
+    public GenericQueue<ComplexNumber> fillTrackingQueue(ComplexNumber zStart) {
 
-        DoublyLinkedQueue<ComplexNumber> queue = new DoublyLinkedQueue<>();
+        GenericQueue<ComplexNumber> queue = new GenericQueue<>();
         int i = 1;
         ComplexNumber current = zStart;
         queue.add(current);
