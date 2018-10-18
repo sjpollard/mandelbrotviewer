@@ -31,7 +31,7 @@ public interface FractalSet {
     ComplexNumber stepUpIterations(ComplexNumber zCurrent, int x, int y, int steps);
 
     /**Fill queue with values after each iteration of a given point*/
-    DoublyLinkedQueue<ComplexNumber> fillTrackingQueue(ComplexNumber point);
+    GenericQueue<ComplexNumber> fillTrackingQueue(ComplexNumber point);
 
     FractalType getType();
 
