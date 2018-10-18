@@ -2,20 +2,20 @@ package mandelbrot;
 
 /**
  * Dynamic and generic doubly linked stack that uses nodes to implement a LIFO
- * data structure. Implements the DoublyLinked interface to ensure that the stack
+ * data structure. Implements the GenericDataStructure interface to ensure that the stack
  * has the appropriate methods.
  * @param <T>
  */
 
-public class DoublyLinkedStack<T> implements DoublyLinked<T> {
+public class GenericStack<T> implements GenericDataStructure<T> {
 
-    /**Nodes that reference the bottom and top of the stack*/
-    private Node<T> bottom;
-    private Node<T> top;
+    /**DoublyLinkedNodes that reference the bottom and top of the stack*/
+    private DoublyLinkedNode<T> bottom;
+    private DoublyLinkedNode<T> top;
 
 
     /**Constructs an empty stack*/
-    public DoublyLinkedStack() {
+    public GenericStack() {
 
         this.bottom = null;
         this.top = null;
@@ -23,7 +23,7 @@ public class DoublyLinkedStack<T> implements DoublyLinked<T> {
     }
 
     /**Constructs a stack containing a single node*/
-    public DoublyLinkedStack(Node<T> item) {
+    public GenericStack(DoublyLinkedNode<T> item) {
 
         this.bottom = item;
         this.top = item;
@@ -33,7 +33,7 @@ public class DoublyLinkedStack<T> implements DoublyLinked<T> {
     /**Adds a node to the top of the stack*/
     public void add(T item) {
 
-        Node<T> node = new Node<>(item);
+        DoublyLinkedNode<T> node = new DoublyLinkedNode<>(item);
         if (this.isEmpty()) {
 
             bottom = node;
