@@ -162,9 +162,9 @@ public class MandelbrotSet implements FractalSet {
     }
 
     /**Adds the result after each iteration of a complex number to the tracking queue*/
-    public DoublyLinkedQueue<ComplexNumber> fillTrackingQueue(ComplexNumber point) {
+    public GenericQueue<ComplexNumber> fillTrackingQueue(ComplexNumber point) {
 
-        DoublyLinkedQueue<ComplexNumber> queue = new DoublyLinkedQueue<>();
+        GenericQueue<ComplexNumber> queue = new GenericQueue<>();
         int i = 1;
         ComplexNumber current = new ComplexNumber();
         while (i <= maxIterations && current.sqrOfMagnitude() <= 4) {
