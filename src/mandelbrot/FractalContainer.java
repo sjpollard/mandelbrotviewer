@@ -2,7 +2,6 @@ package mandelbrot;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.image.BufferedImage;
 
 /**
  * JPanel that sits within the content of MandelbrotFrame and manages the drawing of fractals.
@@ -25,7 +24,7 @@ public class FractalContainer extends JPanel {
 
     /**Fields used when tracking a complex number*/
     private String fractalTracked;
-    private DoublyLinkedQueue<ComplexNumber> queue;
+    private GenericQueue<ComplexNumber> queue;
     private double pathLength;
     private ComplexNumber first;
     private ComplexNumber last;
@@ -45,7 +44,7 @@ public class FractalContainer extends JPanel {
         this.conditions = new DrawingConditions();
         this.conditions.drawMandelbrot = true;
         this.conditions.drawJulia = true;
-        this.queue = new DoublyLinkedQueue<>();
+        this.queue = new GenericQueue<>();
 
     }
 
@@ -211,7 +210,7 @@ public class FractalContainer extends JPanel {
             lastPixel = nextPixel;
         }
         if (conditions.drawMandelbrot && conditions.drawJulia && fractalTracked.equals("julia")) g.translate(-this.getWidth()/2, 0);
-        
+
     }
 
     /**Draws a straight cross with a specified radius at the location input*/
