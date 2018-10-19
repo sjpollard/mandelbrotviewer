@@ -212,7 +212,7 @@ public class HelpFrame extends JFrame {
     }
 
     /**Adds the glossary items currently searched for to the glossary text pane*/
-    public void addGlossaryItems(DoublyLinkedQueue<InfoItem> currentGlossaryItems) {
+    public void addGlossaryItems(GenericQueue<InfoItem> currentGlossaryItems) {
 
         StringBuilder contentText = new StringBuilder();
         for (InfoItem item: currentGlossaryItems) contentText.append(item.getBoldTitle()).append(" ").append(item.getExplanation()).append("<br><br>");
