@@ -9,15 +9,17 @@ package mandelbrot;
 public class RegexManager {
 
     /**Regex matching with a positive integer*/
-    private static final String unsignedInteger = "[0-9]+";
+    static final String unsignedInteger = "[0-9]+";
     /**Regex matching with a signed integer*/
-    private static final String signedInteger = "[+-]?" + unsignedInteger;
+    static final String signedInteger = "[+-]?" + unsignedInteger;
     /**Regex matching with a positive double*/
-    private static final String unsignedDouble = unsignedInteger + "(\\.[0-9]+)?(E" + signedInteger + ")?";
+    static final String unsignedDouble = unsignedInteger + "(\\.[0-9]+)?(E" + signedInteger + ")?";
     /**Regex matching with a signed double*/
-    private static final String signedDouble = "[+-]?" + unsignedDouble;
+    static final String signedDouble = "[+-]?" + unsignedDouble;
+    /**Regex matching with an imaginary number*/
+    static final String imaginaryNumber = signedDouble + "i";
     /**Regex matching with a complex number*/
-    private static final String complexNumber = "(" + signedDouble + "[+-]" + unsignedDouble + "i|" +  signedDouble + "i?)";
+    static final String complexNumber = "(" + signedDouble + "[+-]" + unsignedDouble + "i|" +  imaginaryNumber + "?)";
 
     /**Decided whether the string is a valid positive integer*/
     public static boolean matchesUnsignedInteger(String input) {
@@ -44,6 +46,12 @@ public class RegexManager {
     public static boolean matchesSignedDouble(String input) {
 
         return input.matches(signedDouble);
+
+    }
+
+    public static boolean matchesImaginaryNumber(String input) {
+
+        return input.matches(imaginaryNumber);
 
     }
 

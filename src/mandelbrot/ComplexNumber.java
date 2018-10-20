@@ -29,24 +29,24 @@ public class ComplexNumber implements Serializable {
     }
 
     /**Constructs a complex number via a string (x+yi form)*/
-    public ComplexNumber (String complexNumber) {
-        double real;
-        double imaginary;
-        String array[] = complexNumber.split("\\+");
-        if (array.length == 1) {
-            array = complexNumber.split("\\-");
-            if (array[0].equals("")) {
-                real = -Double.parseDouble(array[1]);
-                imaginary = -Double.parseDouble(array[2].substring(0, array[2].length() - 1));
-            }
-            else {
-                real = Double.parseDouble(array[0]);
-                imaginary = -Double.parseDouble(array[1].substring(0, array[1].length() - 1));
-            }
+    public ComplexNumber(String complexNumber) {
+        double real = 0;
+        double imaginary = 0;
+        if (RegexManager.matchesSignedDouble(complexNumber))  {
+            real = Double.parseDouble(complexNumber);
+        }
+        else if (RegexManager.matchesImaginaryNumber(complexNumber)) {
+            imaginary = Double.parseDouble(complexNumber.substring(0, complexNumber.length() - 1));
         }
         else {
-            real = Double.parseDouble(array[0]);
-            imaginary = Double.parseDouble(array[1].substring(0,array[1].length() - 1));
+            String[] characters = complexNumber.split("");
+            int index = 0;
+            for (String ch: characters) {
+                if (index != 0 && (ch.equals("+") || ch.equals("-"))) break;
+                index++;
+            }
+            real = Double.parseDouble(complexNumber.substring(0, index));
+            imaginary = Double.parseDouble(complexNumber.substring(index, complexNumber.length() - 1));
         }
         this.real = real;
         this.imaginary = imaginary;
