@@ -49,6 +49,7 @@ public class RegexManager {
 
     }
 
+    /**Decides whether the string is a valid imaginary number*/
     public static boolean matchesImaginaryNumber(String input) {
 
         return input.matches(imaginaryNumber);

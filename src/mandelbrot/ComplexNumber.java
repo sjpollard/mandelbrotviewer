@@ -28,7 +28,7 @@ public class ComplexNumber implements Serializable {
         this.imaginary = imaginary;
     }
 
-    /**Constructs a complex number via a string (x+yi form)*/
+    /**Constructs a complex number via a string (x, yi or x+yi forms)*/
     public ComplexNumber(String complexNumber) {
         double real = 0;
         double imaginary = 0;
