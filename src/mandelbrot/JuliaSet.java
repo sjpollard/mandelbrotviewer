@@ -16,7 +16,7 @@ public class JuliaSet implements FractalSet {
     private ComplexNumber[][] lastResults;
     private boolean[][] refined;
     private int maxIterations;
-    private int power;
+    private double power;
     private int chunkSize;
     private int pixelArea;
     private double zoom;
@@ -108,7 +108,10 @@ public class JuliaSet implements FractalSet {
         int i;
 
         for (i = 0; i < maxIterations && zStart.sqrOfMagnitude() <= 4; i++) {
-            zStart = zStart.pow(power);
+            if (power % 1 == 0) {
+                zStart = zStart.pow((int)power);
+            }
+            else zStart = zStart.pow(power);
             zStart = zStart.add(c);
         }
         lastResults[y][x] = zStart;
@@ -141,7 +144,10 @@ public class JuliaSet implements FractalSet {
 
         int i;
         for (i = 0; i < steps && zCurrent.sqrOfMagnitude() < 4; i++) {
-            zCurrent = zCurrent.pow(power);
+            if (power % 1 == 0) {
+                zCurrent = zCurrent.pow((int) power);
+            }
+            else zCurrent = zCurrent.pow(power);
             zCurrent = zCurrent.add(c);
         }
         iterations[y][x] += i;
@@ -157,7 +163,10 @@ public class JuliaSet implements FractalSet {
         ComplexNumber current = zStart;
         queue.add(current);
         while (i <= maxIterations && current.sqrOfMagnitude() <= 4) {
-            current = current.pow(power);
+            if (power % 1 == 0) {
+                current = current.pow((int)power);
+            }
+            else current = current.pow(power);
             current = current.add(c);
             queue.add(current);
             i++;
@@ -173,7 +182,7 @@ public class JuliaSet implements FractalSet {
     public void setAllValues(String[] values) {
 
         this.maxIterations = Integer.parseInt(values[0]);
-        this.power = Integer.parseInt(values[1]);
+        this.power = Double.parseDouble(values[1]);
         this.chunkSize = Integer.parseInt(values[2]);
         this.zoom = Double.parseDouble(values[3]);
         this.centre = new ComplexNumber(values[4]);
@@ -234,11 +243,11 @@ public class JuliaSet implements FractalSet {
         this.maxIterations = maxIterations;
     }
 
-    public int getPower() {
+    public double getPower() {
         return power;
     }
 
-    public void setPower(int power) {
+    public void setPower(double power) {
         this.power = power;
     }
 

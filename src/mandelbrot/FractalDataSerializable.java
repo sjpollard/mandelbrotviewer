@@ -15,7 +15,7 @@ public class FractalDataSerializable implements Serializable {
 
     /**Data needed to define a FractalSet*/
     int maxIterations;
-    int power;
+    double power;
     int chunkSize;
     double zoom;
     ComplexNumber centre;

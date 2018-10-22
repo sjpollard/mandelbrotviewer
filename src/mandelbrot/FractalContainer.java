@@ -160,7 +160,7 @@ public class FractalContainer extends JPanel {
     }
 
     /**Methods that use drawString() to output fractal information to the screen*/
-    public void drawInformationStrings(String choice, int infoPos, ComplexNumber centre, ComplexNumber point, double zoom, int power, int pixelArea, int totalArea, Graphics2D g) {
+    public void drawInformationStrings(String choice, int infoPos, ComplexNumber centre, ComplexNumber point, double zoom, double power, int pixelArea, int totalArea, Graphics2D g) {
         double percentage;
         double distance;
         String item;

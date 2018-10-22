@@ -51,9 +51,9 @@ public interface FractalSet {
 
     void setMaxIterations(int maxIterations);
 
-    int getPower();
+    double getPower();
 
-    void setPower(int power);
+    void setPower(double power);
 
     int getChunkSize();
 

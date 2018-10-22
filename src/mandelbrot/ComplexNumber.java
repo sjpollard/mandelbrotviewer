@@ -93,6 +93,19 @@ public class ComplexNumber implements Serializable {
         return result;
     }
 
+    /**Raises a complex number to the power of a decimal exponent using De Moivre's theorem*/
+    public ComplexNumber pow(double power) {
+
+        double magnitude;
+        double argument;
+
+        magnitude = Math.pow(Math.sqrt(this.imaginary * this.imaginary + this.real * this.real), power);
+        argument = power * Math.atan2(this.imaginary, this.real);
+
+        return new ComplexNumber(magnitude, 0).multiply(new ComplexNumber(Math.cos(argument), Math.sin(argument)));
+
+    }
+
     /**Returns the magnitude of a complex number squared*/
     public double sqrOfMagnitude() {
 

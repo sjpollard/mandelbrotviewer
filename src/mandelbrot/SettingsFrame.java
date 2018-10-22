@@ -156,9 +156,10 @@ public class SettingsFrame extends JFrame {
     /**Verifies via the RegexManager class, whether all of the inputs can have valid data extrapolated*/
     public boolean entriesValid() {
 
-        for (InputPanel item: generalPanelList) {
-            if (!RegexManager.matchesUnsignedDouble(item.getInputFieldText())) return false;
-        }
+
+        if (!RegexManager.matchesUnsignedInteger(generalPanelList.get(0).getInputFieldText())) return false;
+        if (!RegexManager.matchesUnsignedDouble(generalPanelList.get(1).getInputFieldText())) return false;
+        if (!RegexManager.matchesUnsignedInteger(generalPanelList.get(2).getInputFieldText())) return false;
         if (!RegexManager.matchesUnsignedDouble(mandelbrotPanelList.get(0).getInputFieldText())) return false;
         if (!RegexManager.matchesComplexNumber(mandelbrotPanelList.get(1).getInputFieldText())) return false;
         if (!RegexManager.matchesComplexNumber(mandelbrotPanelList.get(2).getInputFieldText())) return false;
