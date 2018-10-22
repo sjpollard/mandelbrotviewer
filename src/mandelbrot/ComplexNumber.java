@@ -1,5 +1,6 @@
 package mandelbrot;
 
+import java.awt.*;
 import java.io.Serializable;
 
 /**
@@ -96,6 +97,7 @@ public class ComplexNumber implements Serializable {
     /**Raises a complex number to the power of a decimal exponent using De Moivre's theorem*/
     public ComplexNumber pow(double power) {
 
+        Color a;
         double magnitude;
         double argument;
 
