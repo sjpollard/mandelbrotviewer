@@ -73,7 +73,6 @@ public class Controller implements MouseListener, MouseWheelListener, MouseMotio
     @Override
     public void mouseEntered(MouseEvent me) {
 
-        mandelbrotFrame.draw();
 
     }
 

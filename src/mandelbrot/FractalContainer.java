@@ -39,6 +39,13 @@ public class FractalContainer extends JPanel {
 
     }
 
+    public void drawImages() {
+
+        mandelbrotDiagram.repaint();
+        juliaDiagram.repaint();
+
+    }
+
     /**Called within MandelbrotFrame (when the FractalSets have been created) to create the FractalDiagrams*/
     public void setupFractalImages(MandelbrotSet mandelbrotSet) {
 

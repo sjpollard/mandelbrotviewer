@@ -101,7 +101,6 @@ public class MandelbrotFrame extends JFrame {
         this.successiveRefinementOption = 1;
         this.successiveRefiner = new Thread(new SuccessiveRefiner(this));
         this.setVisible(true);
-        this.draw();
 
     }
 
@@ -536,9 +535,7 @@ public class MandelbrotFrame extends JFrame {
     /**Shortened method name for repainting graphics component*/
     public void draw() {
 
-        diagram.mandelbrotDiagram.repaint();
-        diagram.conditions.readyToCreateImage = true;
-        diagram.juliaDiagram.repaint();
+        diagram.drawImages();
 
     }
 

@@ -28,7 +28,7 @@ public class FractalDiagram extends JPanel {
 
     private FractalSet fractalSet;
     private Point location;
-    private DrawingConditions conditions;
+    public DrawingConditions conditions;
     private int[] histogram;
 
     /**Constructs a BufferedImage with the same dimensions as the fractals data and passes in references*/
@@ -45,6 +45,7 @@ public class FractalDiagram extends JPanel {
         this.queue = new GenericQueue<>();
 
         this.setVisible(true);
+        this.repaint();
 
     }
 
@@ -54,15 +55,22 @@ public class FractalDiagram extends JPanel {
 
         Graphics2D g = (Graphics2D)graphics;
         g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+
         super.paintComponent(g);
+
         first = last = null;
         pathLength = 0;
 
-        System.out.println("outer");
+        //System.out.println("outer");
+        if (fractalSet.getZoom() == 600) {
+            System.out.println();
+        }
+        System.out.println(fractalSet.getType());
+        System.out.println("diagram: " + conditions.readyToCreateImage);
         if (conditions.readyToCreateImage) {
-            System.out.println(fractalSet.getType());
-            System.out.println("inner");
+            //System.out.println("inner");
             createImage(colours);
+            //System.out.println("image created");
 
         }
 
@@ -117,7 +125,7 @@ public class FractalDiagram extends JPanel {
                 }
             }
         }
-        conditions.readyToCreateImage = false;
+        if (fractalSet.getType() == FractalType.MANDELBROT) conditions.readyToCreateImage = false;
 
     }
 
