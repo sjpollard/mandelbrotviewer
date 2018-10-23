@@ -88,7 +88,7 @@ public class PopupManager {
             mandelbrotFrame.adjustSlider(100);
             mandelbrotFrame.chunkSpinner.setValue(1);
             mandelbrotFrame.diagram.colours = new FractalColours(Color.RED, Color.BLUE, Color.BLACK);
-            mandelbrotFrame.diagram.inverseColour = Color.WHITE;
+            //mandelbrotFrame.diagram.inverseColour = Color.WHITE;
         }
         mandelbrotFrame.draw();
 
@@ -114,7 +114,7 @@ public class PopupManager {
             Color newColour = JColorChooser.showDialog(mandelbrotFrame, "Pick a colour", mandelbrotFrame.diagram.colours.getInner());
             if (!(newColour == null)) {
                 mandelbrotFrame.diagram.colours.setInner(newColour);
-                mandelbrotFrame.diagram.inverseColour = mandelbrotFrame.diagram.invertColour(newColour);
+                //mandelbrotFrame.diagram.inverseColour = mandelbrotFrame.diagram.invertColour(newColour);
             }
         }
         mandelbrotFrame.diagram.conditions.readyToCreateImage = true;

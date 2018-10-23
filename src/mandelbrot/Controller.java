@@ -26,9 +26,15 @@ public class Controller implements MouseListener, MouseWheelListener, MouseMotio
     public Controller(MandelbrotFrame mandelbrotFrame) {
 
         this.mandelbrotFrame = mandelbrotFrame;
-        this.mandelbrotFrame.diagram.addMouseListener(this);
-        this.mandelbrotFrame.diagram.addMouseWheelListener(this);
-        this.mandelbrotFrame.diagram.addMouseMotionListener(this);
+        //this.mandelbrotFrame.diagram.addMouseListener(this);
+        //this.mandelbrotFrame.diagram.addMouseWheelListener(this);
+        //this.mandelbrotFrame.diagram.addMouseMotionListener(this);
+        this.mandelbrotFrame.diagram.mandelbrotDiagram.addMouseListener(this);
+        this.mandelbrotFrame.diagram.mandelbrotDiagram.addMouseWheelListener(this);
+        this.mandelbrotFrame.diagram.mandelbrotDiagram.addMouseMotionListener(this);
+        this.mandelbrotFrame.diagram.juliaDiagram.addMouseListener(this);
+        this.mandelbrotFrame.diagram.juliaDiagram.addMouseWheelListener(this);
+        this.mandelbrotFrame.diagram.juliaDiagram.addMouseMotionListener(this);
 
     }
 
@@ -67,7 +73,6 @@ public class Controller implements MouseListener, MouseWheelListener, MouseMotio
     @Override
     public void mouseEntered(MouseEvent me) {
 
-        mandelbrotFrame.diagram.grabFocus();
         mandelbrotFrame.draw();
 
     }
@@ -188,7 +193,7 @@ public class Controller implements MouseListener, MouseWheelListener, MouseMotio
         }
         else if (SwingUtilities.isRightMouseButton(mme)) {
 
-            mandelbrotFrame.diagram.track(mme.getX(), mme.getY());
+            //mandelbrotFrame.diagram.track(mme.getX(), mme.getY());
             mandelbrotFrame.draw();
 
         }
