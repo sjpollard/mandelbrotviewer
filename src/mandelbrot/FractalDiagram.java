@@ -13,6 +13,10 @@ import java.awt.image.BufferedImage;
 
 public class FractalDiagram extends JPanel {
 
+    MandelbrotFrame mandelbrotFrame;
+
+    Controller controller;
+
     /**BufferedImage which contains the pixel raster to be drawn by the graphics object*/
     BufferedImage fractalImg;
 
@@ -26,16 +30,17 @@ public class FractalDiagram extends JPanel {
     private ComplexNumber first;
     private ComplexNumber last;
 
-    private FractalSet fractalSet;
+    public FractalSet fractalSet;
     private Point location;
     public DrawingConditions conditions;
     private int[] histogram;
 
     /**Constructs a BufferedImage with the same dimensions as the fractals data and passes in references*/
-    public FractalDiagram(FractalSet fractalSet, DrawingConditions conditions, FractalColours colours) {
+    public FractalDiagram(MandelbrotFrame mandelbrotFrame, FractalSet fractalSet, DrawingConditions conditions, FractalColours colours) {
 
         super();
 
+        this.mandelbrotFrame = mandelbrotFrame;
         this.location = new Point();
         this.fractalImg = new BufferedImage(fractalSet.getIterations()[0].length, fractalSet.getIterations().length, BufferedImage.TYPE_INT_RGB);
         this.fractalSet = fractalSet;
@@ -43,7 +48,7 @@ public class FractalDiagram extends JPanel {
         this.colours = colours;
         this.inverseColour = invertColour(colours.getInner());
         this.queue = new GenericQueue<>();
-
+        this.controller = new Controller(mandelbrotFrame, this);
         this.setVisible(true);
         this.repaint();
 
@@ -61,16 +66,9 @@ public class FractalDiagram extends JPanel {
         first = last = null;
         pathLength = 0;
 
-        //System.out.println("outer");
-        if (fractalSet.getZoom() == 600) {
-            System.out.println();
-        }
-        System.out.println(fractalSet.getType());
-        System.out.println("diagram: " + conditions.readyToCreateImage);
         if (conditions.readyToCreateImage) {
-            //System.out.println("inner");
+
             createImage(colours);
-            //System.out.println("image created");
 
         }
 

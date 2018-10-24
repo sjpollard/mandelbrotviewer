@@ -1,5 +1,6 @@
 package mandelbrot;
 
+import javax.naming.ldap.Control;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -17,24 +18,22 @@ public class Controller implements MouseListener, MouseWheelListener, MouseMotio
     /**Reference to the MandelbrotFrame GUI*/
     MandelbrotFrame mandelbrotFrame;
 
+    FractalDiagram fractalDiagram;
+
     /**Data used while dragging the fractal image to a new location*/
-    boolean dragging;
+    private boolean dragging;
     private int lastX;
     private int lastY;
 
     /**Sets the reference to the GUI component and adds the listeners to this object*/
-    public Controller(MandelbrotFrame mandelbrotFrame) {
+    public Controller(MandelbrotFrame mandelbrotFrame, FractalDiagram fractalDiagram) {
 
         this.mandelbrotFrame = mandelbrotFrame;
-        //this.mandelbrotFrame.diagram.addMouseListener(this);
-        //this.mandelbrotFrame.diagram.addMouseWheelListener(this);
-        //this.mandelbrotFrame.diagram.addMouseMotionListener(this);
-        this.mandelbrotFrame.diagram.mandelbrotDiagram.addMouseListener(this);
-        this.mandelbrotFrame.diagram.mandelbrotDiagram.addMouseWheelListener(this);
-        this.mandelbrotFrame.diagram.mandelbrotDiagram.addMouseMotionListener(this);
-        this.mandelbrotFrame.diagram.juliaDiagram.addMouseListener(this);
-        this.mandelbrotFrame.diagram.juliaDiagram.addMouseWheelListener(this);
-        this.mandelbrotFrame.diagram.juliaDiagram.addMouseMotionListener(this);
+        this.fractalDiagram = fractalDiagram;
+
+        this.fractalDiagram.addMouseListener(this);
+        this.fractalDiagram.addMouseWheelListener(this);
+        this.fractalDiagram.addMouseMotionListener(this);
 
     }
 
@@ -45,25 +44,10 @@ public class Controller implements MouseListener, MouseWheelListener, MouseMotio
         mandelbrotFrame.addActionToStack();
         if (me.getButton() == MouseEvent.BUTTON1) {
 
-            if (mandelbrotFrame.diagram.conditions.drawMandelbrot && mandelbrotFrame.diagram.conditions.drawJulia) {
-                if (me.getX() < mandelbrotFrame.diagram.getWidth() / 2) {
-                    ComplexNumber newCentre = mandelbrotFrame.mandelbrotSet.pixelToComplexNumber(me.getX(), me.getY());
-                    mandelbrotFrame.mandelbrotSet.setCentre(newCentre);
-                    mandelbrotFrame.mandelbrotSet.juliaSet.setC(newCentre);
-                } else {
-                    ComplexNumber newCentre = mandelbrotFrame.mandelbrotSet.juliaSet.pixelToComplexNumber(me.getX() - mandelbrotFrame.diagram.getWidth() / 2, me.getY());
-                    mandelbrotFrame.mandelbrotSet.juliaSet.setCentre(newCentre);
-                }
-            }
-            else if (mandelbrotFrame.diagram.conditions.drawMandelbrot) {
-                ComplexNumber newCentre = mandelbrotFrame.mandelbrotSet.pixelToComplexNumber(me.getX(), me.getY());
-                mandelbrotFrame.mandelbrotSet.setCentre(newCentre);
-                mandelbrotFrame.mandelbrotSet.juliaSet.setC(newCentre);
-            }
-            else if (mandelbrotFrame.diagram.conditions.drawJulia) {
-                ComplexNumber newCentre = mandelbrotFrame.mandelbrotSet.juliaSet.pixelToComplexNumber(me.getX(), me.getY());
-                mandelbrotFrame.mandelbrotSet.juliaSet.setCentre(newCentre);
-            }
+            ComplexNumber newCentre = fractalDiagram.fractalSet.pixelToComplexNumber(me.getX(), me.getY());
+            fractalDiagram.fractalSet.setCentre(newCentre);
+            if (fractalDiagram.fractalSet.getType() == FractalType.MANDELBROT) mandelbrotFrame.mandelbrotSet.juliaSet.setC(newCentre);
+
             mandelbrotFrame.iterateAndDraw();
         }
 
@@ -73,6 +57,7 @@ public class Controller implements MouseListener, MouseWheelListener, MouseMotio
     @Override
     public void mouseEntered(MouseEvent me) {
 
+        fractalDiagram.grabFocus();
 
     }
 
@@ -97,16 +82,7 @@ public class Controller implements MouseListener, MouseWheelListener, MouseMotio
 
         if (SwingUtilities.isLeftMouseButton(me)) {
             dragging = false;
-            if (mandelbrotFrame.diagram.conditions.drawMandelbrot && mandelbrotFrame.diagram.conditions.drawJulia) {
-                mandelbrotFrame.diagram.mandelbrotDiagram.setLocation(new Point());
-                mandelbrotFrame.diagram.juliaDiagram.setLocation(new Point(mandelbrotFrame.diagram.getWidth()/2, 0));
-            }
-            else if (mandelbrotFrame.diagram.conditions.drawMandelbrot) {
-                mandelbrotFrame.diagram.mandelbrotDiagram.setLocation(new Point());
-            }
-            else if (mandelbrotFrame.diagram.conditions.drawJulia) {
-                mandelbrotFrame.diagram.juliaDiagram.setLocation(new Point());
-            }
+            fractalDiagram.setLocation(new Point());
             mandelbrotFrame.iterateAndDraw();
         }
 
@@ -117,36 +93,12 @@ public class Controller implements MouseListener, MouseWheelListener, MouseMotio
     public void mouseWheelMoved(MouseWheelEvent mwe) {
 
         mandelbrotFrame.addActionToStack();
-        if (mandelbrotFrame.diagram.conditions.drawMandelbrot && mandelbrotFrame.diagram.conditions.drawJulia) {
-            if (mwe.getX() < mandelbrotFrame.getWidth() / 2) {
-                if (mwe.getWheelRotation() < 0) {
-                    mandelbrotFrame.mandelbrotSet.setZoom(mandelbrotFrame.mandelbrotSet.getZoom() * (2 * -mwe.getWheelRotation()));
-                } else {
-                    mandelbrotFrame.mandelbrotSet.setZoom(mandelbrotFrame.mandelbrotSet.getZoom() / (2 * mwe.getWheelRotation()));
-                }
-            } else {
-                if (mwe.getWheelRotation() < 0) {
-                    mandelbrotFrame.mandelbrotSet.juliaSet.setZoom(mandelbrotFrame.mandelbrotSet.juliaSet.getZoom() * (2 * -mwe.getWheelRotation()));
-                } else {
-                    mandelbrotFrame.mandelbrotSet.juliaSet.setZoom(mandelbrotFrame.mandelbrotSet.juliaSet.getZoom() / (2 * mwe.getWheelRotation()));
-                }
-            }
+
+        if (mwe.getWheelRotation() < 0) {
+            fractalDiagram.fractalSet.setZoom(fractalDiagram.fractalSet.getZoom() * (2 * -mwe.getWheelRotation()));
         }
-        else if (mandelbrotFrame.diagram.conditions.drawMandelbrot) {
-            if (mwe.getWheelRotation() < 0) {
-                mandelbrotFrame.mandelbrotSet.setZoom(mandelbrotFrame.mandelbrotSet.getZoom() * (2 * -mwe.getWheelRotation()));
-            }
-            else {
-                mandelbrotFrame.mandelbrotSet.setZoom(mandelbrotFrame.mandelbrotSet.getZoom() / (2 * mwe.getWheelRotation()));
-            }
-        }
-        else if (mandelbrotFrame.diagram.conditions.drawJulia) {
-            if (mwe.getWheelRotation() < 0) {
-                mandelbrotFrame.mandelbrotSet.juliaSet.setZoom(mandelbrotFrame.mandelbrotSet.juliaSet.getZoom() * (2 * -mwe.getWheelRotation()));
-            }
-            else {
-                mandelbrotFrame.mandelbrotSet.juliaSet.setZoom(mandelbrotFrame.mandelbrotSet.juliaSet.getZoom() / (2 * mwe.getWheelRotation()));
-            }
+        else {
+            fractalDiagram.fractalSet.setZoom(fractalDiagram.fractalSet.getZoom() / (2 * mwe.getWheelRotation()));
         }
         mandelbrotFrame.iterateAndDraw();
 
@@ -163,36 +115,19 @@ public class Controller implements MouseListener, MouseWheelListener, MouseMotio
             }
 
             ComplexNumber newCentre;
-            if (mandelbrotFrame.diagram.conditions.drawMandelbrot && mandelbrotFrame.diagram.conditions.drawJulia) {
-                if (lastX < mandelbrotFrame.diagram.getWidth() / 2) {
-                    mandelbrotFrame.diagram.mandelbrotDiagram.translateLocation(new Point(mme.getX() - lastX, mme.getY() - lastY));
-                    newCentre = calculateNewCentre(mandelbrotFrame.mandelbrotSet, mme.getX(), mme.getY(), lastX, lastY);
-                    mandelbrotFrame.mandelbrotSet.setCentre(newCentre);
-                    mandelbrotFrame.mandelbrotSet.juliaSet.setC(newCentre);
-                } else {
-                    mandelbrotFrame.diagram.juliaDiagram.translateLocation(new Point(mme.getX() - lastX, mme.getY() - lastY));
-                    newCentre = calculateNewCentre(mandelbrotFrame.mandelbrotSet.juliaSet, mme.getX() - mandelbrotFrame.diagram.getWidth() / 2, mme.getY(), lastX - mandelbrotFrame.diagram.getWidth() / 2, lastY);
-                    mandelbrotFrame.mandelbrotSet.juliaSet.setCentre(newCentre);
-                }
-            }
-            else if (mandelbrotFrame.diagram.conditions.drawMandelbrot) {
-                mandelbrotFrame.diagram.mandelbrotDiagram.translateLocation(new Point(mme.getX() - lastX, mme.getY() - lastY));
-                newCentre = calculateNewCentre(mandelbrotFrame.mandelbrotSet, mme.getX(), mme.getY(), lastX, lastY);
-                mandelbrotFrame.mandelbrotSet.setCentre(newCentre);
-                mandelbrotFrame.mandelbrotSet.juliaSet.setC(newCentre);
-            }
-            else if (mandelbrotFrame.diagram.conditions.drawJulia) {
-                mandelbrotFrame.diagram.juliaDiagram.translateLocation(new Point(mme.getX() - lastX, mme.getY() - lastY));
-                newCentre = calculateNewCentre(mandelbrotFrame.mandelbrotSet.juliaSet, mme.getX(), mme.getY(), lastX, lastY);
-                mandelbrotFrame.mandelbrotSet.juliaSet.setCentre(newCentre);
-            }
+            fractalDiagram.translateLocation(new Point(mme.getX() - lastX, mme.getY() - lastY));
+            newCentre = calculateNewCentre(fractalDiagram.fractalSet, mme.getX(), mme.getY(), lastX, lastY);
+            fractalDiagram.fractalSet.setCentre(newCentre);
+            if (fractalDiagram.fractalSet.getType() == FractalType.MANDELBROT) mandelbrotFrame.mandelbrotSet.juliaSet.setC(newCentre);
+
             mandelbrotFrame.draw();
             lastX = mme.getX();
             lastY = mme.getY();
+
         }
         else if (SwingUtilities.isRightMouseButton(mme)) {
 
-            //mandelbrotFrame.diagram.track(mme.getX(), mme.getY());
+            fractalDiagram.track(mme.getX(), mme.getY());
             mandelbrotFrame.draw();
 
         }

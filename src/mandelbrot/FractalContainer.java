@@ -15,6 +15,8 @@ import java.awt.*;
 @SuppressWarnings("serial")
 public class FractalContainer extends JPanel {
 
+    MandelbrotFrame mandelbrotFrame;
+
     /**Reference to the main Mandelbrot set*/
     MandelbrotSet mandelbrotSet;
 
@@ -24,11 +26,14 @@ public class FractalContainer extends JPanel {
     public FractalDiagram juliaDiagram;
 
     /**Constructor that sets up ready to contain FractalDiagrams*/
-    public FractalContainer () {
+    public FractalContainer (MandelbrotFrame mandelbrotFrame) {
 
         super();
+
         this.setFont(new Font("default", Font.BOLD, 12));
         this.setLayout(new GridLayout(1,2));
+
+        this.mandelbrotFrame = mandelbrotFrame;
 
         this.colours = new FractalColours(Color.RED, Color.BLUE, Color.BLACK);
         this.conditions = new DrawingConditions();
@@ -52,8 +57,8 @@ public class FractalContainer extends JPanel {
         this.setPreferredSize(new Dimension(mandelbrotSet.getIterations()[0].length, mandelbrotSet.getIterations().length));
 
         this.mandelbrotSet = mandelbrotSet;
-        this.mandelbrotDiagram = new FractalDiagram(mandelbrotSet, conditions, colours);
-        this.juliaDiagram = new FractalDiagram(mandelbrotSet.juliaSet, conditions, colours);
+        this.mandelbrotDiagram = new FractalDiagram(mandelbrotFrame, mandelbrotSet, conditions, colours);
+        this.juliaDiagram = new FractalDiagram(mandelbrotFrame, mandelbrotSet.juliaSet, conditions, colours);
 
         this.add(mandelbrotDiagram);
         this.add(juliaDiagram);

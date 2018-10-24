@@ -169,7 +169,7 @@ public class MandelbrotFrame extends JFrame {
         undoStack = new GenericStack<>();
         redoStack = new GenericStack<>();
 
-        diagram = new FractalContainer();
+        diagram = new FractalContainer(this);
 
     }
 
