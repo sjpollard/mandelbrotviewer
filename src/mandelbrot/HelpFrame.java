@@ -62,7 +62,7 @@ public class HelpFrame extends JFrame {
     }
 
     /**Constructs and adds the components to the HelpFrame*/
-    public void setupComponents() {
+    private void setupComponents() {
 
         content = new JPanel(new BorderLayout());
         content.setBackground(Color.white);
@@ -87,7 +87,7 @@ public class HelpFrame extends JFrame {
     }
 
     /**Sets up the instructions tab with appropriate text*/
-    public void setupInstructionsTab() {
+    private void setupInstructionsTab() {
 
         instructionsTab.setLayout(new BorderLayout());
 
@@ -125,7 +125,7 @@ public class HelpFrame extends JFrame {
     }
 
     /**Sets up the theory tab with appropriate text*/
-    public void setupTheoryTab() {
+    private void setupTheoryTab() {
 
         theoryTab.setLayout(new BorderLayout());
 
@@ -173,7 +173,7 @@ public class HelpFrame extends JFrame {
     }
 
     /**Sets up the glossary tab with the appropriate text*/
-    public void setupGlossaryTab() {
+    private void setupGlossaryTab() {
 
         glossaryTab.setLayout(new BoxLayout(glossaryTab, BoxLayout.PAGE_AXIS));
         glossaryTab.setBorder(BorderFactory.createLineBorder(Color.gray));
@@ -212,7 +212,7 @@ public class HelpFrame extends JFrame {
     }
 
     /**Adds the glossary items currently searched for to the glossary text pane*/
-    public void addGlossaryItems(GenericQueue<InfoItem> currentGlossaryItems) {
+    private void addGlossaryItems(GenericQueue<InfoItem> currentGlossaryItems) {
 
         StringBuilder contentText = new StringBuilder();
         for (InfoItem item: currentGlossaryItems) contentText.append(item.getBoldTitle()).append(" ").append(item.getExplanation()).append("<br><br>");
@@ -222,7 +222,7 @@ public class HelpFrame extends JFrame {
     }
 
     /**Searches through the glossary items to find those containing the string parameter*/
-    public void searchThroughGlossary() {
+    private void searchThroughGlossary() {
 
         String searchParameter = searchBar.getText().toLowerCase();
         GenericQueue<InfoItem> searchedItems = new GenericQueue<>();
@@ -240,7 +240,7 @@ public class HelpFrame extends JFrame {
     }
 
     /**Constructs and adds the default glossary items to a SortedSet*/
-    public void fillTreeSet() {
+    private void fillTreeSet() {
 
         defaultGlossaryItems.add(new InfoItem("Complex number", "An extension of the real numbers that includes a real and imaginary part."));
         defaultGlossaryItems.add(new InfoItem("Argand diagram", "A graphical method of displaying complex numbers where the x and y axes represent the real and imaginary number lines respectively."));

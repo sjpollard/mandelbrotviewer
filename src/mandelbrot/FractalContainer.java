@@ -16,7 +16,7 @@ import java.util.ArrayList;
 @SuppressWarnings("serial")
 public class FractalContainer extends JPanel {
 
-    MandelbrotFrame mandelbrotFrame;
+    private MandelbrotFrame mandelbrotFrame;
 
     /**Reference to the main Mandelbrot set*/
     MandelbrotSet mandelbrotSet;
@@ -62,7 +62,7 @@ public class FractalContainer extends JPanel {
     }
 
     /**Called within MandelbrotFrame (when the FractalSets have been created) to create the FractalDiagrams*/
-    public void setupFractalImages(MandelbrotSet mandelbrotSet) {
+    void setupFractalImages(MandelbrotSet mandelbrotSet) {
 
         this.setPreferredSize(new Dimension(mandelbrotSet.getIterations()[0].length, mandelbrotSet.getIterations().length));
 

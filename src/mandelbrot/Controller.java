@@ -15,10 +15,14 @@ import java.awt.event.*;
 public class Controller implements MouseListener, MouseWheelListener, MouseMotionListener {
 
     /**Reference to the MandelbrotFrame GUI*/
-    MandelbrotFrame mandelbrotFrame;
+    private MandelbrotFrame mandelbrotFrame;
 
-    FractalDiagram fractalDiagram;
-
+    /**Reference to the FractalDiagram of this controller*/
+    private FractalDiagram fractalDiagram;
+    
+    /**Reference to the FractalSet of the linked diagram*/
+    private FractalSet fractalSet;
+    
     /**Data used while dragging the fractal image to a new location*/
     private boolean dragging;
     private Point lastPos;
@@ -28,6 +32,7 @@ public class Controller implements MouseListener, MouseWheelListener, MouseMotio
 
         this.mandelbrotFrame = mandelbrotFrame;
         this.fractalDiagram = fractalDiagram;
+        this.fractalSet = fractalDiagram.getFractalSet();
 
         this.fractalDiagram.addMouseListener(this);
         this.fractalDiagram.addMouseWheelListener(this);
@@ -42,9 +47,9 @@ public class Controller implements MouseListener, MouseWheelListener, MouseMotio
         mandelbrotFrame.addActionToStack();
         if (me.getButton() == MouseEvent.BUTTON1) {
 
-            ComplexNumber newCentre = fractalDiagram.fractalSet.pixelToComplexNumber(me.getX(), me.getY());
-            fractalDiagram.fractalSet.setCentre(newCentre);
-            if (fractalDiagram.fractalSet.getType() == FractalType.MANDELBROT) mandelbrotFrame.mandelbrotSet.juliaSet.setC(newCentre);
+            ComplexNumber newCentre = fractalSet.pixelToComplexNumber(me.getX(), me.getY());
+            fractalSet.setCentre(newCentre);
+            if (fractalSet.getType() == FractalType.MANDELBROT) mandelbrotFrame.mandelbrotSet.juliaSet.setC(newCentre);
 
             mandelbrotFrame.iterateAndDraw();
         }
@@ -92,10 +97,10 @@ public class Controller implements MouseListener, MouseWheelListener, MouseMotio
         mandelbrotFrame.addActionToStack();
 
         if (mwe.getWheelRotation() < 0) {
-            fractalDiagram.fractalSet.setZoom(fractalDiagram.fractalSet.getZoom() * (2 * -mwe.getWheelRotation()));
+            fractalSet.setZoom(fractalSet.getZoom() * (2 * -mwe.getWheelRotation()));
         }
         else {
-            fractalDiagram.fractalSet.setZoom(fractalDiagram.fractalSet.getZoom() / (2 * mwe.getWheelRotation()));
+            fractalSet.setZoom(fractalSet.getZoom() / (2 * mwe.getWheelRotation()));
         }
         mandelbrotFrame.iterateAndDraw();
 
@@ -114,9 +119,9 @@ public class Controller implements MouseListener, MouseWheelListener, MouseMotio
 
             ComplexNumber newCentre;
             fractalDiagram.translateImgLocation(new Point(mme.getX() - lastPos.x, mme.getY() - lastPos.y));
-            newCentre = calculateNewCentre(fractalDiagram.fractalSet, mme.getX(), mme.getY(), lastPos);
-            fractalDiagram.fractalSet.setCentre(newCentre);
-            if (fractalDiagram.fractalSet.getType() == FractalType.MANDELBROT) mandelbrotFrame.mandelbrotSet.juliaSet.setC(newCentre);
+            newCentre = calculateNewCentre(fractalSet, mme.getX(), mme.getY(), lastPos);
+            fractalSet.setCentre(newCentre);
+            if (fractalSet.getType() == FractalType.MANDELBROT) mandelbrotFrame.mandelbrotSet.juliaSet.setC(newCentre);
 
             mandelbrotFrame.draw();
             lastPos = new Point(mme.getX(), mme.getY());
@@ -132,7 +137,7 @@ public class Controller implements MouseListener, MouseWheelListener, MouseMotio
     }
 
     /**Calculates the new centre of the FractalSet by considering how many pixels the image has moved by*/
-    public ComplexNumber calculateNewCentre(FractalSet set, int newX, int newY, Point lastPos) {
+    private ComplexNumber calculateNewCentre(FractalSet set, int newX, int newY, Point lastPos) {
 
         ComplexNumber newPos = set.pixelToComplexNumber(newX, newY);
         ComplexNumber diff = newPos.subtract(set.pixelToComplexNumber(lastPos.x, lastPos.y));

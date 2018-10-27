@@ -14,7 +14,10 @@ import java.util.ArrayList;
 
 public class FractalDiagram extends JPanel {
 
+    /**Reference to the main GUI*/
     MandelbrotFrame mandelbrotFrame;
+
+    /**Controller object that manages this objects mouse interactions*/
     Controller controller;
 
     /**BufferedImage which contains the pixel raster to be drawn by the graphics object*/
@@ -29,9 +32,9 @@ public class FractalDiagram extends JPanel {
     private ComplexNumber first;
     private ComplexNumber last;
 
-    public FractalSet fractalSet;
+    private FractalSet fractalSet;
     private Point imgLocation;
-    public DrawingConditions conditions;
+    private DrawingConditions conditions;
     private int[] histogram;
 
     ArrayList<FractalDiagram> repaintList;
@@ -97,7 +100,7 @@ public class FractalDiagram extends JPanel {
     }
 
     /**Large scale method that analyses the data found in the FractalSet to assign colour to individual pixels*/
-    public void createImage(FractalColours colours) {
+    private void createImage(FractalColours colours) {
 
         int width = fractalSet.getIterations()[0].length;
         int height = fractalSet.getIterations().length;
@@ -136,7 +139,7 @@ public class FractalDiagram extends JPanel {
     }
 
     /**Iterates through the queue to connect up the locations travelled to by a tracked complex number*/
-    public void drawLines(Graphics2D g) {
+    private void drawLines(Graphics2D g) {
 
         int[] nextPixel, lastPixel;
         first = trackingQueue.remove();
@@ -168,7 +171,7 @@ public class FractalDiagram extends JPanel {
     }
 
     /**Method that decides what information should be drawn where*/
-    public void drawInfo(Graphics2D g) {
+    private void drawInfo(Graphics2D g) {
 
         int infoPos;
         int totalArea = (fractalSet.getIterations().length * fractalSet.getIterations()[0].length) / (fractalSet.getChunkSize() * fractalSet.getChunkSize());
@@ -216,7 +219,7 @@ public class FractalDiagram extends JPanel {
     }
 
     /**Forms a cumulative list of the number of pixels that iterate to be less than or equal to each iteration*/
-    public int[] fillHistogram(int[][] iterations, int chunkSize, int maxIterations) {
+    private int[] fillHistogram(int[][] iterations, int chunkSize, int maxIterations) {
 
         int[] histogram = new int[maxIterations - 1];
         for (int y = 0; y < iterations.length - chunkSize; y += chunkSize) {
@@ -231,7 +234,7 @@ public class FractalDiagram extends JPanel {
     }
 
     /**Based on an input numIterations, looks through the histogram to find the proportional scaling for this pixel*/
-    public double calcScale(int[] histogram, int total, int numIterations) {
+    private double calcScale(int[] histogram, int total, int numIterations) {
 
         double scale = 0;
         for (int i = 0; i < numIterations; i++) {
@@ -244,7 +247,7 @@ public class FractalDiagram extends JPanel {
     }
 
     /**Used within createImage() for to add a filled in square to the BufferedImage (to allow for lower resolution)*/
-    public void addFilledSquare(int x, int y, int width, Color colour) {
+    private void addFilledSquare(int x, int y, int width, Color colour) {
 
         for (int currentY = y; currentY - y < width && currentY < fractalImg.getHeight(); currentY++) {
 
@@ -259,7 +262,7 @@ public class FractalDiagram extends JPanel {
     }
 
     /**Draws a straight cross with a specified radius at the location input*/
-    public void drawCross(Graphics2D g, int x, int y, int radius) {
+    private void drawCross(Graphics2D g, int x, int y, int radius) {
 
         g.drawLine(x - radius, y, x + radius, y);
         g.drawLine(x, y - radius, x, y + radius);
@@ -267,7 +270,7 @@ public class FractalDiagram extends JPanel {
     }
 
     /**Draws a tilted cross with a specified radius at the location input*/
-    public void drawDiagonalCross(Graphics2D g, int x, int y, int radius) {
+    private void drawDiagonalCross(Graphics2D g, int x, int y, int radius) {
 
         g.drawLine(x - radius, y + radius, x + radius, y - radius);
         g.drawLine(x - radius, y - radius, x + radius, y + radius);
@@ -275,7 +278,7 @@ public class FractalDiagram extends JPanel {
     }
 
     /**Uses HSV colouring to scale from a beginning colour, through the rainbow and back to itself*/
-    public Color scalePalette(Color firstColour, double scale) {
+    private Color scalePalette(Color firstColour, double scale) {
 
         float[] hsbArray = new float[3];
         Color.RGBtoHSB(firstColour.getRed(), firstColour.getGreen(), firstColour.getBlue(), hsbArray);
@@ -291,24 +294,27 @@ public class FractalDiagram extends JPanel {
 
     }
 
+    public FractalSet getFractalSet() {
+
+        return fractalSet;
+
+    }
+
+    /**Sets this FractalSet*/
     public void setFractalSet(FractalSet fractalSet) {
 
         this.fractalSet = fractalSet;
 
     }
 
-    public Point getImgLocation() {
-
-        return this.imgLocation;
-
-    }
-
+    /**Set the location of the BufferedImage relative to this object*/
     public void setImgLocation(Point location) {
 
         this.imgLocation = location;
 
     }
 
+    /**Translates the location of the BufferedImage relative to this object*/
     public void translateImgLocation(Point change) {
 
         imgLocation.translate(change.x, change.y);

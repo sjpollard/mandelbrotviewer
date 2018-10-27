@@ -25,53 +25,53 @@ public class MandelbrotFrame extends JFrame {
     String filePath;
 
     /**Main JPanel of the frame*/
-    JPanel content;
+    private JPanel content;
 
     /**Menu bar components*/
-    JMenuBar menuBar;
-    JMenu fileMenu;
-    JMenuItem loadItem;
-    JMenuItem saveItem;
-    JMenuItem screenShotItem;
-    JMenuItem quitItem;
+    private JMenuBar menuBar;
+    private JMenu fileMenu;
+    private JMenuItem loadItem;
+    private JMenuItem saveItem;
+    private JMenuItem screenShotItem;
+    private JMenuItem quitItem;
 
     /**Options menu components*/
-    JMenu optionsMenu;
-    JMenu fractalChoiceMenu;
-    ButtonGroup buttonGroup;
-    JRadioButtonMenuItem bothButton;
-    JRadioButtonMenuItem mandelbrotOnlyButton;
-    JRadioButtonMenuItem juliaOnlyButton;
-    JMenuItem resetItem;
-    JMenuItem settingsItem;
-    JCheckBoxMenuItem drawInfoItem;
-    JCheckBoxMenuItem drawCoordsItem;
-    JCheckBoxMenuItem drawSuccessRefineItem;
-    SettingsFrame settingsFrame;
+    private JMenu optionsMenu;
+    private JMenu fractalChoiceMenu;
+    private ButtonGroup buttonGroup;
+    private JRadioButtonMenuItem bothButton;
+    private JRadioButtonMenuItem mandelbrotOnlyButton;
+    private JRadioButtonMenuItem juliaOnlyButton;
+    private JMenuItem resetItem;
+    private JMenuItem settingsItem;
+    private JCheckBoxMenuItem drawInfoItem;
+    private JCheckBoxMenuItem drawCoordsItem;
+    private JCheckBoxMenuItem drawSuccessRefineItem;
+    private SettingsFrame settingsFrame;
 
     /**Colour menu components*/
-    JMenu colourMenu;
-    JMenuItem outerItem;
-    JMenuItem edgeItem;
-    JMenuItem innerItem;
-    JCheckBoxMenuItem paletteItem;
-    JCheckBoxMenuItem histogramItem;
+    private JMenu colourMenu;
+    private JMenuItem outerItem;
+    private JMenuItem edgeItem;
+    private JMenuItem innerItem;
+    private JCheckBoxMenuItem paletteItem;
+    private JCheckBoxMenuItem histogramItem;
 
     /**Help menu components*/
-    JMenuItem helpMenu;
-    HelpFrame helpFrame;
+    private JMenuItem helpMenu;
+    private HelpFrame helpFrame;
 
     /**Value changer components*/
     JLabel maxIterationsLabel;
-    JSlider iterSlider;
-    JLabel chunkSizeLabel;
+    private JSlider iterSlider;
+    private JLabel chunkSizeLabel;
     JSpinner chunkSpinner;
 
     /**Undo/redo components*/
-    JButton undoButton;
-    JButton redoButton;
-    GenericStack<FractalDataSerializable[]> redoStack;
-    GenericStack<FractalDataSerializable[]> undoStack;
+    private JButton undoButton;
+    private JButton redoButton;
+    private GenericStack<FractalDataSerializable[]> redoStack;
+    private GenericStack<FractalDataSerializable[]> undoStack;
 
     /**Graphical component*/
     FractalContainer diagram;
@@ -105,7 +105,7 @@ public class MandelbrotFrame extends JFrame {
     }
 
     /**Groups up the construction and use of components*/
-    public void setupComponents() {
+    private void setupComponents() {
 
         initialiseComponents();
         addComponents();
@@ -116,7 +116,7 @@ public class MandelbrotFrame extends JFrame {
     }
 
     /**Constructs all of the components and objects used*/
-    public void initialiseComponents() {
+    private void initialiseComponents() {
 
         content = new JPanel(new BorderLayout());
         content.setPreferredSize(screenSize);
@@ -174,7 +174,7 @@ public class MandelbrotFrame extends JFrame {
     }
 
     /**Adds components to MandelbrotFrame and applies listeners*/
-    public void addComponents() {
+    private void addComponents() {
 
         addGeneralMenuListener(fileMenu);
         addGeneralMenuListener(optionsMenu);
@@ -276,7 +276,7 @@ public class MandelbrotFrame extends JFrame {
     }
 
     /**Sets every menu components background to a specific colour*/
-    public void setAllMenuItemsColour(JMenu menu, Color colour) {
+    private void setAllMenuItemsColour(JMenu menu, Color colour) {
 
         for (Component menuItem: menu.getMenuComponents()) menuItem.setBackground(colour);
 
@@ -297,7 +297,7 @@ public class MandelbrotFrame extends JFrame {
     }
 
     /**Iterate using the SuccessiveRefiner runnable to allow for the resolution to build up over time*/
-    public void successivelyRefine() {
+    private void successivelyRefine() {
 
         try {
             successiveRefiner.join();
@@ -315,7 +315,7 @@ public class MandelbrotFrame extends JFrame {
     }
 
     /**Ensuring that opening a menu doesn't unload the image*/
-    public void addGeneralMenuListener(JMenu jmenu){
+    private void addGeneralMenuListener(JMenu jmenu){
 
         jmenu.addMenuListener(new MenuListener() {
             @Override
@@ -387,7 +387,7 @@ public class MandelbrotFrame extends JFrame {
     }
 
     /**Changes whether or not to draw information*/
-    public void editDrawInfo() {
+    private void editDrawInfo() {
 
         diagram.conditions.readyToDrawInfo = drawInfoItem.getState();
         draw();
@@ -395,7 +395,7 @@ public class MandelbrotFrame extends JFrame {
     }
 
     /**Changes whether or not to draw coordinates tracked*/
-    public void editDrawCoords() {
+    private void editDrawCoords() {
 
         diagram.conditions.readyToDrawCoords = drawCoordsItem.getState();
         draw();
@@ -403,7 +403,7 @@ public class MandelbrotFrame extends JFrame {
     }
 
     /**Changes whether or not to use HSV colour scaling*/
-    public void editUsePalette() {
+    private void editUsePalette() {
 
         diagram.conditions.readyToColourPalette = paletteItem.getState();
         diagram.conditions.readyToCreateImage = true;
@@ -412,7 +412,7 @@ public class MandelbrotFrame extends JFrame {
     }
 
     /**Changes whether or not to use histogram colouring*/
-    public void editUseHistogram() {
+    private void editUseHistogram() {
 
         diagram.conditions.readyToHistogramColour = histogramItem.getState();
         diagram.conditions.readyToCreateImage = true;
@@ -420,7 +420,7 @@ public class MandelbrotFrame extends JFrame {
     }
 
     /**Changes whether or not to successively refine on iteration*/
-    public void editDrawSuccessRefine() {
+    private void editDrawSuccessRefine() {
 
         if (drawSuccessRefineItem.getState()) successiveRefinementOption = 16;
         else successiveRefinementOption = 1;
@@ -428,7 +428,7 @@ public class MandelbrotFrame extends JFrame {
     }
 
     /**Activates when slider is moved and changes the max iterations of the fractal*/
-    public void sliderEditMaxIterations() {
+    private void sliderEditMaxIterations() {
 
         int newValue = iterSlider.getValue();
         if (!(newValue == mandelbrotSet.getMaxIterations())) {
@@ -462,7 +462,7 @@ public class MandelbrotFrame extends JFrame {
     }
 
     /**Activates when spinner is used and changes the chunk size of the fractal*/
-    public void spinnerEditChunkSize() {
+    private void spinnerEditChunkSize() {
 
         int newValue = (int)chunkSpinner.getValue();
         if (!(mandelbrotSet.getChunkSize() == newValue)) {
@@ -482,7 +482,7 @@ public class MandelbrotFrame extends JFrame {
     }
 
     /**Undoes the last action performed*/
-    public void undoAction() {
+    private void undoAction() {
 
         if (!undoStack.isEmpty()) {
 
@@ -499,7 +499,7 @@ public class MandelbrotFrame extends JFrame {
     }
 
     /**Redoes the last action that was undone*/
-    public void redoAction() {
+    private void redoAction() {
 
         if (!redoStack.isEmpty()) {
 
@@ -528,7 +528,7 @@ public class MandelbrotFrame extends JFrame {
     }
 
     /**Iterates normally*/
-    public void calculateIterations() {
+    private void calculateIterations() {
 
         if (diagram.conditions.drawMandelbrot) {
             mandelbrotSet.iterate(false);

@@ -234,7 +234,6 @@ public class JuliaSet implements FractalSet {
         this.refined = refined;
     }
 
-
     public int getMaxIterations() {
         return maxIterations;
     }

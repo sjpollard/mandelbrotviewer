@@ -9,21 +9,21 @@ package mandelbrot;
 public class RegexManager {
 
     /**Regex matching with a positive integer*/
-    static final String unsignedInteger = "[0-9]+";
+    private static final String unsignedInteger = "[0-9]+";
     /**Regex matching with a signed integer*/
-    static final String signedInteger = "[+-]?" + unsignedInteger;
+    private static final String signedInteger = "[+-]?" + unsignedInteger;
     /**Regex matching with a positive double*/
-    static final String unsignedDouble = unsignedInteger + "(\\.[0-9]+)?(E" + signedInteger + ")?";
+    private static final String unsignedDouble = unsignedInteger + "(\\.[0-9]+)?(E" + signedInteger + ")?";
     /**Regex matching with a signed double*/
-    static final String signedDouble = "[+-]?" + unsignedDouble;
+    private static final String signedDouble = "[+-]?" + unsignedDouble;
     /**Regex matching with an imaginary number*/
-    static final String imaginaryNumber = signedDouble + "i";
+    private static final String imaginaryNumber = signedDouble + "i";
     /**Regex matching with a complex number*/
-    static final String complexNumber = "(" + signedDouble + "[+-]" + unsignedDouble + "i|" +  imaginaryNumber + "?)";
+    private static final String complexNumber = "(" + signedDouble + "[+-]" + unsignedDouble + "i|" +  imaginaryNumber + "?)";
 
     /**Decided whether the string is a valid positive integer*/
     public static boolean matchesUnsignedInteger(String input) {
-        
+
         return input.matches(unsignedInteger);
 
     }
