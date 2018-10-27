@@ -21,8 +21,7 @@ public class Controller implements MouseListener, MouseWheelListener, MouseMotio
 
     /**Data used while dragging the fractal image to a new location*/
     private boolean dragging;
-    private int lastX;
-    private int lastY;
+    private Point lastPos;
 
     /**Sets the reference to the GUI component and adds the listeners to this object*/
     public Controller(MandelbrotFrame mandelbrotFrame, FractalDiagram fractalDiagram) {
@@ -70,8 +69,7 @@ public class Controller implements MouseListener, MouseWheelListener, MouseMotio
     @Override
     public void mousePressed(MouseEvent me) {
 
-        lastX = me.getX();
-        lastY = me.getY();
+        lastPos = new Point(me.getX(), me.getY());
 
     }
 
@@ -115,14 +113,13 @@ public class Controller implements MouseListener, MouseWheelListener, MouseMotio
             }
 
             ComplexNumber newCentre;
-            fractalDiagram.translateImgLocation(new Point(mme.getX() - lastX, mme.getY() - lastY));
-            newCentre = calculateNewCentre(fractalDiagram.fractalSet, mme.getX(), mme.getY(), lastX, lastY);
+            fractalDiagram.translateImgLocation(new Point(mme.getX() - lastPos.x, mme.getY() - lastPos.y));
+            newCentre = calculateNewCentre(fractalDiagram.fractalSet, mme.getX(), mme.getY(), lastPos);
             fractalDiagram.fractalSet.setCentre(newCentre);
             if (fractalDiagram.fractalSet.getType() == FractalType.MANDELBROT) mandelbrotFrame.mandelbrotSet.juliaSet.setC(newCentre);
 
             mandelbrotFrame.draw();
-            lastX = mme.getX();
-            lastY = mme.getY();
+            lastPos = new Point(mme.getX(), mme.getY());
 
         }
         else if (SwingUtilities.isRightMouseButton(mme)) {
@@ -135,10 +132,10 @@ public class Controller implements MouseListener, MouseWheelListener, MouseMotio
     }
 
     /**Calculates the new centre of the FractalSet by considering how many pixels the image has moved by*/
-    public ComplexNumber calculateNewCentre(FractalSet set, int newX, int newY, int oldX, int oldY) {
+    public ComplexNumber calculateNewCentre(FractalSet set, int newX, int newY, Point lastPos) {
 
         ComplexNumber newPos = set.pixelToComplexNumber(newX, newY);
-        ComplexNumber diff = newPos.subtract(set.pixelToComplexNumber(oldX, oldY));
+        ComplexNumber diff = newPos.subtract(set.pixelToComplexNumber(lastPos.x, lastPos.y));
         return set.getCentre().subtract(diff);
 
     }
