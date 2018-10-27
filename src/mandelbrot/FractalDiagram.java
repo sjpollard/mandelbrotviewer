@@ -15,7 +15,6 @@ import java.util.ArrayList;
 public class FractalDiagram extends JPanel {
 
     MandelbrotFrame mandelbrotFrame;
-
     Controller controller;
 
     /**BufferedImage which contains the pixel raster to be drawn by the graphics object*/
@@ -23,10 +22,9 @@ public class FractalDiagram extends JPanel {
 
     /**Colours that the fractals should be generated with*/
     FractalColours colours;
-    Color inverseColour;
 
     /**Fields used when tracking a complex number*/
-    private GenericQueue<ComplexNumber> queue;
+    private GenericQueue<ComplexNumber> trackingQueue;
     private double pathLength;
     private ComplexNumber first;
     private ComplexNumber last;
@@ -49,8 +47,7 @@ public class FractalDiagram extends JPanel {
         this.fractalSet = fractalSet;
         this.conditions = conditions;
         this.colours = colours;
-        this.inverseColour = invertColour(colours.getInner());
-        this.queue = new GenericQueue<>();
+        this.trackingQueue = new GenericQueue<>();
         this.controller = new Controller(mandelbrotFrame, this);
         this.repaintList = repaintList;
         this.setVisible(true);
@@ -77,7 +74,7 @@ public class FractalDiagram extends JPanel {
 
         g.drawImage(fractalImg, this.imgLocation.x, this.imgLocation.y, this);
 
-        if(!queue.isEmpty()) {
+        if(!trackingQueue.isEmpty()) {
 
             drawLines(g);
 
@@ -128,14 +125,13 @@ public class FractalDiagram extends JPanel {
 
                     Color pixelColour;
                     if (conditions.readyToColourPalette) pixelColour = scalePalette(colours.getOuter(), scale);
-                    else pixelColour = scaleBetweenColours(scale, colours.getEdge(), colours.getOuter());
+                    else pixelColour = colours.scaleBetweenColours(scale);
 
                     addFilledSquare(x, y, fractalSet.getChunkSize(), pixelColour);
 
                 }
             }
         }
-        //if (fractalSet.getType() == FractalType.MANDELBROT) conditions.readyToCreateImage = false;
 
     }
 
@@ -143,24 +139,24 @@ public class FractalDiagram extends JPanel {
     public void drawLines(Graphics2D g) {
 
         int[] nextPixel, lastPixel;
-        first = queue.remove();
+        first = trackingQueue.remove();
         lastPixel = fractalSet.complexNumberToPixel(first);
-        g.setColor(inverseColour);
+        g.setColor(colours.getInverse());
 
         if (conditions.readyToDrawCoords) g.drawString(first.toString(3), lastPixel[0], lastPixel[1]);
 
         drawDiagonalCross(g, lastPixel[0], lastPixel[1], 4);
         last = first;
         pathLength = 0;
-        for (ComplexNumber point: queue) {
+        for (ComplexNumber point: trackingQueue) {
 
             pathLength += last.distanceBetween(point);
             nextPixel = fractalSet.complexNumberToPixel(point);
 
-            g.setColor(inverseColour);
+            g.setColor(colours.getInverse());
             g.drawLine(lastPixel[0], lastPixel[1], nextPixel[0], nextPixel[1]);
-            if (queue.isEmpty()) {
-                g.setColor(inverseColour);
+            if (trackingQueue.isEmpty()) {
+                g.setColor(colours.getInverse());
                 if (conditions.readyToDrawCoords) g.drawString(point.toString(3), nextPixel[0], nextPixel[1]);
                 drawDiagonalCross(g, nextPixel[0], nextPixel[1], 4);
             }
@@ -181,7 +177,7 @@ public class FractalDiagram extends JPanel {
         String item = "";
         ComplexNumber point = new ComplexNumber();
 
-        g.setColor(inverseColour);
+        g.setColor(colours.getInverse());
         infoPos = this.getWidth() - 150;
         drawCross(g, this.getWidth() / 2, this.getHeight() / 2, 4);
         g.drawString("Centre: " + fractalSet.getCentre().toString(3), infoPos, 20);
@@ -215,7 +211,7 @@ public class FractalDiagram extends JPanel {
     public void track(int x, int y) {
 
         ComplexNumber point = fractalSet.pixelToComplexNumber(x, y);
-        queue = fractalSet.fillTrackingQueue(point);
+        trackingQueue = fractalSet.fillTrackingQueue(point);
 
     }
 
@@ -288,29 +284,10 @@ public class FractalDiagram extends JPanel {
 
     }
 
-    /**If colour palette is turned off, this simply returns the correct scaling between two colours*/
-    public Color scaleBetweenColours(double scale, Color edgeColour, Color outerColour) {
-
-        Color output;
-        int redDif = edgeColour.getRed() - outerColour.getRed();
-        int greenDif = edgeColour.getGreen() - outerColour.getGreen();
-        int blueDif = edgeColour.getBlue() - outerColour.getBlue();
-        output = new Color((int)(outerColour.getRed() + redDif*scale), (int)(outerColour.getGreen() + greenDif*scale), (int)(outerColour.getBlue() + blueDif*scale));
-        return output;
-
-    }
-
     /**Returns a colour with random RGB values*/
     public Color randomColour() {
 
         return new Color((float)Math.random(), (float)Math.random(), (float)Math.random());
-
-    }
-
-    /**Inverts the RGB values of the input colour and returns the inverted colour*/
-    public Color invertColour(Color colour) {
-
-        return new Color(255 - colour.getRed(), 255 - colour.getGreen(), 255 - colour.getBlue());
 
     }
 

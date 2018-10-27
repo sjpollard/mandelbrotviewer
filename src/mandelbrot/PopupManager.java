@@ -89,8 +89,6 @@ public class PopupManager {
             mandelbrotFrame.chunkSpinner.setValue(1);
             mandelbrotFrame.diagram.mandelbrotDiagram.colours = new FractalColours(Color.RED, Color.BLUE, Color.BLACK);
             mandelbrotFrame.diagram.juliaDiagram.colours = new FractalColours(Color.RED, Color.BLUE, Color.BLACK);
-            mandelbrotFrame.diagram.mandelbrotDiagram.inverseColour = Color.WHITE;
-            mandelbrotFrame.diagram.juliaDiagram.inverseColour = Color.WHITE;
             mandelbrotFrame.changeFractalDrawn("both");
         }
         mandelbrotFrame.draw();
@@ -120,8 +118,6 @@ public class PopupManager {
             if (!(newColour == null)) {
                 mandelbrotFrame.diagram.mandelbrotDiagram.colours.setInner(newColour);
                 mandelbrotFrame.diagram.juliaDiagram.colours.setInner(newColour);
-                mandelbrotFrame.diagram.mandelbrotDiagram.inverseColour = mandelbrotFrame.diagram.mandelbrotDiagram.invertColour(newColour);
-                mandelbrotFrame.diagram.juliaDiagram.inverseColour = mandelbrotFrame.diagram.juliaDiagram.invertColour(newColour);
             }
         }
         mandelbrotFrame.diagram.conditions.readyToCreateImage = true;

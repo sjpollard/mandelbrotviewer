@@ -16,6 +16,7 @@ public class FractalColours implements Serializable {
     private Color outer;
     private Color edge;
     private Color inner;
+    private Color inverse;
 
     /**Constructor that passes in input colours*/
     public FractalColours(Color outer, Color edge, Color inner) {
@@ -23,6 +24,26 @@ public class FractalColours implements Serializable {
         this.outer = outer;
         this.edge = edge;
         this.inner = inner;
+        this.invertColour(inner);
+
+    }
+
+    /**Inverts the RGB values of the input colour and returns the inverted colour*/
+    private void invertColour(Color colour) {
+
+        this.inverse = new Color(255 - colour.getRed(), 255 - colour.getGreen(), 255 - colour.getBlue());
+
+    }
+    
+    /**If colour palette is turned off, this simply returns the correct scaling between two colours*/
+    public Color scaleBetweenColours(double scale) {
+
+        Color output;
+        int redDif = edge.getRed() - outer.getRed();
+        int greenDif = edge.getGreen() - outer.getGreen();
+        int blueDif = edge.getBlue() - outer.getBlue();
+        output = new Color((int)(outer.getRed() + redDif*scale), (int)(outer.getGreen() + greenDif*scale), (int)(outer.getBlue() + blueDif*scale));
+        return output;
 
     }
 
@@ -59,6 +80,19 @@ public class FractalColours implements Serializable {
     public void setInner(Color inner) {
 
         this.inner = inner;
+        this.invertColour(inner);
+
+    }
+
+    public Color getInverse() {
+
+        return inverse;
+
+    }
+
+    public void setInverse(Color inverse) {
+
+        this.inverse = inverse;
 
     }
 
