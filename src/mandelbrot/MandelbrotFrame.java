@@ -340,37 +340,46 @@ public class MandelbrotFrame extends JFrame {
     /**Sets everything ready to re-iterate and display a different fractal*/
     public void changeFractalDrawn(String option) {
 
+        int width = diagram.getWidth();
+        int height = diagram.getHeight();
+
         if (option.equals("both")) {
             diagram.conditions.drawMandelbrot = true;
             diagram.conditions.drawJulia = true;
-            mandelbrotSet.setIterations(new int[diagram.getHeight()][diagram.getWidth()/2]);
-            mandelbrotSet.setLastResults(new ComplexNumber[diagram.getHeight()][diagram.getWidth()/2]);
-            mandelbrotSet.setRefined(new boolean[diagram.getHeight()][diagram.getWidth()/2]);
-            mandelbrotSet.juliaSet.setIterations(new int[diagram.getHeight()][diagram.getWidth()/2]);
-            mandelbrotSet.juliaSet.setLastResults(new ComplexNumber[diagram.getHeight()][diagram.getWidth()/2]);
-            mandelbrotSet.juliaSet.setRefined(new boolean[diagram.getHeight()][diagram.getWidth()/2]);
-            diagram.mandelbrotDiagram.fractalImg = new BufferedImage(diagram.getWidth()/2, diagram.getHeight(), BufferedImage.TYPE_INT_RGB);
-            diagram.juliaDiagram.fractalImg = new BufferedImage(diagram.getWidth()/2, diagram.getHeight(), BufferedImage.TYPE_INT_RGB);
-            diagram.mandelbrotDiagram.setLocation(new Point());
-            diagram.juliaDiagram.setLocation(new Point(diagram.getWidth()/2, 0));
+            mandelbrotSet.setIterations(new int[height][width/2]);
+            mandelbrotSet.setLastResults(new ComplexNumber[height][width/2]);
+            mandelbrotSet.setRefined(new boolean[height][width/2]);
+            mandelbrotSet.juliaSet.setIterations(new int[height][width/2]);
+            mandelbrotSet.juliaSet.setLastResults(new ComplexNumber[height][width/2]);
+            mandelbrotSet.juliaSet.setRefined(new boolean[height][width/2]);
+            diagram.mandelbrotDiagram.fractalImg = new BufferedImage(width/2, height, BufferedImage.TYPE_INT_RGB);
+            diagram.juliaDiagram.fractalImg = new BufferedImage(width/2, height, BufferedImage.TYPE_INT_RGB);
+            diagram.mandelbrotDiagram.setLocation(0,0);
+            diagram.mandelbrotDiagram.setSize(width/2, height);
+            diagram.juliaDiagram.setLocation(width/2, 0);
+            diagram.juliaDiagram.setSize(width/2, height);
         }
         else if (option.equals("mandelbrot")) {
             diagram.conditions.drawMandelbrot = true;
             diagram.conditions.drawJulia = false;
-            mandelbrotSet.setIterations(new int[diagram.getHeight()][diagram.getWidth()]);
-            mandelbrotSet.setLastResults(new ComplexNumber[diagram.getHeight()][diagram.getWidth()]);
-            mandelbrotSet.setRefined(new boolean[diagram.getHeight()][diagram.getWidth()]);
-            diagram.mandelbrotDiagram.fractalImg = new BufferedImage(diagram.getWidth(), diagram.getHeight(), BufferedImage.TYPE_INT_RGB);
-            diagram.mandelbrotDiagram.setLocation(new Point());
+            mandelbrotSet.setIterations(new int[height][width]);
+            mandelbrotSet.setLastResults(new ComplexNumber[height][width]);
+            mandelbrotSet.setRefined(new boolean[height][width]);
+            diagram.mandelbrotDiagram.fractalImg = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
+            diagram.mandelbrotDiagram.setLocation(0,0);
+            diagram.mandelbrotDiagram.setSize(width, height);
+            diagram.juliaDiagram.setSize(0,0);
         }
         else if(option.equals("julia")) {
             diagram.conditions.drawMandelbrot = false;
             diagram.conditions.drawJulia = true;
-            mandelbrotSet.juliaSet.setIterations(new int[diagram.getHeight()][diagram.getWidth()]);
-            mandelbrotSet.juliaSet.setLastResults(new ComplexNumber[diagram.getHeight()][diagram.getWidth()]);
-            mandelbrotSet.juliaSet.setRefined(new boolean[diagram.getHeight()][diagram.getWidth()]);
-            diagram.juliaDiagram.fractalImg = new BufferedImage(diagram.getWidth(), diagram.getHeight(), BufferedImage.TYPE_INT_RGB);
-            diagram.juliaDiagram.setLocation(new Point());
+            mandelbrotSet.juliaSet.setIterations(new int[height][width]);
+            mandelbrotSet.juliaSet.setLastResults(new ComplexNumber[height][width]);
+            mandelbrotSet.juliaSet.setRefined(new boolean[height][width]);
+            diagram.juliaDiagram.fractalImg = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
+            diagram.juliaDiagram.setLocation(0,0);
+            diagram.juliaDiagram.setSize(width, height);
+            diagram.mandelbrotDiagram.setSize(0,0);
         }
         calculateIterations();
         draw();

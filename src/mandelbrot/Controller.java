@@ -81,7 +81,7 @@ public class Controller implements MouseListener, MouseWheelListener, MouseMotio
 
         if (SwingUtilities.isLeftMouseButton(me)) {
             dragging = false;
-            fractalDiagram.setLocation(new Point());
+            fractalDiagram.setImgLocation(new Point());
             mandelbrotFrame.iterateAndDraw();
         }
 
@@ -108,13 +108,14 @@ public class Controller implements MouseListener, MouseWheelListener, MouseMotio
     public void mouseDragged(MouseEvent mme) {
 
         if (SwingUtilities.isLeftMouseButton(mme)) {
+
             if (!dragging) {
                 mandelbrotFrame.addActionToStack();
                 dragging = true;
             }
 
             ComplexNumber newCentre;
-            fractalDiagram.translateLocation(new Point(mme.getX() - lastX, mme.getY() - lastY));
+            fractalDiagram.translateImgLocation(new Point(mme.getX() - lastX, mme.getY() - lastY));
             newCentre = calculateNewCentre(fractalDiagram.fractalSet, mme.getX(), mme.getY(), lastX, lastY);
             fractalDiagram.fractalSet.setCentre(newCentre);
             if (fractalDiagram.fractalSet.getType() == FractalType.MANDELBROT) mandelbrotFrame.mandelbrotSet.juliaSet.setC(newCentre);

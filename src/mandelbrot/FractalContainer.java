@@ -2,6 +2,7 @@ package mandelbrot;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
 
 /**
  * JPanel that sits within the content of MandelbrotFrame and manages the drawing of fractals.
@@ -25,6 +26,8 @@ public class FractalContainer extends JPanel {
     public FractalDiagram mandelbrotDiagram;
     public FractalDiagram juliaDiagram;
 
+    ArrayList<FractalDiagram> repaintList;
+
     /**Constructor that sets up ready to contain FractalDiagrams*/
     public FractalContainer (MandelbrotFrame mandelbrotFrame) {
 
@@ -46,6 +49,13 @@ public class FractalContainer extends JPanel {
 
     public void drawImages() {
 
+        if (conditions.readyToCreateImage) {
+            repaintList = new ArrayList<>();
+            if (conditions.drawMandelbrot) repaintList.add(mandelbrotDiagram);
+            if (conditions.drawJulia) repaintList.add(juliaDiagram);
+            mandelbrotDiagram.repaintList = repaintList;
+            juliaDiagram.repaintList = repaintList;
+        }
         mandelbrotDiagram.repaint();
         juliaDiagram.repaint();
 
@@ -57,8 +67,9 @@ public class FractalContainer extends JPanel {
         this.setPreferredSize(new Dimension(mandelbrotSet.getIterations()[0].length, mandelbrotSet.getIterations().length));
 
         this.mandelbrotSet = mandelbrotSet;
-        this.mandelbrotDiagram = new FractalDiagram(mandelbrotFrame, mandelbrotSet, conditions, colours);
-        this.juliaDiagram = new FractalDiagram(mandelbrotFrame, mandelbrotSet.juliaSet, conditions, colours);
+        this.repaintList = new ArrayList<>();
+        this.mandelbrotDiagram = new FractalDiagram(mandelbrotFrame, mandelbrotSet, conditions, colours, repaintList);
+        this.juliaDiagram = new FractalDiagram(mandelbrotFrame, mandelbrotSet.juliaSet, conditions, colours, repaintList);
 
         this.add(mandelbrotDiagram);
         this.add(juliaDiagram);

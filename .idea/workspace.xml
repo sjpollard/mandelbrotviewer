@@ -4,13 +4,34 @@
     <bookmark url="uml://JAVA/mandelbrot" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c970403-ff6d-4481-9156-a7fb3198209c" name="Default" comment="">
+    <list default="true" id="0c970403-ff6d-4481-9156-a7fb3198209c" name="Default" comment="Unused import">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saves/test.fractaldata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mandelbrot/ComplexNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/ComplexNumber.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mandelbrot/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mandelbrot/DoublyLinkedNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/DoublyLinkedNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mandelbrot/DrawingConditions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/DrawingConditions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mandelbrot/FractalColours.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/FractalColours.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mandelbrot/FractalContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/FractalContainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mandelbrot/FractalDataSerializable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/FractalDataSerializable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mandelbrot/FractalDiagram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/FractalDiagram.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mandelbrot/FractalSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/FractalSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mandelbrot/FractalType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/FractalType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mandelbrot/GenericDataStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/GenericDataStructure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mandelbrot/GenericQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/GenericQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mandelbrot/GenericStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/GenericStack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mandelbrot/HelpFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/HelpFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mandelbrot/InfoItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/InfoItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mandelbrot/InputPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/InputPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mandelbrot/JuliaSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/JuliaSet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mandelbrot/MandelbrotFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/MandelbrotFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mandelbrot/MandelbrotSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/MandelbrotSet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mandelbrot/MandelbrotViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/MandelbrotViewer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mandelbrot/PopupManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/PopupManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mandelbrot/RegexManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/RegexManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mandelbrot/SerializationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/SerializationManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mandelbrot/SettingsFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/SettingsFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mandelbrot/SuccessiveRefiner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/SuccessiveRefiner.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,46 +40,32 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="FractalContainer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mandelbrot/FractalContainer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-48">
-              <caret line="35" column="47" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="47" />
+            <state relative-caret-position="568">
+              <caret line="54" column="38" selection-start-line="54" selection-start-column="38" selection-end-line="54" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#579#606#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MandelbrotViewer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mandelbrot/MandelbrotViewer.java">
+      <file leaf-file-name="PopupManager.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/mandelbrot/PopupManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="64" selection-start-line="12" selection-start-column="64" selection-end-line="12" selection-end-column="64" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mandelbrot/Controller.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="209" column="31" lean-forward="true" selection-start-line="209" selection-start-column="31" selection-end-line="209" selection-end-column="31" />
+            <state relative-caret-position="432">
+              <caret line="122" column="105" selection-start-line="122" selection-start-column="105" selection-end-line="122" selection-end-column="105" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FractalColours.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mandelbrot/FractalColours.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -66,8 +73,8 @@
       <file leaf-file-name="FractalDiagram.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mandelbrot/FractalDiagram.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1267">
-              <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
+            <state>
+              <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -75,25 +82,51 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MandelbrotFrame.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/mandelbrot/MandelbrotFrame.java">
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mandelbrot/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1164">
-              <caret line="517" lean-forward="true" selection-start-line="517" selection-end-line="517" />
+            <state relative-caret-position="836">
+              <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#11987#11988#0" expanded="true" />
-                <element signature="e#12025#12026#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DrawingConditions.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mandelbrot/DrawingConditions.java">
+      <file leaf-file-name="MandelbrotSet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mandelbrot/MandelbrotSet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+            <state relative-caret-position="173">
+              <caret line="221" selection-start-line="221" selection-end-line="221" />
+              <folding>
+                <element signature="e#6686#6687#0" expanded="true" />
+                <element signature="e#6713#6714#0" expanded="true" />
+                <element signature="e#7535#7536#0" expanded="true" />
+                <element signature="e#8884#8885#0" expanded="true" />
+                <element signature="e#8913#8914#0" expanded="true" />
+                <element signature="e#8964#8965#0" expanded="true" />
+                <element signature="e#9000#9001#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ComplexNumber.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mandelbrot/ComplexNumber.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="224">
+              <caret line="67" selection-start-line="67" selection-end-line="67" />
+              <folding>
+                <element signature="e#6138#6139#0" expanded="true" />
+                <element signature="e#6165#6166#0" expanded="true" />
+                <element signature="e#6205#6206#0" expanded="true" />
+                <element signature="e#6237#6238#0" expanded="true" />
+                <element signature="e#6273#6274#0" expanded="true" />
+                <element signature="e#6305#6306#0" expanded="true" />
+                <element signature="e#6355#6356#0" expanded="true" />
+                <element signature="e#6397#6398#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -101,8 +134,20 @@
       <file leaf-file-name="SuccessiveRefiner.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mandelbrot/SuccessiveRefiner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="32" column="68" selection-start-line="32" selection-start-column="68" selection-end-line="32" selection-end-column="68" />
+            <state relative-caret-position="-68">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MandelbrotFrame.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mandelbrot/MandelbrotFrame.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4427">
+              <caret line="546" column="23" selection-start-line="546" selection-start-column="23" selection-end-line="546" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -110,18 +155,32 @@
       <file leaf-file-name="JuliaSet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mandelbrot/JuliaSet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3026">
-              <caret line="178" selection-start-line="178" selection-end-line="178" />
+            <state relative-caret-position="366">
+              <caret line="299" selection-start-line="299" selection-end-line="299" />
               <folding>
+                <element signature="e#6142#6143#0" expanded="true" />
                 <element signature="e#6169#6170#0" expanded="true" />
                 <element signature="e#8319#8320#0" expanded="true" />
                 <element signature="e#8346#8347#0" expanded="true" />
+                <element signature="e#8832#8833#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>join</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -140,16 +199,17 @@
         <option value="$PROJECT_DIR$/src/mandelbrot/FractalSet.java" />
         <option value="$PROJECT_DIR$/src/mandelbrot/FractalDataSerializable.java" />
         <option value="$PROJECT_DIR$/src/mandelbrot/SettingsFrame.java" />
-        <option value="$PROJECT_DIR$/src/mandelbrot/MandelbrotSet.java" />
-        <option value="$PROJECT_DIR$/src/mandelbrot/JuliaSet.java" />
         <option value="$PROJECT_DIR$/src/mandelbrot/ComplexNumber.java" />
-        <option value="$PROJECT_DIR$/src/mandelbrot/PopupManager.java" />
         <option value="$PROJECT_DIR$/src/mandelbrot/DrawingConditions.java" />
         <option value="$PROJECT_DIR$/src/mandelbrot/MandelbrotFrame.java" />
         <option value="$PROJECT_DIR$/src/mandelbrot/MandelbrotViewer.java" />
-        <option value="$PROJECT_DIR$/src/mandelbrot/FractalContainer.java" />
         <option value="$PROJECT_DIR$/src/mandelbrot/Controller.java" />
+        <option value="$PROJECT_DIR$/src/mandelbrot/MandelbrotSet.java" />
+        <option value="$PROJECT_DIR$/src/mandelbrot/JuliaSet.java" />
+        <option value="$PROJECT_DIR$/src/mandelbrot/RepaintRunner.java" />
         <option value="$PROJECT_DIR$/src/mandelbrot/FractalDiagram.java" />
+        <option value="$PROJECT_DIR$/src/mandelbrot/FractalContainer.java" />
+        <option value="$PROJECT_DIR$/src/mandelbrot/PopupManager.java" />
       </list>
     </option>
   </component>
@@ -165,7 +225,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -189,11 +248,12 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="draw&#9;PSI&#9;JAVA://mandelbrot.MandelbrotFrame#draw&#10;mandel&#9;FILE&#9;file://C:/Users/Sam Pollard/Documents/GitHub/mandelbrotviewer/src/mandelbrot/MandelbrotFrame.java&#10;com&#9;PSI&#9;JAVA://mandelbrot.ComplexNumber" />
+    <property name="SearchEverywhereHistoryKey" value="reset&#9;PSI&#9;JAVA://mandelbrot.PopupManager#resetValues&#10;mande&#9;FILE&#9;file://C:/Users/Sam Pollard/Documents/GitHub/mandelbrotviewer/src/mandelbrot/MandelbrotFrame.java&#10;draw&#9;PSI&#9;JAVA://mandelbrot.MandelbrotFrame#draw&#10;mandel&#9;FILE&#9;file://C:/Users/Sam Pollard/Documents/GitHub/mandelbrotviewer/src/mandelbrot/MandelbrotFrame.java&#10;com&#9;PSI&#9;JAVA://mandelbrot.ComplexNumber" />
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -201,7 +261,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -326,47 +386,16 @@
     <MESSAGE value="Test" />
     <MESSAGE value="Allowing for FractalDiagram to function as FractalContainer and stripping FractalContainer" />
     <MESSAGE value="Fixing bug where FractalDiagrams weren't drawing correctly" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixing bug where FractalDiagrams weren't drawing correctly" />
+    <MESSAGE value="Changing the functionality of Controller: linked to FractalDiagrams and shorter methods" />
+    <MESSAGE value="Unused import" />
+    <option name="LAST_COMMIT_MESSAGE" value="Unused import" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/mandelbrot/MandelbrotFrame.java</url>
-          <line>171</line>
-          <properties />
-          <option name="timeStamp" value="40" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="41" />
+      <option name="time" value="54" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/mandelbrot/FractalDiagram.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1105">
-          <caret line="67" column="8" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mandelbrot/FractalContainer.java" />
-    <entry file="file://$PROJECT_DIR$/src/mandelbrot/SuccessiveRefiner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mandelbrot/MandelbrotFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7344">
-          <caret line="432" column="29" lean-forward="true" selection-start-line="432" selection-start-column="29" selection-end-line="432" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mandelbrot/SettingsFrame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2397">
@@ -395,20 +424,7 @@
     <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/java/awt/image/BufferedImage.java" />
     <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/lang/Override.java" />
     <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.desktop/java/awt/Point.java" />
-    <entry file="file://$PROJECT_DIR$/saves/test.fractaldata">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="78" selection-start-line="7" selection-start-column="78" selection-end-line="7" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mandelbrot/SerializationManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="87" selection-start-line="7" selection-start-column="87" selection-end-line="7" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/saves/test.fractaldata" />
     <entry file="file://$PROJECT_DIR$/src/mandelbrot/Node.java" />
     <entry file="file://$PROJECT_DIR$/src/mandelbrot/DoublyLinkedStack.java" />
     <entry file="file://$PROJECT_DIR$/src/mandelbrot/DoublyLinked.java" />
@@ -570,13 +586,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mandelbrot/ComplexNumber.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="92" column="9" lean-forward="true" selection-start-line="92" selection-start-column="9" selection-end-line="92" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mandelbrot/FractalType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -589,43 +598,10 @@
         <state relative-caret-position="-1122" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mandelbrot/MandelbrotSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="196" selection-start-line="196" selection-end-line="196" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mandelbrot/JuliaSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3026">
-          <caret line="178" selection-start-line="178" selection-end-line="178" />
-          <folding>
-            <element signature="e#6169#6170#0" expanded="true" />
-            <element signature="e#8319#8320#0" expanded="true" />
-            <element signature="e#8346#8347#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mandelbrot/DrawingConditions.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mandelbrot/SuccessiveRefiner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="68" selection-start-line="32" selection-start-column="68" selection-end-line="32" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mandelbrot/PopupManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="82" column="28" selection-start-line="82" selection-start-column="28" selection-end-line="82" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -636,51 +612,157 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mandelbrot/FractalContainer.java">
+    <entry file="file://$PROJECT_DIR$/src/mandelbrot/FractalColours.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-48">
-          <caret line="35" column="47" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="47" />
+        <state relative-caret-position="68">
+          <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mandelbrot/SerializationManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/awt/Component.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-107151">
+          <caret line="3378" column="16" selection-start-line="3378" selection-start-column="16" selection-end-line="3378" selection-end-column="16" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#114480#114481#0" expanded="true" />
+            <element signature="e#114527#114528#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/lang/Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="446" column="11" selection-start-line="446" selection-start-column="11" selection-end-line="446" selection-end-column="11" />
+          <folding>
+            <element signature="e#15020#15021#0" expanded="true" />
+            <element signature="e#15084#15085#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-126">
+          <caret line="270" column="29" selection-start-line="270" selection-start-column="29" selection-end-line="270" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mandelbrot/RepaintRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mandelbrot/JuliaSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="299" selection-start-line="299" selection-end-line="299" />
+          <folding>
+            <element signature="e#6142#6143#0" expanded="true" />
+            <element signature="e#6169#6170#0" expanded="true" />
+            <element signature="e#8319#8320#0" expanded="true" />
+            <element signature="e#8346#8347#0" expanded="true" />
+            <element signature="e#8832#8833#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mandelbrot/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="209" column="31" lean-forward="true" selection-start-line="209" selection-start-column="31" selection-end-line="209" selection-end-column="31" />
+        <state relative-caret-position="836">
+          <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mandelbrot/FractalColours.java">
+    <entry file="file://$PROJECT_DIR$/src/mandelbrot/ComplexNumber.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+        <state relative-caret-position="224">
+          <caret line="67" selection-start-line="67" selection-end-line="67" />
+          <folding>
+            <element signature="e#6138#6139#0" expanded="true" />
+            <element signature="e#6165#6166#0" expanded="true" />
+            <element signature="e#6205#6206#0" expanded="true" />
+            <element signature="e#6237#6238#0" expanded="true" />
+            <element signature="e#6273#6274#0" expanded="true" />
+            <element signature="e#6305#6306#0" expanded="true" />
+            <element signature="e#6355#6356#0" expanded="true" />
+            <element signature="e#6397#6398#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mandelbrot/FractalDiagram.java">
+    <entry file="file://$PROJECT_DIR$/src/mandelbrot/SuccessiveRefiner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1267">
-          <caret line="91" lean-forward="true" selection-start-line="91" selection-end-line="91" />
+        <state relative-caret-position="-68">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mandelbrot/MandelbrotSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="221" selection-start-line="221" selection-end-line="221" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#6686#6687#0" expanded="true" />
+            <element signature="e#6713#6714#0" expanded="true" />
+            <element signature="e#7535#7536#0" expanded="true" />
+            <element signature="e#8884#8885#0" expanded="true" />
+            <element signature="e#8913#8914#0" expanded="true" />
+            <element signature="e#8964#8965#0" expanded="true" />
+            <element signature="e#9000#9001#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mandelbrot/MandelbrotFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1164">
-          <caret line="517" lean-forward="true" selection-start-line="517" selection-end-line="517" />
+        <state relative-caret-position="4427">
+          <caret line="546" column="23" selection-start-line="546" selection-start-column="23" selection-end-line="546" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#11987#11988#0" expanded="true" />
-            <element signature="e#12025#12026#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mandelbrot/FractalDiagram.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mandelbrot/FractalContainer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="568">
+          <caret line="54" column="38" selection-start-line="54" selection-start-column="38" selection-end-line="54" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#579#606#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mandelbrot/PopupManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="122" column="105" selection-start-line="122" selection-start-column="105" selection-end-line="122" selection-end-column="105" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -3,6 +3,7 @@ package mandelbrot;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.util.ArrayList;
 
 /**
  * Drawing object that is dedicated to a FractalSet and creates a BufferedImage based on the data
@@ -31,17 +32,19 @@ public class FractalDiagram extends JPanel {
     private ComplexNumber last;
 
     public FractalSet fractalSet;
-    private Point location;
+    private Point imgLocation;
     public DrawingConditions conditions;
     private int[] histogram;
 
+    ArrayList<FractalDiagram> repaintList;
+
     /**Constructs a BufferedImage with the same dimensions as the fractals data and passes in references*/
-    public FractalDiagram(MandelbrotFrame mandelbrotFrame, FractalSet fractalSet, DrawingConditions conditions, FractalColours colours) {
+    public FractalDiagram(MandelbrotFrame mandelbrotFrame, FractalSet fractalSet, DrawingConditions conditions, FractalColours colours, ArrayList<FractalDiagram> repaintList) {
 
         super();
 
         this.mandelbrotFrame = mandelbrotFrame;
-        this.location = new Point();
+        this.imgLocation = new Point();
         this.fractalImg = new BufferedImage(fractalSet.getIterations()[0].length, fractalSet.getIterations().length, BufferedImage.TYPE_INT_RGB);
         this.fractalSet = fractalSet;
         this.conditions = conditions;
@@ -49,8 +52,8 @@ public class FractalDiagram extends JPanel {
         this.inverseColour = invertColour(colours.getInner());
         this.queue = new GenericQueue<>();
         this.controller = new Controller(mandelbrotFrame, this);
+        this.repaintList = repaintList;
         this.setVisible(true);
-        this.repaint();
 
     }
 
@@ -72,7 +75,7 @@ public class FractalDiagram extends JPanel {
 
         }
 
-        g.drawImage(fractalImg, this.getLocation().x, this.getLocation().y, this);
+        g.drawImage(fractalImg, this.imgLocation.x, this.imgLocation.y, this);
 
         if(!queue.isEmpty()) {
 
@@ -83,6 +86,15 @@ public class FractalDiagram extends JPanel {
 
             drawInfo(g);
 
+        }
+        if (repaintList != null) {
+            if (!repaintList.isEmpty()) {
+                repaintList.remove(this);
+                if (repaintList.isEmpty()) {
+                    conditions.readyToCreateImage = false;
+                }
+            }
+            repaintList = null;
         }
 
     }
@@ -123,7 +135,7 @@ public class FractalDiagram extends JPanel {
                 }
             }
         }
-        if (fractalSet.getType() == FractalType.MANDELBROT) conditions.readyToCreateImage = false;
+        //if (fractalSet.getType() == FractalType.MANDELBROT) conditions.readyToCreateImage = false;
 
     }
 
@@ -308,21 +320,21 @@ public class FractalDiagram extends JPanel {
 
     }
 
-    public Point getLocation() {
+    public Point getImgLocation() {
 
-        return this.location;
-
-    }
-
-    public void setLocation(Point location) {
-
-        this.location = location;
+        return this.imgLocation;
 
     }
 
-    public void translateLocation(Point change) {
+    public void setImgLocation(Point location) {
 
-        location.translate(change.x, change.y);
+        this.imgLocation = location;
+
+    }
+
+    public void translateImgLocation(Point change) {
+
+        imgLocation.translate(change.x, change.y);
 
     }
 
