@@ -87,8 +87,11 @@ public class PopupManager {
             mandelbrotFrame.maxIterationsLabel.setText("Max iterations: 100");
             mandelbrotFrame.adjustSlider(100);
             mandelbrotFrame.chunkSpinner.setValue(1);
-            mandelbrotFrame.diagram.colours = new FractalColours(Color.RED, Color.BLUE, Color.BLACK);
-            mandelbrotFrame.diagram.inverseColour = Color.WHITE;
+            mandelbrotFrame.diagram.mandelbrotDiagram.colours = new FractalColours(Color.RED, Color.BLUE, Color.BLACK);
+            mandelbrotFrame.diagram.juliaDiagram.colours = new FractalColours(Color.RED, Color.BLUE, Color.BLACK);
+            mandelbrotFrame.diagram.mandelbrotDiagram.inverseColour = Color.WHITE;
+            mandelbrotFrame.diagram.juliaDiagram.inverseColour = Color.WHITE;
+            mandelbrotFrame.changeFractalDrawn("both");
         }
         mandelbrotFrame.draw();
 
@@ -101,20 +104,24 @@ public class PopupManager {
         if(choice.equals("outer"))  {
             Color newColour = JColorChooser.showDialog(mandelbrotFrame, "Pick a colour", mandelbrotFrame.diagram.colours.getOuter());
             if (!(newColour == null)) {
-                mandelbrotFrame.diagram.colours.setOuter(newColour);
+                mandelbrotFrame.diagram.mandelbrotDiagram.colours.setOuter(newColour);
+                mandelbrotFrame.diagram.juliaDiagram.colours.setOuter(newColour);
             }
         }
         else if(choice.equals("edge")) {
             Color newColour = JColorChooser.showDialog(mandelbrotFrame, "Pick a colour", mandelbrotFrame.diagram.colours.getEdge());
             if (!(newColour == null)) {
-                mandelbrotFrame.diagram.colours.setEdge(newColour);
+                mandelbrotFrame.diagram.mandelbrotDiagram.colours.setEdge(newColour);
+                mandelbrotFrame.diagram.juliaDiagram.colours.setEdge(newColour);
             }
         }
         else if (choice.equals("inner")) {
             Color newColour = JColorChooser.showDialog(mandelbrotFrame, "Pick a colour", mandelbrotFrame.diagram.colours.getInner());
             if (!(newColour == null)) {
-                mandelbrotFrame.diagram.colours.setInner(newColour);
-                mandelbrotFrame.diagram.inverseColour = mandelbrotFrame.diagram.invertColour(newColour);
+                mandelbrotFrame.diagram.mandelbrotDiagram.colours.setInner(newColour);
+                mandelbrotFrame.diagram.juliaDiagram.colours.setInner(newColour);
+                mandelbrotFrame.diagram.mandelbrotDiagram.inverseColour = mandelbrotFrame.diagram.mandelbrotDiagram.invertColour(newColour);
+                mandelbrotFrame.diagram.juliaDiagram.inverseColour = mandelbrotFrame.diagram.juliaDiagram.invertColour(newColour);
             }
         }
         mandelbrotFrame.diagram.conditions.readyToCreateImage = true;

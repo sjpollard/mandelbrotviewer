@@ -1,7 +1,9 @@
 package mandelbrot;
 
+import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.util.ArrayList;
 
 /**
  * Drawing object that is dedicated to a FractalSet and creates a BufferedImage based on the data
@@ -10,32 +12,100 @@ import java.awt.image.BufferedImage;
  * pixel onscreen. This object can also scale colour based on the histogram method.
  */
 
-public class FractalDiagram {
+public class FractalDiagram extends JPanel {
+
+    MandelbrotFrame mandelbrotFrame;
+
+    Controller controller;
 
     /**BufferedImage which contains the pixel raster to be drawn by the graphics object*/
     BufferedImage fractalImg;
 
-    private FractalSet fractalSet;
-    private Point location;
-    private DrawingConditions conditions;
+    /**Colours that the fractals should be generated with*/
+    FractalColours colours;
+    Color inverseColour;
+
+    /**Fields used when tracking a complex number*/
+    private GenericQueue<ComplexNumber> queue;
+    private double pathLength;
+    private ComplexNumber first;
+    private ComplexNumber last;
+
+    public FractalSet fractalSet;
+    private Point imgLocation;
+    public DrawingConditions conditions;
     private int[] histogram;
 
-    /**Constructs a BufferedImage with the same dimensions as the fractals data and passes in references*/
-    public FractalDiagram(FractalSet fractalSet, Point location, DrawingConditions conditions) {
+    ArrayList<FractalDiagram> repaintList;
 
+    /**Constructs a BufferedImage with the same dimensions as the fractals data and passes in references*/
+    public FractalDiagram(MandelbrotFrame mandelbrotFrame, FractalSet fractalSet, DrawingConditions conditions, FractalColours colours, ArrayList<FractalDiagram> repaintList) {
+
+        super();
+
+        this.mandelbrotFrame = mandelbrotFrame;
+        this.imgLocation = new Point();
         this.fractalImg = new BufferedImage(fractalSet.getIterations()[0].length, fractalSet.getIterations().length, BufferedImage.TYPE_INT_RGB);
         this.fractalSet = fractalSet;
-        this.location = location;
         this.conditions = conditions;
+        this.colours = colours;
+        this.inverseColour = invertColour(colours.getInner());
+        this.queue = new GenericQueue<>();
+        this.controller = new Controller(mandelbrotFrame, this);
+        this.repaintList = repaintList;
+        this.setVisible(true);
+
+    }
+
+    /**The paint method that is called whenever something visual changes and decides what to draw based on DrawingConditions*/
+    @Override
+    public void paintComponent(Graphics graphics) {
+
+        Graphics2D g = (Graphics2D)graphics;
+        g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+
+        super.paintComponent(g);
+
+        first = last = null;
+        pathLength = 0;
+
+        if (conditions.readyToCreateImage) {
+
+            createImage(colours);
+
+        }
+
+        g.drawImage(fractalImg, this.imgLocation.x, this.imgLocation.y, this);
+
+        if(!queue.isEmpty()) {
+
+            drawLines(g);
+
+        }
+        if(conditions.readyToDrawInfo) {
+
+            drawInfo(g);
+
+        }
+        if (repaintList != null) {
+            if (!repaintList.isEmpty()) {
+                repaintList.remove(this);
+                if (repaintList.isEmpty()) {
+                    conditions.readyToCreateImage = false;
+                }
+            }
+            repaintList = null;
+        }
 
     }
 
     /**Large scale method that analyses the data found in the FractalSet to assign colour to individual pixels*/
     public void createImage(FractalColours colours) {
 
-        fractalImg = new BufferedImage(fractalSet.getIterations()[0].length, fractalSet.getIterations().length, BufferedImage.TYPE_INT_RGB);
         int width = fractalSet.getIterations()[0].length;
         int height = fractalSet.getIterations().length;
+
+        fractalImg = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
 
         int total = 0;
         if (conditions.readyToHistogramColour) {
@@ -65,7 +135,87 @@ public class FractalDiagram {
                 }
             }
         }
-        conditions.readyToCreateImage = false;
+        //if (fractalSet.getType() == FractalType.MANDELBROT) conditions.readyToCreateImage = false;
+
+    }
+
+    /**Iterates through the queue to connect up the locations travelled to by a tracked complex number*/
+    public void drawLines(Graphics2D g) {
+
+        int[] nextPixel, lastPixel;
+        first = queue.remove();
+        lastPixel = fractalSet.complexNumberToPixel(first);
+        g.setColor(inverseColour);
+
+        if (conditions.readyToDrawCoords) g.drawString(first.toString(3), lastPixel[0], lastPixel[1]);
+
+        drawDiagonalCross(g, lastPixel[0], lastPixel[1], 4);
+        last = first;
+        pathLength = 0;
+        for (ComplexNumber point: queue) {
+
+            pathLength += last.distanceBetween(point);
+            nextPixel = fractalSet.complexNumberToPixel(point);
+
+            g.setColor(inverseColour);
+            g.drawLine(lastPixel[0], lastPixel[1], nextPixel[0], nextPixel[1]);
+            if (queue.isEmpty()) {
+                g.setColor(inverseColour);
+                if (conditions.readyToDrawCoords) g.drawString(point.toString(3), nextPixel[0], nextPixel[1]);
+                drawDiagonalCross(g, nextPixel[0], nextPixel[1], 4);
+            }
+
+            last = point;
+            lastPixel = nextPixel;
+        }
+
+    }
+
+    /**Method that decides what information should be drawn where*/
+    public void drawInfo(Graphics2D g) {
+
+        int infoPos;
+        int totalArea = (fractalSet.getIterations().length * fractalSet.getIterations()[0].length) / (fractalSet.getChunkSize() * fractalSet.getChunkSize());
+        double percentage;
+        double distance;
+        String item = "";
+        ComplexNumber point = new ComplexNumber();
+
+        g.setColor(inverseColour);
+        infoPos = this.getWidth() - 150;
+        drawCross(g, this.getWidth() / 2, this.getHeight() / 2, 4);
+        g.drawString("Centre: " + fractalSet.getCentre().toString(3), infoPos, 20);
+
+        if (fractalSet.getType() == FractalType.MANDELBROT) {
+            item = "zStart: ";
+            point = fractalSet.getzStart();
+        }
+        else if (fractalSet.getType() == FractalType.JULIA) {
+            item = "c: ";
+            point = fractalSet.getC();
+        }
+
+        g.drawString(item + point.toString(3), infoPos, 40);
+        g.drawString("Zoom: " + fractalSet.getZoom(), infoPos, 60);
+        g.drawString("Power: " + fractalSet.getPower(), infoPos, 80);
+
+        percentage = Math.round(((fractalSet.getPixelArea()/ (double) totalArea) * 100) * 100) / 100.0;
+        if (percentage > 100) percentage = 100;
+        g.drawString("Pixel percentage: " + percentage + "%", infoPos, 100);
+
+        if (first == null || last == null) distance = Double.NaN;
+        else distance = Math.round(first.distanceBetween(last) * 1000) / 1000.0;
+        g.drawString("Distance moved: " + distance, infoPos, 120);
+        g.drawString("Total path length: " + Math.round(pathLength * 1000) / 1000.0, infoPos, 140);
+
+
+    }
+
+    /**Starts the tracking process of a specified pixel onscreen and compiles the data found into a queue*/
+    public void track(int x, int y) {
+
+        ComplexNumber point = fractalSet.pixelToComplexNumber(x, y);
+        queue = fractalSet.fillTrackingQueue(point);
 
     }
 
@@ -93,7 +243,7 @@ public class FractalDiagram {
             scale += histogram[i];
 
         }
-        return scale/(double)total;
+        return scale /(double)total;
 
     }
 
@@ -109,6 +259,22 @@ public class FractalDiagram {
             }
 
         }
+
+    }
+
+    /**Draws a straight cross with a specified radius at the location input*/
+    public void drawCross(Graphics2D g, int x, int y, int radius) {
+
+        g.drawLine(x - radius, y, x + radius, y);
+        g.drawLine(x, y - radius, x, y + radius);
+
+    }
+
+    /**Draws a tilted cross with a specified radius at the location input*/
+    public void drawDiagonalCross(Graphics2D g, int x, int y, int radius) {
+
+        g.drawLine(x - radius, y + radius, x + radius, y - radius);
+        g.drawLine(x - radius, y - radius, x + radius, y + radius);
 
     }
 
@@ -134,27 +300,41 @@ public class FractalDiagram {
 
     }
 
+    /**Returns a colour with random RGB values*/
+    public Color randomColour() {
+
+        return new Color((float)Math.random(), (float)Math.random(), (float)Math.random());
+
+    }
+
+    /**Inverts the RGB values of the input colour and returns the inverted colour*/
+    public Color invertColour(Color colour) {
+
+        return new Color(255 - colour.getRed(), 255 - colour.getGreen(), 255 - colour.getBlue());
+
+    }
+
     public void setFractalSet(FractalSet fractalSet) {
 
         this.fractalSet = fractalSet;
 
     }
 
-    public Point getLocation() {
+    public Point getImgLocation() {
 
-        return this.location;
-
-    }
-
-    public void setLocation(Point location) {
-
-        this.location = location;
+        return this.imgLocation;
 
     }
 
-    public void translateLocation(Point change) {
+    public void setImgLocation(Point location) {
 
-        location.translate(change.x, change.y);
+        this.imgLocation = location;
+
+    }
+
+    public void translateImgLocation(Point change) {
+
+        imgLocation.translate(change.x, change.y);
 
     }
 

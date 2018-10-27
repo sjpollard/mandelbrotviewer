@@ -10,10 +10,7 @@ public class MandelbrotViewer {
         System.setProperty("swing.aatext", "true");
 
         //Constructs a GUI window
-        MandelbrotFrame GUI = new MandelbrotFrame();
-
-        //Constructs the controller part of the MVC
-        Controller c = new Controller(GUI);
+        MandelbrotFrame mandelbrotFrame = new MandelbrotFrame();
 
     }
 

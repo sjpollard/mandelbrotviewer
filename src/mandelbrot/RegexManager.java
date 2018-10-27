@@ -23,7 +23,7 @@ public class RegexManager {
 
     /**Decided whether the string is a valid positive integer*/
     public static boolean matchesUnsignedInteger(String input) {
-
+        
         return input.matches(unsignedInteger);
 
     }
