@@ -21,7 +21,7 @@ public class Controller implements MouseListener, MouseWheelListener, MouseMotio
     private FractalDiagram fractalDiagram;
     
     /**Reference to the FractalSet of the linked diagram*/
-    private FractalSet fractalSet;
+    FractalSet fractalSet;
     
     /**Data used while dragging the fractal image to a new location*/
     private boolean dragging;

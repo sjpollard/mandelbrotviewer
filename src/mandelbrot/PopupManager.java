@@ -89,7 +89,11 @@ public class PopupManager {
             mandelbrotFrame.chunkSpinner.setValue(1);
             mandelbrotFrame.diagram.mandelbrotDiagram.colours = new FractalColours(Color.RED, Color.BLUE, Color.BLACK);
             mandelbrotFrame.diagram.juliaDiagram.colours = new FractalColours(Color.RED, Color.BLUE, Color.BLACK);
-            mandelbrotFrame.changeFractalDrawn("both");
+            mandelbrotFrame.mandelbrotButton.setState(true);
+            mandelbrotFrame.juliaButton.setState(true);
+            mandelbrotFrame.diagram.conditions.drawMandelbrot = true;
+            mandelbrotFrame.diagram.conditions.drawJulia = true;
+            mandelbrotFrame.changeFractalDrawn();
         }
         mandelbrotFrame.draw();
 

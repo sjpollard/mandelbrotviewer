@@ -44,7 +44,7 @@ public class FractalDiagram extends JPanel {
 
         super();
 
-        this.setPreferredSize(new Dimension(fractalSet.getIterations()[0].length, fractalSet.getIterations().length));
+        this.setPreferredSize(fractalSet.getDimensions());
         this.mandelbrotFrame = mandelbrotFrame;
         this.imgLocation = new Point();
         this.fractalImg = new BufferedImage(fractalSet.getIterations()[0].length, fractalSet.getIterations().length, BufferedImage.TYPE_INT_RGB);
@@ -305,6 +305,7 @@ public class FractalDiagram extends JPanel {
     public void setFractalSet(FractalSet fractalSet) {
 
         this.fractalSet = fractalSet;
+        this.controller.fractalSet = fractalSet;
 
     }
 

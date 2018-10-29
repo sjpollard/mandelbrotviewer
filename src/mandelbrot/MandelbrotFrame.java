@@ -4,6 +4,7 @@ import javax.swing.*;
 import javax.swing.event.MenuEvent;
 import javax.swing.event.MenuListener;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 import java.awt.image.BufferedImage;
 
 /**
@@ -38,10 +39,8 @@ public class MandelbrotFrame extends JFrame {
     /**Options menu components*/
     private JMenu optionsMenu;
     private JMenu fractalChoiceMenu;
-    private ButtonGroup buttonGroup;
-    private JRadioButtonMenuItem bothButton;
-    private JRadioButtonMenuItem mandelbrotOnlyButton;
-    private JRadioButtonMenuItem juliaOnlyButton;
+    JCheckBoxMenuItem mandelbrotButton;
+    JCheckBoxMenuItem juliaButton;
     private JMenuItem resetItem;
     private JMenuItem settingsItem;
     private JCheckBoxMenuItem drawInfoItem;
@@ -100,6 +99,12 @@ public class MandelbrotFrame extends JFrame {
         this.diagram.conditions.readyToColourPalette = true;
         this.successiveRefinementOption = 1;
         this.successiveRefiner = new Thread(new SuccessiveRefiner(this));
+        this.addWindowStateListener(wsl -> {
+            System.out.println(wsl.getNewState());
+            if (wsl.getNewState() == 6) {
+                System.out.println("maximised");
+                changeFractalDrawn();
+            }});
         this.setVisible(true);
 
     }
@@ -136,9 +141,8 @@ public class MandelbrotFrame extends JFrame {
         fractalChoiceMenu = new JMenu("Fractal choice");
         fractalChoiceMenu.setOpaque(true);
         fractalChoiceMenu.setBackground(Color.white);
-        bothButton = new JRadioButtonMenuItem("Both on screen", true);
-        mandelbrotOnlyButton = new JRadioButtonMenuItem("Mandelbrot set only");
-        juliaOnlyButton = new JRadioButtonMenuItem("Julia set only");
+        mandelbrotButton = new JCheckBoxMenuItem("Mandelbrot set only", true);
+        juliaButton = new JCheckBoxMenuItem("Julia set only", true);
         resetItem = new JMenuItem("Reset values");
         settingsItem = new JMenuItem("Edit fractal settings");
         drawInfoItem = new JCheckBoxMenuItem("Draw information", false);
@@ -192,14 +196,10 @@ public class MandelbrotFrame extends JFrame {
         quitItem.addActionListener(ae -> System.exit(0));
 
         optionsMenu.add(fractalChoiceMenu);
-        buttonGroup = new ButtonGroup();
-        buttonGroup.add(bothButton);
-        buttonGroup.add(mandelbrotOnlyButton);
-        buttonGroup.add(juliaOnlyButton);
-        fractalChoiceMenu.add(bothButton);
-        fractalChoiceMenu.add(mandelbrotOnlyButton);
-        fractalChoiceMenu.add(juliaOnlyButton);
+        fractalChoiceMenu.add(mandelbrotButton);
+        fractalChoiceMenu.add(juliaButton);
         setAllMenuItemsColour(fractalChoiceMenu, Color.white);
+
         optionsMenu.add(resetItem);
         optionsMenu.add(settingsItem);
         optionsMenu.add(drawInfoItem);
@@ -207,9 +207,8 @@ public class MandelbrotFrame extends JFrame {
         optionsMenu.add(drawSuccessRefineItem);
         setAllMenuItemsColour(optionsMenu, Color.white);
 
-        bothButton.addActionListener(e -> changeFractalDrawn("both"));
-        mandelbrotOnlyButton.addActionListener(e -> changeFractalDrawn("mandelbrot"));
-        juliaOnlyButton.addActionListener(e -> changeFractalDrawn("julia"));
+        mandelbrotButton.addActionListener(this::changeFractalConditions);
+        juliaButton.addActionListener(this::changeFractalConditions);
         resetItem.addActionListener(ae -> PopupManager.resetValues(this));
         settingsItem.addActionListener(ae -> {
             if (settingsFrame != null) settingsFrame.dispose();
@@ -338,44 +337,50 @@ public class MandelbrotFrame extends JFrame {
     }
 
     /**Sets everything ready to re-iterate and display a different fractal*/
-    public void changeFractalDrawn(String option) {
+    public void changeFractalConditions(ActionEvent ae) {
+
+        if (!mandelbrotButton.getState() && !juliaButton.getState()) {
+            ((JCheckBoxMenuItem)ae.getSource()).setState(true);
+        }
+        diagram.conditions.drawMandelbrot = mandelbrotButton.getState();
+        diagram.conditions.drawJulia = juliaButton.getState();
+
+        changeFractalDrawn();
+
+    }
+
+    public void changeFractalDrawn() {
 
         int width = diagram.getWidth();
         int height = diagram.getHeight();
 
-        if (option.equals("both")) {
-            diagram.conditions.drawMandelbrot = true;
-            diagram.conditions.drawJulia = true;
-            mandelbrotSet.setDimensions(new Dimension(width/2, height/2));
-            mandelbrotSet.juliaSet.setDimensions(new Dimension(width/2, height/2));
+        if (diagram.conditions.drawMandelbrot && diagram.conditions.drawJulia) {
+            mandelbrotSet.setDimensions(new Dimension(width/2, height));
+            mandelbrotSet.juliaSet.setDimensions(new Dimension(width/2, height));
             diagram.mandelbrotDiagram.fractalImg = new BufferedImage(width/2, height, BufferedImage.TYPE_INT_RGB);
             diagram.juliaDiagram.fractalImg = new BufferedImage(width/2, height, BufferedImage.TYPE_INT_RGB);
             diagram.mandelbrotDiagram.setLocation(0,0);
             diagram.mandelbrotDiagram.setSize(width/2, height);
             diagram.juliaDiagram.setLocation(width/2, 0);
             diagram.juliaDiagram.setSize(width/2, height);
+            diagram.add(diagram.mandelbrotDiagram);
+            diagram.add(diagram.juliaDiagram);
         }
-        else if (option.equals("mandelbrot")) {
-            diagram.conditions.drawMandelbrot = true;
-            diagram.conditions.drawJulia = false;
-            mandelbrotSet.setIterations(new int[height][width]);
-            mandelbrotSet.setLastResults(new ComplexNumber[height][width]);
-            mandelbrotSet.setRefined(new boolean[height][width]);
+        else if (diagram.conditions.drawMandelbrot) {
+            mandelbrotSet.setDimensions(new Dimension(width, height));
             diagram.mandelbrotDiagram.fractalImg = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
             diagram.mandelbrotDiagram.setLocation(0,0);
             diagram.mandelbrotDiagram.setSize(width, height);
-            diagram.juliaDiagram.setSize(0,0);
+            diagram.remove(diagram.juliaDiagram);
+            diagram.add(diagram.mandelbrotDiagram);
         }
-        else if(option.equals("julia")) {
-            diagram.conditions.drawMandelbrot = false;
-            diagram.conditions.drawJulia = true;
-            mandelbrotSet.juliaSet.setIterations(new int[height][width]);
-            mandelbrotSet.juliaSet.setLastResults(new ComplexNumber[height][width]);
-            mandelbrotSet.juliaSet.setRefined(new boolean[height][width]);
+        else if(diagram.conditions.drawJulia) {
+            mandelbrotSet.juliaSet.setDimensions(new Dimension(width, height));
             diagram.juliaDiagram.fractalImg = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
             diagram.juliaDiagram.setLocation(0,0);
             diagram.juliaDiagram.setSize(width, height);
-            diagram.mandelbrotDiagram.setSize(0,0);
+            diagram.remove(diagram.mandelbrotDiagram);
+            diagram.add(diagram.juliaDiagram);
         }
         calculateIterations();
         draw();
