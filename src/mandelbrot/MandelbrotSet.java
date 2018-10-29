@@ -1,5 +1,7 @@
 package mandelbrot;
 
+import java.awt.*;
+
 /**
  * The backbone of the program that contains and deals with the complex number maths
  * required to generate a fractal image. Implements the FractalSet interface so that
@@ -11,9 +13,11 @@ package mandelbrot;
 
 public class MandelbrotSet implements FractalSet {
 
+    /**Enum that identifies this object when it is passed around as a FractalSet*/
     private FractalType type = FractalType.MANDELBROT;
 
     /**Fields that contain fractal properties and generated values*/
+    private Dimension dimensions;
     private int[][] iterations;
     private ComplexNumber[][] lastResults;
     private boolean[][] refined;
@@ -37,9 +41,7 @@ public class MandelbrotSet implements FractalSet {
     /**Constructs a MandelbrotSet with the given properties*/
     public MandelbrotSet(int width, int height, int maxIterations, double power, boolean createJulia) {
 
-        this.iterations = new int[height][width];
-        this.lastResults = new ComplexNumber[height][width];
-        this.refined = new boolean[height][width];
+        this.setDimensions(new Dimension(width, height));
         this.maxIterations = maxIterations;
         this.power = power;
         this.chunkSize = 1;
@@ -186,13 +188,13 @@ public class MandelbrotSet implements FractalSet {
 
     }
 
+    public FractalType getType() {
+        return type;
+    }
+
     /**Re-constructs the array so that it is empty*/
     public void resetRefined() {
        this.refined = new boolean[iterations.length][iterations[0].length];
-    }
-
-    public FractalType getType() {
-        return type;
     }
 
     public void setAllValues(String[] values) {
@@ -215,6 +217,19 @@ public class MandelbrotSet implements FractalSet {
         this.centre = fractalData.centre;
         this.zStart = fractalData.zStart;
         this.c = fractalData.c;
+
+    }
+
+    public Dimension getDimensions() {
+        return dimensions;
+    }
+
+    public void setDimensions(Dimension dimensions) {
+
+        this.dimensions = dimensions;
+        this.iterations = new int[dimensions.height][dimensions.width];
+        this.lastResults = new ComplexNumber[dimensions.height][dimensions.width];
+        this.refined = new boolean[dimensions.height][dimensions.width];
 
     }
 

@@ -1,5 +1,7 @@
 package mandelbrot;
 
+import java.awt.*;
+
 /**
  * Very similar to and contained within the MandelbrotSet object. Implements the FractalSet
  * interface because it functions with the same methods, but different implementation.
@@ -12,6 +14,7 @@ public class JuliaSet implements FractalSet {
     private FractalType type = FractalType.JULIA;
 
     /**Fields that contain properties and generated values*/
+    private Dimension dimensions;
     private int[][] iterations;
     private ComplexNumber[][] lastResults;
     private boolean[][] refined;
@@ -32,9 +35,7 @@ public class JuliaSet implements FractalSet {
     /**Constructs a Julia set based on the current properties of the Mandelbrot set*/
     public JuliaSet(MandelbrotSet mandelbrotSet) {
 
-        this.iterations = new int[mandelbrotSet.getIterations().length][mandelbrotSet.getIterations()[0].length];
-        this.lastResults = new ComplexNumber[mandelbrotSet.getIterations().length][mandelbrotSet.getIterations()[0].length];
-        this.refined = new boolean[mandelbrotSet.getIterations().length][mandelbrotSet.getIterations()[0].length];
+        this.setDimensions(mandelbrotSet.getDimensions());
         this.maxIterations = mandelbrotSet.getMaxIterations();
         this.power = mandelbrotSet.getPower();
         this.chunkSize = mandelbrotSet.getChunkSize();
@@ -179,6 +180,10 @@ public class JuliaSet implements FractalSet {
         return type;
     }
 
+    public void resetRefined() {
+        this.refined = new boolean[iterations.length][iterations[0].length];
+    }
+
     public void setAllValues(String[] values) {
 
         this.maxIterations = Integer.parseInt(values[0]);
@@ -202,8 +207,17 @@ public class JuliaSet implements FractalSet {
 
     }
 
-    public void resetRefined() {
-        this.refined = new boolean[iterations.length][iterations[0].length];
+    public Dimension getDimensions() {
+        return dimensions;
+    }
+
+    public void setDimensions(Dimension dimensions) {
+
+        this.dimensions = dimensions;
+        this.iterations = new int[dimensions.height][dimensions.width];
+        this.lastResults = new ComplexNumber[dimensions.height][dimensions.width];
+        this.refined = new boolean[dimensions.height][dimensions.width];
+
     }
 
     public int[][] getIterations() {

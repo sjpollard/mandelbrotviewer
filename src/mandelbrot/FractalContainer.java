@@ -49,6 +49,8 @@ public class FractalContainer extends JPanel {
 
     public void drawImages() {
 
+        System.out.println(conditions.drawMandelbrot + " " + conditions.drawJulia);
+        System.out.println(mandelbrotDiagram.getSize() + "  " + juliaDiagram.getSize());
         if (conditions.readyToCreateImage) {
             repaintList = new ArrayList<>();
             if (conditions.drawMandelbrot) repaintList.add(mandelbrotDiagram);

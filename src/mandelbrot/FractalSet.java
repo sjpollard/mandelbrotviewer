@@ -1,5 +1,7 @@
 package mandelbrot;
 
+import java.awt.*;
+
 /**
  * Interface that dictates the methods required for an object to act as a FractalSet.
  * The methods here can be implemented differently, but they need to achieve the same
@@ -37,6 +39,10 @@ public interface FractalSet {
 
     void setAllValues(FractalDataSerializable fractalData);
 
+    Dimension getDimensions();
+
+    void setDimensions(Dimension dimensions);
+
     int[][] getIterations();
 
     void setIterations(int x, int y, int input);
@@ -46,6 +52,10 @@ public interface FractalSet {
     ComplexNumber[][] getLastResults();
 
     void setLastResults(ComplexNumber[][] lastResults);
+
+    boolean[][] getRefined();
+
+    void setRefined(boolean[][] refined);
 
     int getMaxIterations();
 

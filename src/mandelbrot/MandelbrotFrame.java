@@ -346,12 +346,8 @@ public class MandelbrotFrame extends JFrame {
         if (option.equals("both")) {
             diagram.conditions.drawMandelbrot = true;
             diagram.conditions.drawJulia = true;
-            mandelbrotSet.setIterations(new int[height][width/2]);
-            mandelbrotSet.setLastResults(new ComplexNumber[height][width/2]);
-            mandelbrotSet.setRefined(new boolean[height][width/2]);
-            mandelbrotSet.juliaSet.setIterations(new int[height][width/2]);
-            mandelbrotSet.juliaSet.setLastResults(new ComplexNumber[height][width/2]);
-            mandelbrotSet.juliaSet.setRefined(new boolean[height][width/2]);
+            mandelbrotSet.setDimensions(new Dimension(width/2, height/2));
+            mandelbrotSet.juliaSet.setDimensions(new Dimension(width/2, height/2));
             diagram.mandelbrotDiagram.fractalImg = new BufferedImage(width/2, height, BufferedImage.TYPE_INT_RGB);
             diagram.juliaDiagram.fractalImg = new BufferedImage(width/2, height, BufferedImage.TYPE_INT_RGB);
             diagram.mandelbrotDiagram.setLocation(0,0);
