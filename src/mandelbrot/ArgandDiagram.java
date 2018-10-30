@@ -12,13 +12,13 @@ import java.util.ArrayList;
  * pixel onscreen. This object can also scale colour based on the histogram method.
  */
 
-public class FractalDiagram extends JPanel {
+public class ArgandDiagram extends JPanel {
 
     /**Reference to the main GUI*/
     MandelbrotFrame mandelbrotFrame;
 
-    /**Controller object that manages this objects mouse interactions*/
-    Controller controller;
+    /**FractalController object that manages this objects mouse interactions*/
+    FractalController fractalController;
 
     /**BufferedImage which contains the pixel raster to be drawn by the graphics object*/
     BufferedImage fractalImg;
@@ -37,10 +37,10 @@ public class FractalDiagram extends JPanel {
     private DrawingConditions conditions;
     private int[] histogram;
 
-    ArrayList<FractalDiagram> repaintList;
+    ArrayList<ArgandDiagram> repaintList;
 
     /**Constructs a BufferedImage with the same dimensions as the fractals data and passes in references*/
-    public FractalDiagram(MandelbrotFrame mandelbrotFrame, FractalSet fractalSet, DrawingConditions conditions, FractalColours colours, ArrayList<FractalDiagram> repaintList) {
+    public ArgandDiagram(MandelbrotFrame mandelbrotFrame, FractalSet fractalSet, DrawingConditions conditions, FractalColours colours, ArrayList<ArgandDiagram> repaintList) {
 
         super();
 
@@ -52,7 +52,7 @@ public class FractalDiagram extends JPanel {
         this.conditions = conditions;
         this.colours = colours;
         this.trackingQueue = new GenericQueue<>();
-        this.controller = new Controller(mandelbrotFrame, this);
+        this.fractalController = new FractalController(mandelbrotFrame, this);
         this.repaintList = repaintList;
         this.setVisible(true);
 
@@ -305,7 +305,7 @@ public class FractalDiagram extends JPanel {
     public void setFractalSet(FractalSet fractalSet) {
 
         this.fractalSet = fractalSet;
-        this.controller.fractalSet = fractalSet;
+        this.fractalController.fractalSet = fractalSet;
 
     }
 
