@@ -60,11 +60,12 @@ public class PopupManager {
         jfc.setFileSelectionMode(JFileChooser.FILES_ONLY);
         if (jfc.showSaveDialog(mandelbrotFrame) == JFileChooser.APPROVE_OPTION) {
             try {
-                File screenShotPath = new File(jfc.getSelectedFile().getPath() + ".png");
                 if (mandelbrotFrame.diagram.conditions.drawMandelbrot) {
+                    File screenShotPath = new File(jfc.getSelectedFile().getPath() + "-M.png");
                     ImageIO.write(mandelbrotFrame.diagram.mandelbrotDiagram.fractalImg, "png", screenShotPath);
                 }
                 if (mandelbrotFrame.diagram.conditions.drawJulia) {
+                    File screenShotPath = new File(jfc.getSelectedFile().getPath() + "-J.png");
                     ImageIO.write(mandelbrotFrame.diagram.juliaDiagram.fractalImg, "png", screenShotPath);
                 }
             } catch (IOException e) {

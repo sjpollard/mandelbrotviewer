@@ -99,12 +99,6 @@ public class MandelbrotFrame extends JFrame {
         this.diagram.conditions.readyToColourPalette = true;
         this.successiveRefinementOption = 1;
         this.successiveRefiner = new Thread(new SuccessiveRefiner(this));
-        this.addWindowStateListener(wsl -> {
-            System.out.println(wsl.getNewState());
-            if (wsl.getNewState() == 6) {
-                System.out.println("maximised");
-                changeFractalDrawn();
-            }});
         this.setVisible(true);
 
     }
