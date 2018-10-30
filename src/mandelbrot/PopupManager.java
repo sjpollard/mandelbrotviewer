@@ -27,8 +27,8 @@ public class PopupManager {
             SerializationManager.readFromFile(mandelbrotFrame, jfc.getSelectedFile().toString());
             mandelbrotFrame.adjustSlider(mandelbrotFrame.mandelbrotSet.getMaxIterations());
             mandelbrotFrame.chunkSpinner.setValue(mandelbrotFrame.mandelbrotSet.getChunkSize());
-            mandelbrotFrame.diagram.mandelbrotDiagram.setFractalSet(mandelbrotFrame.mandelbrotSet);
-            mandelbrotFrame.diagram.juliaDiagram.setFractalSet(mandelbrotFrame.mandelbrotSet.juliaSet);
+            mandelbrotFrame.fractalContainer.mandelbrotDiagram.setFractalSet(mandelbrotFrame.mandelbrotSet);
+            mandelbrotFrame.fractalContainer.juliaDiagram.setFractalSet(mandelbrotFrame.mandelbrotSet.juliaSet);
 
         }
         mandelbrotFrame.iterateAndDraw();
@@ -60,13 +60,13 @@ public class PopupManager {
         jfc.setFileSelectionMode(JFileChooser.FILES_ONLY);
         if (jfc.showSaveDialog(mandelbrotFrame) == JFileChooser.APPROVE_OPTION) {
             try {
-                if (mandelbrotFrame.diagram.conditions.drawMandelbrot) {
+                if (mandelbrotFrame.fractalContainer.conditions.drawMandelbrot) {
                     File screenShotPath = new File(jfc.getSelectedFile().getPath() + "-M.png");
-                    ImageIO.write(mandelbrotFrame.diagram.mandelbrotDiagram.fractalImg, "png", screenShotPath);
+                    ImageIO.write(mandelbrotFrame.fractalContainer.mandelbrotDiagram.fractalImg, "png", screenShotPath);
                 }
-                if (mandelbrotFrame.diagram.conditions.drawJulia) {
+                if (mandelbrotFrame.fractalContainer.conditions.drawJulia) {
                     File screenShotPath = new File(jfc.getSelectedFile().getPath() + "-J.png");
-                    ImageIO.write(mandelbrotFrame.diagram.juliaDiagram.fractalImg, "png", screenShotPath);
+                    ImageIO.write(mandelbrotFrame.fractalContainer.juliaDiagram.fractalImg, "png", screenShotPath);
                 }
             } catch (IOException e) {
                 e.printStackTrace();
@@ -82,18 +82,18 @@ public class PopupManager {
         int reset = JOptionPane.showConfirmDialog(mandelbrotFrame, "Are you sure you want to reset?", "Reset", JOptionPane.YES_NO_OPTION);
         if (reset == JOptionPane.YES_OPTION) {
             mandelbrotFrame.createSet();
-            mandelbrotFrame.diagram.mandelbrotSet = mandelbrotFrame.mandelbrotSet;
-            mandelbrotFrame.diagram.mandelbrotDiagram.setFractalSet(mandelbrotFrame.mandelbrotSet);
-            mandelbrotFrame.diagram.juliaDiagram.setFractalSet(mandelbrotFrame.mandelbrotSet.juliaSet);
+            mandelbrotFrame.fractalContainer.mandelbrotSet = mandelbrotFrame.mandelbrotSet;
+            mandelbrotFrame.fractalContainer.mandelbrotDiagram.setFractalSet(mandelbrotFrame.mandelbrotSet);
+            mandelbrotFrame.fractalContainer.juliaDiagram.setFractalSet(mandelbrotFrame.mandelbrotSet.juliaSet);
             mandelbrotFrame.maxIterationsLabel.setText("Max iterations: 100");
             mandelbrotFrame.adjustSlider(100);
             mandelbrotFrame.chunkSpinner.setValue(1);
-            mandelbrotFrame.diagram.mandelbrotDiagram.colours = new FractalColours(Color.RED, Color.BLUE, Color.BLACK);
-            mandelbrotFrame.diagram.juliaDiagram.colours = new FractalColours(Color.RED, Color.BLUE, Color.BLACK);
+            mandelbrotFrame.fractalContainer.mandelbrotDiagram.colours = new FractalColours(Color.RED, Color.BLUE, Color.BLACK);
+            mandelbrotFrame.fractalContainer.juliaDiagram.colours = new FractalColours(Color.RED, Color.BLUE, Color.BLACK);
             mandelbrotFrame.mandelbrotButton.setState(true);
             mandelbrotFrame.juliaButton.setState(true);
-            mandelbrotFrame.diagram.conditions.drawMandelbrot = true;
-            mandelbrotFrame.diagram.conditions.drawJulia = true;
+            mandelbrotFrame.fractalContainer.conditions.drawMandelbrot = true;
+            mandelbrotFrame.fractalContainer.conditions.drawJulia = true;
             mandelbrotFrame.changeFractalDrawn();
         }
         mandelbrotFrame.draw();
@@ -105,27 +105,27 @@ public class PopupManager {
 
         mandelbrotFrame.draw();
         if(choice.equals("outer"))  {
-            Color newColour = JColorChooser.showDialog(mandelbrotFrame, "Pick a colour", mandelbrotFrame.diagram.colours.getOuter());
+            Color newColour = JColorChooser.showDialog(mandelbrotFrame, "Pick a colour", mandelbrotFrame.fractalContainer.colours.getOuter());
             if (!(newColour == null)) {
-                mandelbrotFrame.diagram.mandelbrotDiagram.colours.setOuter(newColour);
-                mandelbrotFrame.diagram.juliaDiagram.colours.setOuter(newColour);
+                mandelbrotFrame.fractalContainer.mandelbrotDiagram.colours.setOuter(newColour);
+                mandelbrotFrame.fractalContainer.juliaDiagram.colours.setOuter(newColour);
             }
         }
         else if(choice.equals("edge")) {
-            Color newColour = JColorChooser.showDialog(mandelbrotFrame, "Pick a colour", mandelbrotFrame.diagram.colours.getEdge());
+            Color newColour = JColorChooser.showDialog(mandelbrotFrame, "Pick a colour", mandelbrotFrame.fractalContainer.colours.getEdge());
             if (!(newColour == null)) {
-                mandelbrotFrame.diagram.mandelbrotDiagram.colours.setEdge(newColour);
-                mandelbrotFrame.diagram.juliaDiagram.colours.setEdge(newColour);
+                mandelbrotFrame.fractalContainer.mandelbrotDiagram.colours.setEdge(newColour);
+                mandelbrotFrame.fractalContainer.juliaDiagram.colours.setEdge(newColour);
             }
         }
         else if (choice.equals("inner")) {
-            Color newColour = JColorChooser.showDialog(mandelbrotFrame, "Pick a colour", mandelbrotFrame.diagram.colours.getInner());
+            Color newColour = JColorChooser.showDialog(mandelbrotFrame, "Pick a colour", mandelbrotFrame.fractalContainer.colours.getInner());
             if (!(newColour == null)) {
-                mandelbrotFrame.diagram.mandelbrotDiagram.colours.setInner(newColour);
-                mandelbrotFrame.diagram.juliaDiagram.colours.setInner(newColour);
+                mandelbrotFrame.fractalContainer.mandelbrotDiagram.colours.setInner(newColour);
+                mandelbrotFrame.fractalContainer.juliaDiagram.colours.setInner(newColour);
             }
         }
-        mandelbrotFrame.diagram.conditions.readyToCreateImage = true;
+        mandelbrotFrame.fractalContainer.conditions.readyToCreateImage = true;
         mandelbrotFrame.draw();
 
     }

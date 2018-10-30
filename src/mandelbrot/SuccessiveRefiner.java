@@ -30,7 +30,7 @@ public class SuccessiveRefiner implements Runnable{
             mandelbrotFrame.chunkSpinner.setValue(i);
             mandelbrotFrame.mandelbrotSet.iterate(true);
             mandelbrotFrame.mandelbrotSet.juliaSet.iterate(true);
-            mandelbrotFrame.diagram.conditions.readyToCreateImage = true;
+            mandelbrotFrame.fractalContainer.conditions.readyToCreateImage = true;
             mandelbrotFrame.draw();
             try {
                 Thread.sleep(100);

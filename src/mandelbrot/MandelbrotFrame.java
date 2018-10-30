@@ -73,7 +73,7 @@ public class MandelbrotFrame extends JFrame {
     private GenericStack<FractalDataSerializable[]> undoStack;
 
     /**Graphical component*/
-    FractalContainer diagram;
+    FractalContainer fractalContainer;
 
     private Dimension screenSize;
     private Thread successiveRefiner;
@@ -94,9 +94,9 @@ public class MandelbrotFrame extends JFrame {
 
         this.setupComponents();
         this.createSet();
-        this.diagram.setupFractalImages(mandelbrotSet);
-        this.diagram.conditions.readyToCreateImage = true;
-        this.diagram.conditions.readyToColourPalette = true;
+        this.fractalContainer.setupFractalImages(mandelbrotSet);
+        this.fractalContainer.conditions.readyToCreateImage = true;
+        this.fractalContainer.conditions.readyToColourPalette = true;
         this.successiveRefinementOption = 1;
         this.successiveRefiner = new Thread(new SuccessiveRefiner(this));
         this.setVisible(true);
@@ -167,7 +167,7 @@ public class MandelbrotFrame extends JFrame {
         undoStack = new GenericStack<>();
         redoStack = new GenericStack<>();
 
-        diagram = new FractalContainer(this);
+        fractalContainer = new FractalContainer(this);
 
     }
 
@@ -264,7 +264,7 @@ public class MandelbrotFrame extends JFrame {
         menuBar.add(redoButton);
 
         content.add(menuBar, BorderLayout.NORTH);
-        content.add(diagram, BorderLayout.CENTER);
+        content.add(fractalContainer, BorderLayout.CENTER);
 
     }
 
@@ -278,14 +278,14 @@ public class MandelbrotFrame extends JFrame {
     /**Creates a MandelbrotSet object with the default properties*/
     public void createSet() {
 
-        if (diagram.conditions.drawMandelbrot && diagram.conditions.drawJulia) {
-            mandelbrotSet = new MandelbrotSet(diagram.getWidth() / 2, diagram.getHeight(), 100, 2, true);
+        if (fractalContainer.conditions.drawMandelbrot && fractalContainer.conditions.drawJulia) {
+            mandelbrotSet = new MandelbrotSet(fractalContainer.getWidth() / 2, fractalContainer.getHeight(), 100, 2, true);
         }
         else {
-            mandelbrotSet = new MandelbrotSet(diagram.getWidth(), diagram.getHeight(), 100, 2, true);
+            mandelbrotSet = new MandelbrotSet(fractalContainer.getWidth(), fractalContainer.getHeight(), 100, 2, true);
         }
 
-        diagram.conditions.readyToCreateImage = true;
+        fractalContainer.conditions.readyToCreateImage = true;
 
     }
 
@@ -336,8 +336,8 @@ public class MandelbrotFrame extends JFrame {
         if (!mandelbrotButton.getState() && !juliaButton.getState()) {
             ((JCheckBoxMenuItem)ae.getSource()).setState(true);
         }
-        diagram.conditions.drawMandelbrot = mandelbrotButton.getState();
-        diagram.conditions.drawJulia = juliaButton.getState();
+        fractalContainer.conditions.drawMandelbrot = mandelbrotButton.getState();
+        fractalContainer.conditions.drawJulia = juliaButton.getState();
 
         changeFractalDrawn();
 
@@ -345,36 +345,36 @@ public class MandelbrotFrame extends JFrame {
 
     public void changeFractalDrawn() {
 
-        int width = diagram.getWidth();
-        int height = diagram.getHeight();
+        int width = fractalContainer.getWidth();
+        int height = fractalContainer.getHeight();
 
-        if (diagram.conditions.drawMandelbrot && diagram.conditions.drawJulia) {
+        if (fractalContainer.conditions.drawMandelbrot && fractalContainer.conditions.drawJulia) {
             mandelbrotSet.setDimensions(new Dimension(width/2, height));
             mandelbrotSet.juliaSet.setDimensions(new Dimension(width/2, height));
-            diagram.mandelbrotDiagram.fractalImg = new BufferedImage(width/2, height, BufferedImage.TYPE_INT_RGB);
-            diagram.juliaDiagram.fractalImg = new BufferedImage(width/2, height, BufferedImage.TYPE_INT_RGB);
-            diagram.mandelbrotDiagram.setLocation(0,0);
-            diagram.mandelbrotDiagram.setSize(width/2, height);
-            diagram.juliaDiagram.setLocation(width/2, 0);
-            diagram.juliaDiagram.setSize(width/2, height);
-            diagram.add(diagram.mandelbrotDiagram);
-            diagram.add(diagram.juliaDiagram);
+            fractalContainer.mandelbrotDiagram.fractalImg = new BufferedImage(width/2, height, BufferedImage.TYPE_INT_RGB);
+            fractalContainer.juliaDiagram.fractalImg = new BufferedImage(width/2, height, BufferedImage.TYPE_INT_RGB);
+            fractalContainer.mandelbrotDiagram.setLocation(0,0);
+            fractalContainer.mandelbrotDiagram.setSize(width/2, height);
+            fractalContainer.juliaDiagram.setLocation(width/2, 0);
+            fractalContainer.juliaDiagram.setSize(width/2, height);
+            fractalContainer.add(fractalContainer.mandelbrotDiagram);
+            fractalContainer.add(fractalContainer.juliaDiagram);
         }
-        else if (diagram.conditions.drawMandelbrot) {
+        else if (fractalContainer.conditions.drawMandelbrot) {
             mandelbrotSet.setDimensions(new Dimension(width, height));
-            diagram.mandelbrotDiagram.fractalImg = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
-            diagram.mandelbrotDiagram.setLocation(0,0);
-            diagram.mandelbrotDiagram.setSize(width, height);
-            diagram.remove(diagram.juliaDiagram);
-            diagram.add(diagram.mandelbrotDiagram);
+            fractalContainer.mandelbrotDiagram.fractalImg = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
+            fractalContainer.mandelbrotDiagram.setLocation(0,0);
+            fractalContainer.mandelbrotDiagram.setSize(width, height);
+            fractalContainer.remove(fractalContainer.juliaDiagram);
+            fractalContainer.add(fractalContainer.mandelbrotDiagram);
         }
-        else if(diagram.conditions.drawJulia) {
+        else if(fractalContainer.conditions.drawJulia) {
             mandelbrotSet.juliaSet.setDimensions(new Dimension(width, height));
-            diagram.juliaDiagram.fractalImg = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
-            diagram.juliaDiagram.setLocation(0,0);
-            diagram.juliaDiagram.setSize(width, height);
-            diagram.remove(diagram.mandelbrotDiagram);
-            diagram.add(diagram.juliaDiagram);
+            fractalContainer.juliaDiagram.fractalImg = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
+            fractalContainer.juliaDiagram.setLocation(0,0);
+            fractalContainer.juliaDiagram.setSize(width, height);
+            fractalContainer.remove(fractalContainer.mandelbrotDiagram);
+            fractalContainer.add(fractalContainer.juliaDiagram);
         }
         calculateIterations();
         draw();
@@ -384,7 +384,7 @@ public class MandelbrotFrame extends JFrame {
     /**Changes whether or not to draw information*/
     private void editDrawInfo() {
 
-        diagram.conditions.readyToDrawInfo = drawInfoItem.getState();
+        fractalContainer.conditions.readyToDrawInfo = drawInfoItem.getState();
         draw();
 
     }
@@ -392,7 +392,7 @@ public class MandelbrotFrame extends JFrame {
     /**Changes whether or not to draw coordinates tracked*/
     private void editDrawCoords() {
 
-        diagram.conditions.readyToDrawCoords = drawCoordsItem.getState();
+        fractalContainer.conditions.readyToDrawCoords = drawCoordsItem.getState();
         draw();
 
     }
@@ -400,8 +400,8 @@ public class MandelbrotFrame extends JFrame {
     /**Changes whether or not to use HSV colour scaling*/
     private void editUsePalette() {
 
-        diagram.conditions.readyToColourPalette = paletteItem.getState();
-        diagram.conditions.readyToCreateImage = true;
+        fractalContainer.conditions.readyToColourPalette = paletteItem.getState();
+        fractalContainer.conditions.readyToCreateImage = true;
         draw();
 
     }
@@ -409,8 +409,8 @@ public class MandelbrotFrame extends JFrame {
     /**Changes whether or not to use histogram colouring*/
     private void editUseHistogram() {
 
-        diagram.conditions.readyToHistogramColour = histogramItem.getState();
-        diagram.conditions.readyToCreateImage = true;
+        fractalContainer.conditions.readyToHistogramColour = histogramItem.getState();
+        fractalContainer.conditions.readyToCreateImage = true;
         draw();
     }
 
@@ -432,7 +432,7 @@ public class MandelbrotFrame extends JFrame {
             if (newValue > mandelbrotSet.getMaxIterations()) {
                 mandelbrotSet.iterateForwards(newValue);
                 mandelbrotSet.juliaSet.iterateForwards(newValue);
-                diagram.conditions.readyToCreateImage = true;
+                fractalContainer.conditions.readyToCreateImage = true;
             }
             else  {
                 mandelbrotSet.setMaxIterations(newValue);
@@ -470,7 +470,7 @@ public class MandelbrotFrame extends JFrame {
     /**Adds the action performed to the undo stack*/
     public void addActionToStack() {
 
-        FractalDataSerializable[] oldData = {new FractalDataSerializable(mandelbrotSet, diagram.colours), new FractalDataSerializable(mandelbrotSet.juliaSet, diagram.colours)};
+        FractalDataSerializable[] oldData = {new FractalDataSerializable(mandelbrotSet, fractalContainer.colours), new FractalDataSerializable(mandelbrotSet.juliaSet, fractalContainer.colours)};
         undoStack.add(oldData);
         if (!redoStack.isEmpty()) redoStack = new GenericStack<>();
 
@@ -481,7 +481,7 @@ public class MandelbrotFrame extends JFrame {
 
         if (!undoStack.isEmpty()) {
 
-            FractalDataSerializable[] oldData = {new FractalDataSerializable(mandelbrotSet, diagram.colours), new FractalDataSerializable(mandelbrotSet.juliaSet, diagram.colours)};
+            FractalDataSerializable[] oldData = {new FractalDataSerializable(mandelbrotSet, fractalContainer.colours), new FractalDataSerializable(mandelbrotSet.juliaSet, fractalContainer.colours)};
             redoStack.add(oldData);
             FractalDataSerializable[] fractalData = undoStack.remove();
             mandelbrotSet.setAllValues(fractalData[0]);
@@ -525,21 +525,21 @@ public class MandelbrotFrame extends JFrame {
     /**Iterates normally*/
     private void calculateIterations() {
 
-        if (diagram.conditions.drawMandelbrot) {
+        if (fractalContainer.conditions.drawMandelbrot) {
             mandelbrotSet.iterate(false);
 
         }
-        if (diagram.conditions.drawJulia) {
+        if (fractalContainer.conditions.drawJulia) {
             mandelbrotSet.juliaSet.iterate(false);
         }
-        diagram.conditions.readyToCreateImage = true;
+        fractalContainer.conditions.readyToCreateImage = true;
 
     }
 
     /**Shortened method name for repainting graphics component*/
     public void draw() {
 
-        diagram.drawImages();
+        fractalContainer.drawImages();
 
     }
 

@@ -17,7 +17,7 @@ public class SerializationManager {
             ObjectInputStream inputStream = new ObjectInputStream(new BufferedInputStream(new FileInputStream(source)));
             FractalDataSerializable mandelbrotData = (FractalDataSerializable)inputStream.readObject();
             mandelbrotFrame.mandelbrotSet.setAllValues(mandelbrotData);
-            mandelbrotFrame.diagram.colours = mandelbrotData.colours;
+            mandelbrotFrame.fractalContainer.colours = mandelbrotData.colours;
             mandelbrotFrame.mandelbrotSet.juliaSet.setAllValues((FractalDataSerializable)inputStream.readObject());
             inputStream.close();
         } catch (IOException | ClassNotFoundException e) {
@@ -32,9 +32,9 @@ public class SerializationManager {
         try {
 
             ObjectOutputStream outputStream =  new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream(destination + ".fractaldata")));
-            outputStream.writeObject(new FractalDataSerializable(mandelbrotFrame.mandelbrotSet, mandelbrotFrame.diagram.colours));
+            outputStream.writeObject(new FractalDataSerializable(mandelbrotFrame.mandelbrotSet, mandelbrotFrame.fractalContainer.colours));
             outputStream.reset();
-            outputStream.writeObject(new FractalDataSerializable(mandelbrotFrame.mandelbrotSet.juliaSet, mandelbrotFrame.diagram.colours));
+            outputStream.writeObject(new FractalDataSerializable(mandelbrotFrame.mandelbrotSet.juliaSet, mandelbrotFrame.fractalContainer.colours));
             outputStream.close();
         } catch (IOException e) {
             e.printStackTrace();
