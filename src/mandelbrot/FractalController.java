@@ -18,7 +18,7 @@ public class FractalController implements MouseListener, MouseWheelListener, Mou
     private MandelbrotFrame mandelbrotFrame;
 
     /**Reference to the ArgandDiagram of this FractalController*/
-    private ArgandDiagram ArgandDiagram;
+    private ArgandDiagram argandDiagram;
     
     /**Reference to the FractalSet of the linked diagram*/
     FractalSet fractalSet;
@@ -28,15 +28,15 @@ public class FractalController implements MouseListener, MouseWheelListener, Mou
     private Point lastPos;
 
     /**Sets the reference to the GUI component and adds the listeners to this object*/
-    public FractalController(MandelbrotFrame mandelbrotFrame, ArgandDiagram ArgandDiagram) {
+    public FractalController(MandelbrotFrame mandelbrotFrame, ArgandDiagram argandDiagram) {
 
         this.mandelbrotFrame = mandelbrotFrame;
-        this.ArgandDiagram = ArgandDiagram;
-        this.fractalSet = ArgandDiagram.getFractalSet();
+        this.argandDiagram = argandDiagram;
+        this.fractalSet = argandDiagram.getFractalSet();
 
-        this.ArgandDiagram.addMouseListener(this);
-        this.ArgandDiagram.addMouseWheelListener(this);
-        this.ArgandDiagram.addMouseMotionListener(this);
+        this.argandDiagram.addMouseListener(this);
+        this.argandDiagram.addMouseWheelListener(this);
+        this.argandDiagram.addMouseMotionListener(this);
 
     }
 
@@ -60,7 +60,7 @@ public class FractalController implements MouseListener, MouseWheelListener, Mou
     @Override
     public void mouseEntered(MouseEvent me) {
 
-        ArgandDiagram.grabFocus();
+        argandDiagram.grabFocus();
 
     }
 
@@ -84,7 +84,7 @@ public class FractalController implements MouseListener, MouseWheelListener, Mou
 
         if (SwingUtilities.isLeftMouseButton(me)) {
             dragging = false;
-            ArgandDiagram.setImgLocation(new Point());
+            argandDiagram.setImgLocation(new Point());
             mandelbrotFrame.iterateAndDraw();
         }
 
@@ -118,7 +118,7 @@ public class FractalController implements MouseListener, MouseWheelListener, Mou
             }
 
             ComplexNumber newCentre;
-            ArgandDiagram.translateImgLocation(new Point(mme.getX() - lastPos.x, mme.getY() - lastPos.y));
+            argandDiagram.translateImgLocation(new Point(mme.getX() - lastPos.x, mme.getY() - lastPos.y));
             newCentre = calculateNewCentre(fractalSet, mme.getX(), mme.getY(), lastPos);
             fractalSet.setCentre(newCentre);
             if (fractalSet.getType() == FractalType.MANDELBROT) mandelbrotFrame.mandelbrotSet.juliaSet.setC(newCentre);
@@ -129,7 +129,7 @@ public class FractalController implements MouseListener, MouseWheelListener, Mou
         }
         else if (SwingUtilities.isRightMouseButton(mme)) {
 
-            ArgandDiagram.track(mme.getX(), mme.getY());
+            argandDiagram.track(mme.getX(), mme.getY());
             mandelbrotFrame.draw();
 
         }
