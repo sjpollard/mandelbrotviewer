@@ -156,7 +156,6 @@ public class SettingsFrame extends JFrame {
     /**Verifies via the RegexManager class, whether all of the inputs can have valid data extrapolated*/
     public boolean entriesValid() {
 
-
         if (!RegexManager.matchesUnsignedInteger(generalPanelList.get(0).getInputFieldText())) return false;
         if (!RegexManager.matchesUnsignedDouble(generalPanelList.get(1).getInputFieldText())) return false;
         if (!RegexManager.matchesUnsignedInteger(generalPanelList.get(2).getInputFieldText())) return false;

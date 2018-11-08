@@ -25,6 +25,7 @@ public class PopupManager {
         if (jfc.showOpenDialog(mandelbrotFrame) == JFileChooser.APPROVE_OPTION) {
 
             SerializationManager.readFromFile(mandelbrotFrame, jfc.getSelectedFile().toString());
+            mandelbrotFrame.maxIterationsLabel.setText("Max iterations: " + mandelbrotFrame.mandelbrotSet.getMaxIterations());
             mandelbrotFrame.adjustSlider(mandelbrotFrame.mandelbrotSet.getMaxIterations());
             mandelbrotFrame.chunkSpinner.setValue(mandelbrotFrame.mandelbrotSet.getChunkSize());
             mandelbrotFrame.fractalContainer.mandelbrotDiagram.setFractalSet(mandelbrotFrame.mandelbrotSet);

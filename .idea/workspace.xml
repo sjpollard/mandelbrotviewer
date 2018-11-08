@@ -3,11 +3,14 @@
   <component name="BookmarkManager">
     <bookmark url="uml://JAVA/mandelbrot" />
     <bookmark url="file://$PROJECT_DIR$/.idea/workspace.xml" />
+    <bookmark url="file://$PROJECT_DIR$/src/mandelbrot/MandelbrotSet.java" line="142" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c970403-ff6d-4481-9156-a7fb3198209c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mandelbrot/MandelbrotFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/MandelbrotFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mandelbrot/PopupManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/PopupManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mandelbrot/SerializationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/SerializationManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mandelbrot/SettingsFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/SettingsFrame.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,20 +24,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ArgandDiagram.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mandelbrot/ArgandDiagram.java">
+      <file leaf-file-name="SettingsFrame.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mandelbrot/SettingsFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
+            <state relative-caret-position="417">
+              <caret line="178" column="37" selection-start-line="178" selection-start-column="37" selection-end-line="178" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MandelbrotFrame.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PopupManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mandelbrot/PopupManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="26" column="37" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SerializationManager.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/mandelbrot/SerializationManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="23" column="32" lean-forward="true" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MandelbrotFrame.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mandelbrot/MandelbrotFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="431" column="37" selection-start-line="431" selection-start-column="37" selection-end-line="431" selection-end-column="37" />
+            <state relative-caret-position="450">
+              <caret line="450" column="16" selection-start-line="450" selection-start-column="16" selection-end-line="450" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JuliaSet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mandelbrot/JuliaSet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="186" column="16" selection-start-line="186" selection-start-column="16" selection-end-line="186" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -60,7 +90,8 @@
       <find>diagram</find>
       <find>fractal</find>
       <find>ArgandDiagram</find>
-      <find />
+      <find>&quot;mandelbrot set only&quot;</find>
+      <find>!(</find>
     </findStrings>
     <replaceStrings>
       <replace>edge</replace>
@@ -90,12 +121,8 @@
         <option value="$PROJECT_DIR$/src/mandelbrot/MandelbrotViewer.java" />
         <option value="$PROJECT_DIR$/src/mandelbrot/RegexManager.java" />
         <option value="$PROJECT_DIR$/src/mandelbrot/FractalType.java" />
-        <option value="$PROJECT_DIR$/src/mandelbrot/SettingsFrame.java" />
         <option value="$PROJECT_DIR$/src/mandelbrot/FractalSet.java" />
-        <option value="$PROJECT_DIR$/src/mandelbrot/MandelbrotSet.java" />
-        <option value="$PROJECT_DIR$/src/mandelbrot/JuliaSet.java" />
         <option value="$PROJECT_DIR$/src/mandelbrot/FractalContainer.java" />
-        <option value="$PROJECT_DIR$/src/mandelbrot/PopupManager.java" />
         <option value="$PROJECT_DIR$/src/mandelbrot/FractalDiagram.java" />
         <option value="$PROJECT_DIR$/src/mandelbrot/Controller.java" />
         <option value="$PROJECT_DIR$/src/mandelbrot/HelpFrame.java" />
@@ -103,6 +130,11 @@
         <option value="$PROJECT_DIR$/src/mandelbrot/FractalController.java" />
         <option value="$PROJECT_DIR$/src/mandelbrot/ArgandDiagram.java" />
         <option value="$PROJECT_DIR$/src/mandelbrot/MandelbrotFrame.java" />
+        <option value="$PROJECT_DIR$/src/mandelbrot/JuliaSet.java" />
+        <option value="$PROJECT_DIR$/src/mandelbrot/MandelbrotSet.java" />
+        <option value="$PROJECT_DIR$/src/mandelbrot/SettingsFrame.java" />
+        <option value="$PROJECT_DIR$/src/mandelbrot/PopupManager.java" />
+        <option value="$PROJECT_DIR$/src/mandelbrot/SerializationManager.java" />
       </list>
     </option>
   </component>
@@ -146,7 +178,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="slider&#9;PSI&#9;JAVA://mandelbrot.MandelbrotFrame#sliderEditMaxIterations&#10;saveScreen&#9;PSI&#9;JAVA://mandelbrot.PopupManager#saveScreenShot&#10;change&#9;PSI&#9;JAVA://mandelbrot.MandelbrotFrame#changeFractalConditions&#10;changeFractal&#9;PSI&#9;JAVA://mandelbrot.MandelbrotFrame#changeFractalDrawn&#10;reset&#9;PSI&#9;JAVA://mandelbrot.PopupManager#resetValues&#10;mande&#9;FILE&#9;file://C:/Users/Sam Pollard/Documents/GitHub/mandelbrotviewer/src/mandelbrot/MandelbrotFrame.java&#10;draw&#9;PSI&#9;JAVA://mandelbrot.MandelbrotFrame#draw&#10;mandel&#9;FILE&#9;file://C:/Users/Sam Pollard/Documents/GitHub/mandelbrotviewer/src/mandelbrot/MandelbrotFrame.java&#10;com&#9;PSI&#9;JAVA://mandelbrot.ComplexNumber" />
+    <property name="SearchEverywhereHistoryKey" value="load&#9;PSI&#9;JAVA://mandelbrot.PopupManager#loadValues&#10;change&#9;PSI&#9;JAVA://mandelbrot.SettingsFrame#changeSettings&#10;settings&#9;FILE&#9;file://C:/Users/Sam Pollard/Documents/GitHub/mandelbrotviewer/src/mandelbrot/SettingsFrame.java&#10;slider&#9;PSI&#9;JAVA://mandelbrot.MandelbrotFrame#sliderEditMaxIterations&#10;saveScreen&#9;PSI&#9;JAVA://mandelbrot.PopupManager#saveScreenShot&#10;changeFractal&#9;PSI&#9;JAVA://mandelbrot.MandelbrotFrame#changeFractalDrawn&#10;reset&#9;PSI&#9;JAVA://mandelbrot.PopupManager#resetValues&#10;mande&#9;FILE&#9;file://C:/Users/Sam Pollard/Documents/GitHub/mandelbrotviewer/src/mandelbrot/MandelbrotFrame.java&#10;draw&#9;PSI&#9;JAVA://mandelbrot.MandelbrotFrame#draw&#10;mandel&#9;FILE&#9;file://C:/Users/Sam Pollard/Documents/GitHub/mandelbrotviewer/src/mandelbrot/MandelbrotFrame.java&#10;com&#9;PSI&#9;JAVA://mandelbrot.ComplexNumber" />
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -204,14 +236,14 @@
       <window_info anchor="bottom" id="Messages" order="9" sideWeight="0.4984375" weight="0.32943678" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50208336" side_tool="true" weight="0.32731137" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49791667" weight="0.32629356" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49791667" visible="true" weight="0.32629356" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49947917" weight="0.32943678" />
       <window_info id="Designer" order="6" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12135417" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="UI Designer" order="2" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3970433" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3970433" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
@@ -293,7 +325,9 @@
     <MESSAGE value="Mistake" />
     <MESSAGE value="Changing to fit camel-case" />
     <MESSAGE value="Missing example file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Missing example file" />
+    <MESSAGE value="Small bug fixes" />
+    <MESSAGE value="Neatening of conditions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Neatening of conditions" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -402,13 +436,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mandelbrot/RepaintRunner.java" />
-    <entry file="file://$PROJECT_DIR$/src/mandelbrot/SerializationManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="6" selection-start-column="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mandelbrot/MandelbrotViewer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -497,27 +524,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mandelbrot/PopupManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="977">
-          <caret line="67" column="88" selection-start-line="67" selection-start-column="88" selection-end-line="67" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mandelbrot/MandelbrotSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="43" column="54" selection-start-line="43" selection-start-column="54" selection-end-line="43" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mandelbrot/JuliaSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="185" selection-start-line="185" selection-end-line="185" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mandelbrot/FractalSet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="551">
@@ -563,13 +569,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mandelbrot/SettingsFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="574">
-          <caret line="149" column="9" selection-start-line="149" selection-start-column="9" selection-end-line="149" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mandelbrot/FractalContainer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
@@ -607,15 +606,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mandelbrot/ArgandDiagram.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
+        <state relative-caret-position="612">
           <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mandelbrot/MandelbrotSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2295">
+          <caret line="135" selection-start-line="135" selection-end-line="135" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mandelbrot/JuliaSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="186" column="16" selection-start-line="186" selection-start-column="16" selection-end-line="186" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mandelbrot/MandelbrotFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="431" column="37" selection-start-line="431" selection-start-column="37" selection-end-line="431" selection-end-column="37" />
+        <state relative-caret-position="450">
+          <caret line="450" column="16" selection-start-line="450" selection-start-column="16" selection-end-line="450" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mandelbrot/SettingsFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="178" column="37" selection-start-line="178" selection-start-column="37" selection-end-line="178" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mandelbrot/PopupManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="26" column="37" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mandelbrot/SerializationManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="32" lean-forward="true" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
         </state>
       </provider>
     </entry>

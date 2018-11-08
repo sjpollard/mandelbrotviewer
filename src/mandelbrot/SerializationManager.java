@@ -18,6 +18,8 @@ public class SerializationManager {
             FractalDataSerializable mandelbrotData = (FractalDataSerializable)inputStream.readObject();
             mandelbrotFrame.mandelbrotSet.setAllValues(mandelbrotData);
             mandelbrotFrame.fractalContainer.colours = mandelbrotData.colours;
+            mandelbrotFrame.fractalContainer.mandelbrotDiagram.colours = mandelbrotData.colours;
+            mandelbrotFrame.fractalContainer.juliaDiagram.colours = mandelbrotData.colours;
             mandelbrotFrame.mandelbrotSet.juliaSet.setAllValues((FractalDataSerializable)inputStream.readObject());
             inputStream.close();
         } catch (IOException | ClassNotFoundException e) {
