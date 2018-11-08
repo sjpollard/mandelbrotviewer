@@ -106,21 +106,21 @@ public class PopupManager {
         mandelbrotFrame.draw();
         if(choice.equals("outer"))  {
             Color newColour = JColorChooser.showDialog(mandelbrotFrame, "Pick a colour", mandelbrotFrame.fractalContainer.colours.getOuter());
-            if (!(newColour == null)) {
+            if (newColour != null) {
                 mandelbrotFrame.fractalContainer.mandelbrotDiagram.colours.setOuter(newColour);
                 mandelbrotFrame.fractalContainer.juliaDiagram.colours.setOuter(newColour);
             }
         }
         else if(choice.equals("edge")) {
             Color newColour = JColorChooser.showDialog(mandelbrotFrame, "Pick a colour", mandelbrotFrame.fractalContainer.colours.getEdge());
-            if (!(newColour == null)) {
+            if (newColour != null) {
                 mandelbrotFrame.fractalContainer.mandelbrotDiagram.colours.setEdge(newColour);
                 mandelbrotFrame.fractalContainer.juliaDiagram.colours.setEdge(newColour);
             }
         }
         else if (choice.equals("inner")) {
             Color newColour = JColorChooser.showDialog(mandelbrotFrame, "Pick a colour", mandelbrotFrame.fractalContainer.colours.getInner());
-            if (!(newColour == null)) {
+            if (newColour != null) {
                 mandelbrotFrame.fractalContainer.mandelbrotDiagram.colours.setInner(newColour);
                 mandelbrotFrame.fractalContainer.juliaDiagram.colours.setInner(newColour);
             }

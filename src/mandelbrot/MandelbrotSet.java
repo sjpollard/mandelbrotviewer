@@ -140,7 +140,7 @@ public class MandelbrotSet implements FractalSet {
         for (int y = 0; y < lastResults.length; y += chunkSize) {
             for (int x = 0; x < lastResults[0].length; x += chunkSize) {
 
-                if (!(lastResults[y][x] == null)) {
+                if (lastResults[y][x] != null) {
                     lastResults[y][x] = stepUpIterations(lastResults[y][x], x, y, newMaxIterations - iterations[y][x]);
                 }
                 else {

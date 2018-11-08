@@ -426,7 +426,7 @@ public class MandelbrotFrame extends JFrame {
     private void sliderEditMaxIterations() {
 
         int newValue = iterSlider.getValue();
-        if (!(newValue == mandelbrotSet.getMaxIterations())) {
+        if (newValue != mandelbrotSet.getMaxIterations()) {
             if (newValue == 0)  {
                 newValue = 1;
                 iterSlider.setValue(1);
@@ -463,7 +463,7 @@ public class MandelbrotFrame extends JFrame {
     private void spinnerEditChunkSize() {
 
         int newValue = (int)chunkSpinner.getValue();
-        if (!(mandelbrotSet.getChunkSize() == newValue)) {
+        if (mandelbrotSet.getChunkSize() != newValue) {
             mandelbrotSet.setChunkSize(newValue);
             mandelbrotSet.juliaSet.setChunkSize(newValue);
         }
