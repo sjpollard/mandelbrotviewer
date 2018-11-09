@@ -82,7 +82,7 @@ public class FractalController implements MouseListener, MouseWheelListener, Mou
     @Override
     public void mouseReleased(MouseEvent me) {
 
-        if (SwingUtilities.isLeftMouseButton(me)) {
+        if (SwingUtilities.isLeftMouseButton(me) && dragging) {
             dragging = false;
             argandDiagram.setImgLocation(new Point());
             mandelbrotFrame.iterateAndDraw();
