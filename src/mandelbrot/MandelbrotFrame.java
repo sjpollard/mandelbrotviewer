@@ -135,8 +135,8 @@ public class MandelbrotFrame extends JFrame {
         fractalChoiceMenu = new JMenu("Fractal choice");
         fractalChoiceMenu.setOpaque(true);
         fractalChoiceMenu.setBackground(Color.white);
-        mandelbrotButton = new JCheckBoxMenuItem("Mandelbrot set only", true);
-        juliaButton = new JCheckBoxMenuItem("Julia set only", true);
+        mandelbrotButton = new JCheckBoxMenuItem("Mandelbrot set", true);
+        juliaButton = new JCheckBoxMenuItem("Julia set", true);
         resetItem = new JMenuItem("Reset values");
         settingsItem = new JMenuItem("Edit fractal settings");
         drawInfoItem = new JCheckBoxMenuItem("Draw information", false);
@@ -426,7 +426,7 @@ public class MandelbrotFrame extends JFrame {
     private void sliderEditMaxIterations() {
 
         int newValue = iterSlider.getValue();
-        if (!(newValue == mandelbrotSet.getMaxIterations())) {
+        if (newValue != mandelbrotSet.getMaxIterations()) {
             maxIterationsLabel.setText("Max iterations: " + newValue);
             if (newValue == 0) newValue = 1;
             if (newValue > mandelbrotSet.getMaxIterations()) {

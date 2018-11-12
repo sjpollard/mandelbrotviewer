@@ -69,6 +69,8 @@ public class MandelbrotSet implements FractalSet {
 
             }
         }
+        System.out.println(type);
+        System.out.println(Math.log(pixelArea) + " " + Math.log(1.0/chunkSize));
 
     }
 

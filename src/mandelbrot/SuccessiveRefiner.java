@@ -26,7 +26,7 @@ public class SuccessiveRefiner implements Runnable{
     @Override
     public void run() {
 
-        for (int i = mandelbrotFrame.successiveRefinementOption; i >= breakPoint; i /= 2) {
+        for (int i = mandelbrotFrame.successiveRefinementOption; i >= breakPoint; i--) {
             mandelbrotFrame.chunkSpinner.setValue(i);
             mandelbrotFrame.mandelbrotSet.iterate(true);
             mandelbrotFrame.mandelbrotSet.juliaSet.iterate(true);
