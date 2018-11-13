@@ -19,6 +19,8 @@ public class FractalController implements MouseListener, MouseWheelListener, Mou
 
     /**Reference to the ArgandDiagram of this FractalController*/
     private ArgandDiagram argandDiagram;
+
+    private DimensionFrame dimensionFrame;
     
     /**Reference to the FractalSet of the linked diagram*/
     FractalSet fractalSet;
@@ -52,6 +54,13 @@ public class FractalController implements MouseListener, MouseWheelListener, Mou
             if (fractalSet.getType() == FractalType.MANDELBROT) mandelbrotFrame.mandelbrotSet.juliaSet.setC(newCentre);
 
             mandelbrotFrame.iterateAndDraw();
+        }
+        else if (me.getButton() == MouseEvent.BUTTON2) {
+
+            if (dimensionFrame != null) dimensionFrame.dispose();
+            FractalSet clone = fractalSet.clone();
+            dimensionFrame = new DimensionFrame(clone, argandDiagram.colours, argandDiagram.conditions.clone());
+
         }
 
     }

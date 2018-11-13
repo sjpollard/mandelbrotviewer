@@ -23,4 +23,19 @@ public class DrawingConditions {
 
     }
 
+    public DrawingConditions clone() {
+
+        DrawingConditions clone = new DrawingConditions();
+        clone.drawMandelbrot = this.drawMandelbrot;
+        clone.drawJulia = this.drawJulia;
+        clone.readyToCreateImage = this.readyToCreateImage;
+        clone.readyToDrawInfo = this.readyToDrawInfo;
+        clone.readyToDrawCoords = this.readyToDrawCoords;
+        clone.readyToColourPalette = this.readyToColourPalette;
+        clone.readyToHistogramColour = this.readyToHistogramColour;
+
+        return clone;
+
+    }
+
 }

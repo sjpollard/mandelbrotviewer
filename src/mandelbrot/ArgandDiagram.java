@@ -34,7 +34,7 @@ public class ArgandDiagram extends JPanel {
 
     private FractalSet fractalSet;
     private Point imgLocation;
-    private DrawingConditions conditions;
+    DrawingConditions conditions;
     private int[] histogram;
 
     ArrayList<ArgandDiagram> repaintList;
@@ -47,13 +47,28 @@ public class ArgandDiagram extends JPanel {
         this.setPreferredSize(fractalSet.getDimensions());
         this.mandelbrotFrame = mandelbrotFrame;
         this.imgLocation = new Point();
-        this.fractalImg = new BufferedImage(fractalSet.getIterations()[0].length, fractalSet.getIterations().length, BufferedImage.TYPE_INT_RGB);
+        this.fractalImg = new BufferedImage(fractalSet.getDimensions().width, fractalSet.getDimensions().height, BufferedImage.TYPE_INT_RGB);
         this.fractalSet = fractalSet;
         this.conditions = conditions;
         this.colours = colours;
         this.trackingQueue = new GenericQueue<>();
         this.fractalController = new FractalController(mandelbrotFrame, this);
         this.repaintList = repaintList;
+        this.setVisible(true);
+
+    }
+
+    public ArgandDiagram(FractalSet fractalSet, DrawingConditions conditions, FractalColours colours) {
+
+        super();
+
+        this.setPreferredSize(new Dimension(800, 600));
+        this.imgLocation = new Point();
+        this.fractalImg = new BufferedImage(fractalSet.getDimensions().width, fractalSet.getDimensions().height, BufferedImage.TYPE_INT_RGB);
+        this.fractalSet = fractalSet;
+        this.conditions = conditions;
+        this.colours = colours;
+        this.trackingQueue = new GenericQueue<>();
         this.setVisible(true);
 
     }

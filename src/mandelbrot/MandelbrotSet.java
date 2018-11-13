@@ -69,8 +69,6 @@ public class MandelbrotSet implements FractalSet {
 
             }
         }
-        System.out.println(type);
-        System.out.println(Math.log(pixelArea) + " " + Math.log(1.0/chunkSize));
 
     }
 
@@ -192,6 +190,21 @@ public class MandelbrotSet implements FractalSet {
 
     public FractalType getType() {
         return type;
+    }
+
+    public MandelbrotSet clone() {
+
+        MandelbrotSet clone = new MandelbrotSet();
+        clone.setDimensions(this.dimensions);
+        clone.maxIterations = this.maxIterations;
+        clone.power = this.power;
+        clone.chunkSize = this.chunkSize;
+        clone.centre = this.centre;
+        clone.zStart = this.zStart;
+        clone.zoom = this.zoom;
+
+        return clone;
+
     }
 
     /**Re-constructs the array so that it is empty*/

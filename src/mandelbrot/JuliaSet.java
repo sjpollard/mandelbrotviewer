@@ -64,8 +64,6 @@ public class JuliaSet implements FractalSet {
 
             }
         }
-        System.out.println(type);
-        System.out.println(Math.log(pixelArea) + " " + Math.log(1.0/chunkSize));
 
     }
 
@@ -180,6 +178,21 @@ public class JuliaSet implements FractalSet {
 
     public FractalType getType() {
         return type;
+    }
+
+    public JuliaSet clone() {
+
+        JuliaSet clone = new JuliaSet();
+        clone.setDimensions(this.dimensions);
+        clone.maxIterations = this.maxIterations;
+        clone.power = this.power;
+        clone.chunkSize = this.chunkSize;
+        clone.centre = this.centre;
+        clone.c = this.c;
+        clone.zoom = this.zoom;
+
+        return clone;
+
     }
 
     public void resetRefined() {

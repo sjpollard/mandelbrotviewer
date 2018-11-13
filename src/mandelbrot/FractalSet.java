@@ -37,6 +37,8 @@ public interface FractalSet {
 
     FractalType getType();
 
+    FractalSet clone();
+
     void setAllValues(FractalDataSerializable fractalData);
 
     Dimension getDimensions();
