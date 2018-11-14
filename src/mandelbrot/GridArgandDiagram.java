@@ -59,10 +59,10 @@ public class GridArgandDiagram extends ArgandDiagram {
 
         for (Point intersected: intersectedBoxes) {
 
-            g.setColor(Color.MAGENTA);
-            g.fillRect(intersected.x, intersected.y, step, step);
-            g.setColor(Color.GREEN);
-            g.drawLine(intersected.x, intersected.y, intersected.x + step - 1, intersected.y + step - 1);
+            g.setColor(FractalColours.invertColour(colours.getOuter()));
+            g.fillRect(intersected.x + 1, intersected.y + 1, step - 1, step - 1);
+            g.setColor(Color.BLACK);
+            g.drawRect(intersected.x, intersected.y, step, step);
 
         }
 

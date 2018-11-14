@@ -18,7 +18,7 @@ public class DimensionFrame extends JFrame {
 
         super();
 
-        this.setMinimumSize(new Dimension(800, 600));
+        this.setSize(800, 600);
         this.setResizable(false);
         this.setIconImage(new ImageIcon("src\\images\\icon.png").getImage());
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
@@ -60,10 +60,6 @@ public class DimensionFrame extends JFrame {
 
     public void updateGridlines() {
 
-        System.out.println(getSize());
-        System.out.println(content.getSize());
-        System.out.println(nextButton.getSize());
-        System.out.println(argandDiagram.getSize());
         if (!argandDiagram.finished) {
             argandDiagram.start = true;
             updateGrids();
@@ -76,9 +72,9 @@ public class DimensionFrame extends JFrame {
 
     public void updateGrids() {
 
-        for (int y = 0; y < argandDiagram.getHeight(); y += argandDiagram.step) {
+        for (int y = 0; y < argandDiagram.getHeight(); y += argandDiagram.step - 1) {
 
-            for (int x = 0; x < argandDiagram.getWidth(); x += argandDiagram.step) {
+            for (int x = 0; x < argandDiagram.getWidth(); x += argandDiagram.step - 1) {
 
                 boolean found = false;
 
@@ -86,7 +82,7 @@ public class DimensionFrame extends JFrame {
 
                     for (int boxX = x; boxX <= x + argandDiagram.step && boxX < argandDiagram.getWidth() && !found; boxX++) {
 
-                        if (argandDiagram.getColorAtPixel(boxX, boxY).equals(Color.BLACK))  {
+                        if (argandDiagram.getColorAtPixel(boxX, boxY).equals(argandDiagram.colours.getInner()))  {
 
                             argandDiagram.intersectedBoxes.add(new Point(x, y));
                             found = true;

@@ -24,14 +24,14 @@ public class FractalColours implements Serializable {
         this.outer = outer;
         this.edge = edge;
         this.inner = inner;
-        this.invertColour(inner);
+        this.inverse = invertColour(inner);
 
     }
 
     /**Inverts the RGB values of the input colour and returns the inverted colour*/
-    private void invertColour(Color colour) {
+    public static Color invertColour(Color colour) {
 
-        this.inverse = new Color(255 - colour.getRed(), 255 - colour.getGreen(), 255 - colour.getBlue());
+        return new Color(255 - colour.getRed(), 255 - colour.getGreen(), 255 - colour.getBlue());
 
     }
     

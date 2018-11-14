@@ -62,7 +62,7 @@ public class ArgandDiagram extends JPanel {
 
         super();
 
-        this.setPreferredSize(new Dimension(800, 600));
+        this.setPreferredSize(new Dimension(800, 550));
         this.imgLocation = new Point();
         this.fractalImg = new BufferedImage(fractalSet.getDimensions().width, fractalSet.getDimensions().height, BufferedImage.TYPE_INT_RGB);
         this.fractalSet = fractalSet;
