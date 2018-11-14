@@ -13,12 +13,12 @@ public class DimensionFrame extends JFrame {
 
     JButton nextButton;
 
-    boolean finished;
 
     public DimensionFrame(FractalSet fractalSet, FractalColours colours, DrawingConditions conditions) {
 
         super();
 
+        this.setMinimumSize(new Dimension(800, 600));
         this.setResizable(false);
         this.setIconImage(new ImageIcon("src\\images\\icon.png").getImage());
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
@@ -39,10 +39,9 @@ public class DimensionFrame extends JFrame {
 
         this.content = new JPanel();
         this.content.setLayout(new BorderLayout());
-        this.content.setBorder(BorderFactory.createLineBorder(Color.green));
 
         this.nextButton = new JButton("Next");
-        this.nextButton.addActionListener(ae -> updateGrids());
+        this.nextButton.addActionListener(ae -> updateGridlines());
 
         if (fractalSet.getType() == FractalType.MANDELBROT) conditions.drawJulia = false;
         if (fractalSet.getType() == FractalType.JULIA) conditions.drawMandelbrot = false;
@@ -59,13 +58,50 @@ public class DimensionFrame extends JFrame {
         
     }
 
-    public void updateGrids() {
+    public void updateGridlines() {
 
-        if (argandDiagram.step == 0 && !finished) argandDiagram.step = 16;
-        argandDiagram.repaint();
-        argandDiagram.step--;
-        if (argandDiagram.step == 2) finished = true;
+        System.out.println(getSize());
+        System.out.println(content.getSize());
+        System.out.println(nextButton.getSize());
+        System.out.println(argandDiagram.getSize());
+        if (!argandDiagram.finished) {
+            argandDiagram.start = true;
+            updateGrids();
+            argandDiagram.repaint();
+            argandDiagram.step--;
+        }
+        if (argandDiagram.step == 1) argandDiagram.finished = true;
 
     }
+
+    public void updateGrids() {
+
+        for (int y = 0; y < argandDiagram.getHeight(); y += argandDiagram.step) {
+
+            for (int x = 0; x < argandDiagram.getWidth(); x += argandDiagram.step) {
+
+                boolean found = false;
+
+                for (int boxY = y; boxY <= y + argandDiagram.step && boxY < argandDiagram.getHeight() && !found; boxY++) {
+
+                    for (int boxX = x; boxX <= x + argandDiagram.step && boxX < argandDiagram.getWidth() && !found; boxX++) {
+
+                        if (argandDiagram.getColorAtPixel(boxX, boxY).equals(Color.BLACK))  {
+
+                            argandDiagram.intersectedBoxes.add(new Point(x, y));
+                            found = true;
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
 
 }

@@ -310,6 +310,16 @@ public class ArgandDiagram extends JPanel {
 
     }
 
+    public Color getColorAtPixel(int x, int y) {
+
+        int red = (fractalImg.getRGB(x, y) >> 16) & 0xff;
+        int green = (fractalImg.getRGB(x, y) >> 8) & 0xff;
+        int blue = (fractalImg.getRGB(x, y)) & 0xff;
+
+        return new Color(red, green, blue);
+
+    }
+
     public FractalSet getFractalSet() {
 
         return fractalSet;
