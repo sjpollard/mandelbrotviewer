@@ -5,34 +5,38 @@ import java.awt.*;
 
 public class DimensionFrame extends JFrame {
 
-    JPanel content;
-
     FractalSet fractalSet;
 
     GridArgandDiagram argandDiagram;
 
-    JButton nextButton;
+    Dimension screensize;
 
+    int iteration;
+    int initialStep;
     int boxes;
     double[] logOfNoBoxes;
     double[] logOfSideLengths;
 
     public DimensionFrame(FractalSet fractalSet, FractalColours colours, DrawingConditions conditions) {
 
-        super();
+        super("Box Counting Calculator");
 
-        this.setSize(800, 600);
-        this.setResizable(false);
+        this.screensize = new Dimension(Toolkit.getDefaultToolkit().getScreenSize());
+        this.setPreferredSize(screensize);
+        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        this.setResizable(true);
         this.setIconImage(new ImageIcon("src\\images\\icon.png").getImage());
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 
         this.fractalSet = fractalSet;
+        this.iteration = 0;
+        this.initialStep = 512;
         this.boxes = 0;
 
         setupComponents(colours, conditions);
 
-        this.logOfNoBoxes = new double[argandDiagram.step - 1];
-        this.logOfSideLengths = new double[argandDiagram.step - 1];
+        this.logOfNoBoxes = new double[8];
+        this.logOfSideLengths = new double[8];
 
         this.fractalSet.setDimensions(new Dimension(this.getWidth(), this.getHeight()));
         this.fractalSet.iterate(false);
@@ -44,12 +48,6 @@ public class DimensionFrame extends JFrame {
 
     public void setupComponents(FractalColours colours, DrawingConditions conditions) {
 
-        this.content = new JPanel();
-        this.content.setLayout(new BorderLayout());
-
-        this.nextButton = new JButton("Next");
-        this.nextButton.addActionListener(ae -> updateGridlines());
-
         if (fractalSet.getType() == FractalType.MANDELBROT) conditions.drawJulia = false;
         if (fractalSet.getType() == FractalType.JULIA) conditions.drawMandelbrot = false;
 
@@ -57,10 +55,9 @@ public class DimensionFrame extends JFrame {
         conditions.readyToDrawCoords = false;
         conditions.readyToDrawInfo = false;
 
-        this.argandDiagram = new GridArgandDiagram(fractalSet, conditions, colours);
-        this.content.add(argandDiagram, BorderLayout.NORTH);
-        this.content.add(nextButton, BorderLayout.CENTER);
-        this.add(content);
+        this.argandDiagram = new GridArgandDiagram(this, fractalSet, conditions, colours, screensize, initialStep);
+
+        this.add(argandDiagram);
         this.pack();
         
     }
@@ -68,35 +65,29 @@ public class DimensionFrame extends JFrame {
     public void updateGridlines() {
 
         if (!argandDiagram.finished) {
+            iteration++;
+            argandDiagram.currentStep /= 2;
             argandDiagram.start = true;
             updateGrids();
-            logOfNoBoxes[16 - argandDiagram.step] = Math.log(boxes);
-            logOfSideLengths[16 - argandDiagram.step] = Math.log(1.0 / argandDiagram.step);
-            argandDiagram.repaint();
-            argandDiagram.step--;
+            logOfNoBoxes[iteration - 1] = Math.log(boxes);
+            logOfSideLengths[iteration - 1] = Math.log(1.0 / argandDiagram.currentStep);
         }
-        if (argandDiagram.step == 1)  {
-            argandDiagram.finished = true;
-            argandDiagram.start = false;
-            argandDiagram.repaint();
-            RegressionCalculator dimensionRegression = new RegressionCalculator(logOfSideLengths, logOfNoBoxes);
-            System.out.println(dimensionRegression.calculateGradient());
-        }
+        argandDiagram.repaint();
 
     }
 
     public void updateGrids() {
-
+        
         boxes = 0;
-        for (int y = 0; y < argandDiagram.getHeight(); y += argandDiagram.step - 1) {
+        for (int y = 0; y < argandDiagram.getHeight(); y += argandDiagram.currentStep - 1) {
 
-            for (int x = 0; x < argandDiagram.getWidth(); x += argandDiagram.step - 1) {
+            for (int x = 0; x < argandDiagram.getWidth(); x += argandDiagram.currentStep - 1) {
 
                 boolean found = false;
 
-                for (int boxY = y; boxY <= y + argandDiagram.step && boxY < argandDiagram.getHeight() && !found; boxY++) {
+                for (int boxY = y; boxY <= y + argandDiagram.currentStep - 1 && boxY < argandDiagram.getHeight() && !found; boxY++) {
 
-                    for (int boxX = x; boxX <= x + argandDiagram.step && boxX < argandDiagram.getWidth() && !found; boxX++) {
+                    for (int boxX = x; boxX <= x + argandDiagram.currentStep - 1 && boxX < argandDiagram.getWidth() && !found; boxX++) {
 
                         if (argandDiagram.getColorAtPixel(boxX, boxY).equals(argandDiagram.colours.getInner()))  {
 

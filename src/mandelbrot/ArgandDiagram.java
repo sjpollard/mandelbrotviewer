@@ -58,11 +58,11 @@ public class ArgandDiagram extends JPanel {
 
     }
 
-    public ArgandDiagram(FractalSet fractalSet, DrawingConditions conditions, FractalColours colours) {
+    public ArgandDiagram(FractalSet fractalSet, DrawingConditions conditions, FractalColours colours, Dimension size) {
 
         super();
 
-        this.setPreferredSize(new Dimension(800, 550));
+        this.setPreferredSize(size);
         this.imgLocation = new Point();
         this.fractalImg = new BufferedImage(fractalSet.getDimensions().width, fractalSet.getDimensions().height, BufferedImage.TYPE_INT_RGB);
         this.fractalSet = fractalSet;
