@@ -13,6 +13,9 @@ public class DimensionFrame extends JFrame {
 
     JButton nextButton;
 
+    int boxes;
+    double[] logOfNoBoxes;
+    double[] logOfSideLengths;
 
     public DimensionFrame(FractalSet fractalSet, FractalColours colours, DrawingConditions conditions) {
 
@@ -24,8 +27,12 @@ public class DimensionFrame extends JFrame {
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 
         this.fractalSet = fractalSet;
+        this.boxes = 0;
 
         setupComponents(colours, conditions);
+
+        this.logOfNoBoxes = new double[argandDiagram.step - 1];
+        this.logOfSideLengths = new double[argandDiagram.step - 1];
 
         this.fractalSet.setDimensions(new Dimension(this.getWidth(), this.getHeight()));
         this.fractalSet.iterate(false);
@@ -63,15 +70,24 @@ public class DimensionFrame extends JFrame {
         if (!argandDiagram.finished) {
             argandDiagram.start = true;
             updateGrids();
+            logOfNoBoxes[16 - argandDiagram.step] = Math.log(boxes);
+            logOfSideLengths[16 - argandDiagram.step] = Math.log(1.0 / argandDiagram.step);
             argandDiagram.repaint();
             argandDiagram.step--;
         }
-        if (argandDiagram.step == 1) argandDiagram.finished = true;
+        if (argandDiagram.step == 1)  {
+            argandDiagram.finished = true;
+            argandDiagram.start = false;
+            argandDiagram.repaint();
+            RegressionCalculator dimensionRegression = new RegressionCalculator(logOfSideLengths, logOfNoBoxes);
+            System.out.println(dimensionRegression.calculateGradient());
+        }
 
     }
 
     public void updateGrids() {
 
+        boxes = 0;
         for (int y = 0; y < argandDiagram.getHeight(); y += argandDiagram.step - 1) {
 
             for (int x = 0; x < argandDiagram.getWidth(); x += argandDiagram.step - 1) {
@@ -85,6 +101,7 @@ public class DimensionFrame extends JFrame {
                         if (argandDiagram.getColorAtPixel(boxX, boxY).equals(argandDiagram.colours.getInner()))  {
 
                             argandDiagram.intersectedBoxes.add(new Point(x, y));
+                            boxes++;
                             found = true;
 
                         }
@@ -98,6 +115,8 @@ public class DimensionFrame extends JFrame {
         }
 
     }
+
+
 
 
 }
