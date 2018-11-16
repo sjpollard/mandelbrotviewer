@@ -37,6 +37,7 @@ public interface FractalSet {
 
     FractalType getType();
 
+    /**Clones the fractal set to separate reference*/
     FractalSet clone();
 
     void setAllValues(FractalDataSerializable fractalData);

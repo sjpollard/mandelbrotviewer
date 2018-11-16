@@ -4,24 +4,37 @@ import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
+/**
+ * Graphical component that has all of the functionality of the ArgandDiagram, with the exception that
+ * it can draw gridlines over the originally generated BufferedImage. This object uses data that is fed
+ * in from DimensionFrame and uses that to fill in the boxes that have been counted during the last
+ * iteration of box counting.
+ * */
+
 public class GridArgandDiagram extends ArgandDiagram implements MouseListener{
 
+    /**The parent of this object*/
     DimensionFrame dimensionFrame;
 
+    /**Queue of points that refer to the upper left pixel of the box*/
     GenericQueue<Point> intersectedBoxes;
 
-    int currentStep;
+    /**Current side length of box to draw*/
+    int currentLength;
 
+    /**Boolean meaning start drawing*/
     boolean start;
 
+    /**Boolean meaning finished calculation*/
     boolean finished;
 
-    public GridArgandDiagram(DimensionFrame dimensionFrame, FractalSet fractalSet, DrawingConditions conditions, FractalColours colours, Dimension size, int step) {
+    /**Constructs a GridArgandDiagram ready for iteration*/
+    public GridArgandDiagram(DimensionFrame dimensionFrame, FractalSet fractalSet, DrawingConditions conditions, FractalColours colours, Dimension size, int length) {
 
         super(fractalSet, conditions, colours, size);
 
         this.dimensionFrame = dimensionFrame;
-        this.currentStep = step;
+        this.currentLength = length;
         this.intersectedBoxes = new GenericQueue<>();
         this.start = false;
         this.finished = false;
@@ -30,6 +43,7 @@ public class GridArgandDiagram extends ArgandDiagram implements MouseListener{
 
     }
 
+    /**Method overridden from ArgandDiagram that draws gridlines*/
     @Override
     public void paintComponent(Graphics g) {
 
@@ -41,7 +55,7 @@ public class GridArgandDiagram extends ArgandDiagram implements MouseListener{
 
             drawBoxes(g);
 
-            if (currentStep == 2)  {
+            if (currentLength == 2)  {
                 finished = true;
                 start = false;
             }
@@ -50,16 +64,17 @@ public class GridArgandDiagram extends ArgandDiagram implements MouseListener{
 
     }
 
+    /**Draws gridlines across the screen for the DimensionFrame to count from*/
     public void drawGridlines(Graphics g) {
 
         if (start) {
             g.setColor(colours.getInverse());
-            for (int x = 0; x < this.getWidth(); x += currentStep - 1) {
+            for (int x = 0; x < this.getWidth(); x += currentLength - 1) {
 
                 g.drawLine(x, 0, x, this.getHeight());
 
             }
-            for (int y = 0; y < this.getHeight(); y += currentStep - 1) {
+            for (int y = 0; y < this.getHeight(); y += currentLength - 1) {
 
                 g.drawLine(0, y, this.getWidth(), y);
 
@@ -68,19 +83,21 @@ public class GridArgandDiagram extends ArgandDiagram implements MouseListener{
 
     }
 
+    /**Uses the queue full of Points to fill in grids where the fractal boundary is present*/
     public void drawBoxes(Graphics g) {
 
         for (Point intersected: intersectedBoxes) {
 
             g.setColor(FractalColours.invertColour(colours.getOuter()));
-            g.fillRect(intersected.x + 1, intersected.y + 1, currentStep - 2, currentStep - 2);
+            g.fillRect(intersected.x + 1, intersected.y + 1, currentLength - 2, currentLength - 2);
             g.setColor(Color.BLACK);
-            g.drawRect(intersected.x, intersected.y, currentStep - 1, currentStep - 1);
+            g.drawRect(intersected.x, intersected.y, currentLength - 1, currentLength - 1);
 
         }
 
     }
 
+    /**Moves to the next iteration when the screen is clicked*/
     @Override
     public void mouseClicked(MouseEvent mouseEvent) {
 

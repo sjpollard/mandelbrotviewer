@@ -80,7 +80,7 @@ public class FractalColours implements Serializable {
     public void setInner(Color inner) {
 
         this.inner = inner;
-        this.invertColour(inner);
+        invertColour(inner);
 
     }
 

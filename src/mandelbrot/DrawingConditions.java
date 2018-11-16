@@ -23,6 +23,7 @@ public class DrawingConditions {
 
     }
 
+    /**Clones the current object and outputs it to separate references*/
     public DrawingConditions clone() {
 
         DrawingConditions clone = new DrawingConditions();

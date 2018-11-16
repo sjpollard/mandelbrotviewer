@@ -15,16 +15,37 @@ public class JuliaSet implements FractalSet {
 
     /**Fields that contain properties and generated values*/
     private Dimension dimensions;
+
+    /**Array of number of iterations for each pixel*/
     private int[][] iterations;
+
+    /**Array of the complex number left over at the end of iteration for each pixel*/
     private ComplexNumber[][] lastResults;
+
+    /**Array of booleans that state whether the pixel has already been successively refined*/
     private boolean[][] refined;
+
+    /**Maximum number of iterations to calculate for each pixel*/
     private int maxIterations;
+
+    /**Power to raise zAlpha to in the equation*/
     private double power;
+
+    /**Measure of effective resolution of the JuliaSet*/
     private int chunkSize;
+
+    /**Total number of pixels within the JuliaSet*/
     private int pixelArea;
+
+    /**Current zoom level of the JuliaSet*/
     private double zoom;
+
+    /**Current complex number centre of this JuliaSet*/
     private ComplexNumber centre;
+
     private ComplexNumber zStart;
+
+    /**The c value of this JuliaSet that describes its unique shape*/
     private ComplexNumber c;
 
     /**Empty constructor*/

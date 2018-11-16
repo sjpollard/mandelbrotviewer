@@ -1,16 +1,26 @@
 package mandelbrot;
 
+/**
+ * Mathematical object that is used to calculate the Pearson Correlation Coefficient and then to find the
+ * gradient of the linear regression line that lies along the data points entered. The object functions via
+ * two arrays that contain the x and y values respectively.
+ */
+
 public class RegressionCalculator {
 
-    double xMean;
-    double yMean;
-    double sumOfXDeviationSqr;
-    double sumOfYDeviationSqr;
-    double[] xValues;
-    double[] yValues;
-    double[] xDeviation;
-    double[] yDeviation;
+    /**The respective sums of the deviation squared of the variable*/
+    private double sumOfXDeviationSqr;
+    private double sumOfYDeviationSqr;
 
+    /**Lists of corresponding input data*/
+    private double[] xValues;
+    private double[] yValues;
+
+    /**Lists of the deviation for each point*/
+    private double[] xDeviation;
+    private double[] yDeviation;
+
+    /**Constructs a RegressionCalculator and sets up for calculation of gradient*/
     public RegressionCalculator(double[] xValues, double[] yValues) {
 
         this.xValues = xValues;
@@ -18,16 +28,17 @@ public class RegressionCalculator {
         this.xDeviation = new double[xValues.length];
         this.yDeviation = new double[yValues.length];
 
-        this.xMean = calculateMean(xValues);
-        this.yMean = calculateMean(yValues);
+        double xMean = calculateMean(xValues);
+        double yMean = calculateMean(yValues);
 
         for (int i = 0; i < this.xValues.length; i++) {
-            this.xDeviation[i] = xValues[i] - this.xMean;
-            this.yDeviation[i] = yValues[i] - this.yMean;
+            this.xDeviation[i] = xValues[i] - xMean;
+            this.yDeviation[i] = yValues[i] - yMean;
         }
 
     }
 
+    /**Uses m = r(sy/sx) to calculate the gradient of the linear regression line*/
     public double calculateGradient() {
 
         double correlationCoefficient = calculateCorrelation();
@@ -37,6 +48,7 @@ public class RegressionCalculator {
 
     }
 
+    /**Calculates the PMCC for the data entered to find the correlation between x and y*/
     public double calculateCorrelation() {
 
         double sumOfProduct = 0;
@@ -54,7 +66,8 @@ public class RegressionCalculator {
 
     }
 
-    public double calculateMean(double[] values) {
+    /**Calculates the mean of the data entered*/
+    private double calculateMean(double[] values) {
 
         double sum = 0;
         for (double value: values)  {
@@ -64,7 +77,8 @@ public class RegressionCalculator {
 
     }
 
-    public double calculateStandardDev(double length, double sumOfDeviationSqr) {
+    /**Calculates the population standard deviation of the specified data*/
+    private double calculateStandardDev(double length, double sumOfDeviationSqr) {
 
         return Math.sqrt(sumOfDeviationSqr/(length - 1));
 
