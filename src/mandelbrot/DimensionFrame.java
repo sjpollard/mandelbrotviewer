@@ -2,6 +2,7 @@ package mandelbrot;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
 
 public class DimensionFrame extends JFrame {
 
@@ -35,8 +36,9 @@ public class DimensionFrame extends JFrame {
 
         setupComponents(colours, conditions);
 
-        this.logOfNoBoxes = new double[8];
-        this.logOfSideLengths = new double[8];
+        int size = (int)((Math.log(initialStep)/Math.log(2)) - 1);
+        this.logOfNoBoxes = new double[size];
+        this.logOfSideLengths = new double[size];
 
         this.fractalSet.setDimensions(new Dimension(this.getWidth(), this.getHeight()));
         this.fractalSet.iterate(false);
@@ -91,9 +93,24 @@ public class DimensionFrame extends JFrame {
 
                         if (argandDiagram.getColorAtPixel(boxX, boxY).equals(argandDiagram.colours.getInner()))  {
 
-                            argandDiagram.intersectedBoxes.add(new Point(x, y));
-                            boxes++;
-                            found = true;
+                            ArrayList<Color> neighbours = new ArrayList<>();
+                            if (boxY - 1 >= 0) neighbours.add(argandDiagram.getColorAtPixel(boxX, boxY - 1));
+                            if (boxX + 1 < argandDiagram.getWidth()) neighbours.add(argandDiagram.getColorAtPixel(boxX + 1, boxY));
+                            if (boxY + 1 < argandDiagram.getHeight()) neighbours.add(argandDiagram.getColorAtPixel(boxX, boxY + 1));
+                            if (boxX - 1 >= 0)neighbours.add(argandDiagram.getColorAtPixel(boxX - 1, boxY));
+
+                            for (Color color: neighbours) {
+
+                                if (!color.equals(argandDiagram.colours.getInner())) {
+
+                                    argandDiagram.intersectedBoxes.add(new Point(x, y));
+                                    boxes++;
+                                    found = true;
+                                    break;
+
+                                }
+
+                            }
 
                         }
 
