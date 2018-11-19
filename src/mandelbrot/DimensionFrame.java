@@ -95,6 +95,12 @@ public class DimensionFrame extends JFrame {
             logOfNoBoxes[iteration - 1] = Math.log(boxes);
             logOfSideLengths[iteration - 1] = Math.log(1.0 / argandDiagram.currentLength);
         }
+        else if (!argandDiagram.start)  {
+
+            String output = "Box counting dimension: " + new RegressionCalculator(logOfSideLengths, logOfNoBoxes).calculateGradient();
+            JOptionPane.showMessageDialog(this, output, "Fractal dimension", JOptionPane.PLAIN_MESSAGE);
+
+        }
         argandDiagram.repaint();
 
     }

@@ -3,34 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="58019ab7-003e-4151-9ea2-d6111521d58c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mandelbrot/ArgandDiagram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/ArgandDiagram.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mandelbrot/ComplexNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/ComplexNumber.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mandelbrot/DimensionFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/DimensionFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mandelbrot/DoublyLinkedNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/DoublyLinkedNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mandelbrot/DrawingConditions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/DrawingConditions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mandelbrot/FractalColours.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/FractalColours.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mandelbrot/FractalContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/FractalContainer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mandelbrot/FractalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/FractalController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mandelbrot/FractalDataSerializable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/FractalDataSerializable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mandelbrot/FractalSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/FractalSet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mandelbrot/FractalType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/FractalType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mandelbrot/GenericDataStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/GenericDataStructure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mandelbrot/GenericQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/GenericQueue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mandelbrot/GenericStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/GenericStack.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mandelbrot/GridArgandDiagram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/GridArgandDiagram.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mandelbrot/HelpFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/HelpFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mandelbrot/InfoItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/InfoItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mandelbrot/InputPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/InputPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mandelbrot/JuliaSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/JuliaSet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mandelbrot/MandelbrotFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/MandelbrotFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mandelbrot/MandelbrotSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/MandelbrotSet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mandelbrot/MandelbrotViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/MandelbrotViewer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mandelbrot/PopupManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/PopupManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mandelbrot/RegexManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/RegexManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mandelbrot/RegressionCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/RegressionCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mandelbrot/SerializationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/SerializationManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mandelbrot/SettingsFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/SettingsFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mandelbrot/SuccessiveRefiner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/SuccessiveRefiner.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,17 +22,8 @@
       <file leaf-file-name="DimensionFrame.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/mandelbrot/DimensionFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="52" column="30" selection-start-line="52" selection-start-column="30" selection-end-line="52" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MandelbrotViewer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mandelbrot/MandelbrotViewer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
+            <state relative-caret-position="442">
+              <caret line="100" column="69" selection-start-line="100" selection-start-column="69" selection-end-line="100" selection-end-column="69" />
             </state>
           </provider>
         </entry>
@@ -66,8 +31,17 @@
       <file leaf-file-name="GridArgandDiagram.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mandelbrot/GridArgandDiagram.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1071">
-              <caret line="65" selection-start-line="65" selection-end-line="65" />
+            <state relative-caret-position="686">
+              <caret line="101" column="41" selection-start-line="101" selection-start-column="41" selection-end-line="101" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PopupManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mandelbrot/PopupManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="397">
+              <caret line="136" column="106" selection-start-line="136" selection-start-column="93" selection-end-line="136" selection-end-column="106" />
             </state>
           </provider>
         </entry>
@@ -129,6 +103,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -152,7 +127,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -200,15 +174,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Designer" order="2" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32946146" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32946146" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32946146" />
       <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info id="Designer" order="2" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39915523" />
@@ -220,27 +196,26 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32946146" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.40232313" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.40232313" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39915523" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
-      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Messages" order="9" weight="0.32946146" />
       <window_info id="Favorites" order="4" side_tool="true" />
     </layout-to-restore>
@@ -256,7 +231,8 @@
     <MESSAGE value="Creation of RegressionCalculator and attempt at calculation of fractal dimension" />
     <MESSAGE value="Ensuring grid drawing works when dividing box length by 2 each time" />
     <MESSAGE value="Only considering points along the boundary of the fractal" />
-    <option name="LAST_COMMIT_MESSAGE" value="Only considering points along the boundary of the fractal" />
+    <MESSAGE value="New annotation and changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="New annotation and changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -264,20 +240,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/mandelbrot/GridArgandDiagram.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mandelbrot/DimensionFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1258">
-          <caret line="74" column="32" selection-start-line="74" selection-start-column="32" selection-end-line="74" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mandelbrot/MandelbrotViewer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -598,10 +560,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mandelbrot/RegressionCalculator.java">
+    <entry file="file://$PROJECT_DIR$/src/mandelbrot/GenericStack.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="149" selection-start-line="33" selection-start-column="149" selection-end-line="33" selection-end-column="149" />
+        <state relative-caret-position="301">
+          <caret line="32" column="44" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -612,17 +574,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/mandelbrot/RegressionCalculator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="55" lean-forward="true" selection-start-line="33" selection-start-column="55" selection-end-line="33" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/mandelbrot/GridArgandDiagram.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="65" selection-start-line="65" selection-end-line="65" />
+        <state relative-caret-position="686">
+          <caret line="101" column="41" selection-start-line="101" selection-start-column="41" selection-end-line="101" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mandelbrot/PopupManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="136" column="106" selection-start-line="136" selection-start-column="93" selection-end-line="136" selection-end-column="106" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mandelbrot/DimensionFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="52" column="30" selection-start-line="52" selection-start-column="30" selection-end-line="52" selection-end-column="30" />
+        <state relative-caret-position="442">
+          <caret line="100" column="69" selection-start-line="100" selection-start-column="69" selection-end-line="100" selection-end-column="69" />
         </state>
       </provider>
     </entry>

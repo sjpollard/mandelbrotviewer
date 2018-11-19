@@ -67,18 +67,16 @@ public class GridArgandDiagram extends ArgandDiagram implements MouseListener{
     /**Draws gridlines across the screen for the DimensionFrame to count from*/
     public void drawGridlines(Graphics g) {
 
-        if (start) {
-            g.setColor(colours.getInverse());
-            for (int x = 0; x < this.getWidth(); x += currentLength - 1) {
+        g.setColor(colours.getInverse());
+        for (int x = 0; x < this.getWidth(); x += currentLength - 1) {
 
-                g.drawLine(x, 0, x, this.getHeight());
+            g.drawLine(x, 0, x, this.getHeight());
 
-            }
-            for (int y = 0; y < this.getHeight(); y += currentLength - 1) {
+        }
+        for (int y = 0; y < this.getHeight(); y += currentLength - 1) {
 
-                g.drawLine(0, y, this.getWidth(), y);
+            g.drawLine(0, y, this.getWidth(), y);
 
-            }
         }
 
     }
@@ -102,8 +100,6 @@ public class GridArgandDiagram extends ArgandDiagram implements MouseListener{
     public void mouseClicked(MouseEvent mouseEvent) {
 
         dimensionFrame.updateGridlines();
-        RegressionCalculator dimensionRegression = new RegressionCalculator(dimensionFrame.logOfSideLengths, dimensionFrame.logOfNoBoxes);
-        System.out.println(dimensionRegression.calculateGradient());
 
     }
 
