@@ -115,9 +115,9 @@ public class DimensionFrame extends JFrame {
 
                 boolean found = false;
 
-                for (int boxY = y; boxY <= y + argandDiagram.currentLength - 1 && boxY < argandDiagram.getHeight() && !found; boxY++) {
+                for (int boxY = y; boxY <= y + argandDiagram.currentLength - 2 && boxY < argandDiagram.getHeight() && !found; boxY++) {
 
-                    for (int boxX = x; boxX <= x + argandDiagram.currentLength - 1 && boxX < argandDiagram.getWidth() && !found; boxX++) {
+                    for (int boxX = x; boxX <= x + argandDiagram.currentLength - 2 && boxX < argandDiagram.getWidth() && !found; boxX++) {
 
                         if (argandDiagram.getColorAtPixel(boxX, boxY).equals(argandDiagram.colours.getInner()))  {
 
