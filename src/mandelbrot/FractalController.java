@@ -46,9 +46,8 @@ public class FractalController implements MouseListener, MouseWheelListener, Mou
     @Override
     public void mouseClicked(MouseEvent me) {
 
-        mandelbrotFrame.addActionToStack();
         if (me.getButton() == MouseEvent.BUTTON1) {
-
+            mandelbrotFrame.addActionToStack();
             ComplexNumber newCentre = fractalSet.pixelToComplexNumber(me.getX(), me.getY());
             fractalSet.setCentre(newCentre);
             if (fractalSet.getType() == FractalType.MANDELBROT) mandelbrotFrame.mandelbrotSet.juliaSet.setC(newCentre);

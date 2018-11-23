@@ -40,7 +40,7 @@ public class HelpFrame extends JFrame {
     private JEditorPane glossaryTextPane;
     private SortedSet<InfoItem> defaultGlossaryItems;
 
-    private String mandelbrotEquation = "z\u2099\u208A\u2081 = z\u2099\u00B2 + c";
+    private String mandelbrotEquation = "z<sub>n+1</sub> = z<sub>n</sub><sup>2</sup> + c";
     private String argandDiagram = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Mandelset_hires.png/800px-Mandelset_hires.png";
     private String douadyRabbit = "http://mathworld.wolfram.com/images/eps-gif/DouadysRabbitFractal_1000.gif";
 
@@ -113,6 +113,7 @@ public class HelpFrame extends JFrame {
                 "<b>Left mouse click:</b> Moves the focus of the image to the position clicked.<br>" +
                 "<b>Left mouse hold:</b> Drags the image towards where the cursor is heading.<br>" +
                 "<b>Right mouse hold:</b> Tracks the behaviour of the Complex Number at the cursor by drawing path lines.<br>" +
+                "<b>Mouse wheel click:</b> Opens up fractal dimension calculator for selected fractal.<br>" +
                 "<b>Mouse wheel scroll forward:</b> Zooms into the image by the given scale factor.<br>" +
                 "<b>Mouse wheel scroll backward:</b> Zooms out of the image by the given scale factor.");
 
@@ -144,7 +145,7 @@ public class HelpFrame extends JFrame {
                 "The method to create this image is called the escape-time algorithm and is fairly efficient as the only complex numbers that are processed until the max iterations are the members of the Mandelbrot set. " +
                 "The general rules followed while calculating the numbers in the Mandelbrot set are: <br><br>" +
                 "<b>1.</b> For a given image size, convert each pixel to its respective complex number in the complex plane. This complex number is c. <br>" +
-                "<b>2.</b> Where z\u2080 = 0, pass each complex number(c) into " + mandelbrotEquation + " and break when the magnitude of z is greater than 2. <br>" +
+                "<b>2.</b> Where z<sub>0</sub> = 0, pass each complex number(c) into " + mandelbrotEquation + " and break when the magnitude of z is greater than 2. <br>" +
                 "<b>3.</b> Colour the point based on the number of times z was passed through the equation. <br><br>" +
                 "<b>Example:</b><br>" +
                 "Say that we want to process the complex number -0.5 + 0.5i for 5 iterations, we will simply pass it into " + mandelbrotEquation + " 5 times. <br><br>" +
@@ -160,8 +161,8 @@ public class HelpFrame extends JFrame {
                 "iterated upon in " + mandelbrotEquation + ". <br>" +
                 "<img src= "+ douadyRabbit + "></img><br> " +
                 "The image above is an example of the \"Douady rabbit\" Julia set which has been coloured in. The general rules followed while calculating the numbers in a Julia set are: <br><br>" +
-                "<b>1.</b> For a given image size, convert each pixel to it's respective complex number in the complex plane. This complex number is z\u2080. <br>" +
-                "<b>2.</b> Where c = a chosen complex number, pass each complex number(z\u2080) into " + mandelbrotEquation + " and break when the magnitude of z is greater than 2. <br>" +
+                "<b>1.</b> For a given image size, convert each pixel to it's respective complex number in the complex plane. This complex number is z<sub>0</sub>. <br>" +
+                "<b>2.</b> Where c = a chosen complex number, pass each complex number(z<sub>0</sub>) into " + mandelbrotEquation + " and break when the magnitude of z is greater than 2. <br>" +
                 "<b>3.</b> Colour the point based on the number of times z was passed through the equation. <br><br>");
         theoryTextPane.setCaretPosition(0);
 
@@ -252,7 +253,7 @@ public class HelpFrame extends JFrame {
         defaultGlossaryItems.add(new InfoItem("Fractal", "An image that is recursive and infinitely deep, usually with striking details and self-similarity."));
         defaultGlossaryItems.add(new InfoItem("Max iterations", "The maximum number of times that a complex number passes through the Mandelbrot equation and in effect a measure of the image detail."));
         defaultGlossaryItems.add(new InfoItem("Mandelbrot set", "The set of complex numbers(c) which do not diverge when iterated by " + mandelbrotEquation + " and z always starts at 0. It is mainly famous for generating an intricate self-similar fractal with \"baroque\" style patterns. As complex numbers behave chaotically with the Mandelbrot set equation, it is also linked to Chaos theory."));
-        defaultGlossaryItems.add(new InfoItem("Julia set","The Julia set of a complex number(c) is the set complex numbers(z) which do not diverge when iterated by f(z) = z\u00B2 + c."));
+        defaultGlossaryItems.add(new InfoItem("Julia set","The Julia set of a complex number(c) is the set complex numbers(z) which do not diverge when iterated by f(z) = z<sup>2</sup> + c."));
         defaultGlossaryItems.add(new InfoItem("Multibrot set", "A version of the Mandelbrot set where the power that z is raised to is greater than 2."));
         defaultGlossaryItems.add(new InfoItem("Successive refinement","The system where the effective resolution of rendering increases over time to allow for an image to be developed faster for the user."));
         defaultGlossaryItems.add(new InfoItem("Chunk size", "The size of each \"pixel\" in the fractal image which means that the larger the chunk size, the faster the image can be developed."));
