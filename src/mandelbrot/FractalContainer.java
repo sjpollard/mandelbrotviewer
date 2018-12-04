@@ -26,7 +26,7 @@ public class FractalContainer extends JPanel {
     public ArgandDiagram mandelbrotDiagram;
     public ArgandDiagram juliaDiagram;
 
-    ArrayList<ArgandDiagram> repaintList;
+    private ArrayList<ArgandDiagram> repaintList;
 
     /**Constructor that sets up ready to contain ArgandDiagrams*/
     public FractalContainer (MandelbrotFrame mandelbrotFrame) {

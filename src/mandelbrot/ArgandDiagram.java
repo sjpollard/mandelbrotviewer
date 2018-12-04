@@ -15,10 +15,10 @@ import java.util.ArrayList;
 public class ArgandDiagram extends JPanel {
 
     /**Reference to the main GUI*/
-    MandelbrotFrame mandelbrotFrame;
+    private MandelbrotFrame mandelbrotFrame;
 
     /**FractalController object that manages this objects mouse interactions*/
-    FractalController fractalController;
+    private FractalController fractalController;
 
     /**BufferedImage which contains the pixel raster to be drawn by the graphics object*/
     BufferedImage fractalImg;

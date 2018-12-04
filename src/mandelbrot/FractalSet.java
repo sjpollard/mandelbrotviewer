@@ -27,10 +27,10 @@ public interface FractalSet {
     int numIterations(ComplexNumber zStart, ComplexNumber c, int x, int y);
 
     /**Increments max iterations by a given value*/
-    void iterateForwards(int newMaxIterations);
+    void partiallyIterate(int change);
 
     /**Alter iterations based on the new bailout*/
-    ComplexNumber stepUpIterations(ComplexNumber zCurrent, int x, int y, int steps);
+    ComplexNumber stepIterationsUp(ComplexNumber zCurrent, int x, int y, int steps);
 
     /**Fill queue with values after each iteration of a given point*/
     GenericQueue<ComplexNumber> fillTrackingQueue(ComplexNumber point);

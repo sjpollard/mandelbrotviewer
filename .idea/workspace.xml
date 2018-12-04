@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="58019ab7-003e-4151-9ea2-d6111521d58c" name="Default" comment="" />
+    <list default="true" id="58019ab7-003e-4151-9ea2-d6111521d58c" name="Default" comment="Missing unicode character changed to HTML">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mandelbrot/ArgandDiagram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/ArgandDiagram.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mandelbrot/FractalContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/FractalContainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mandelbrot/FractalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/FractalController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mandelbrot/FractalSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/FractalSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mandelbrot/HelpFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/HelpFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mandelbrot/JuliaSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/JuliaSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mandelbrot/MandelbrotFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/MandelbrotFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mandelbrot/MandelbrotSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/MandelbrotSet.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,38 +25,146 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DimensionFrame.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mandelbrot/DimensionFrame.java">
+      <file leaf-file-name="MandelbrotFrame.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mandelbrot/MandelbrotFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="136" column="34" selection-start-line="136" selection-start-column="34" selection-end-line="136" selection-end-column="34" />
+            <state relative-caret-position="228">
+              <caret line="433" column="58" selection-start-line="433" selection-start-column="58" selection-end-line="433" selection-end-column="58" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SuccessiveRefiner.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/mandelbrot/SuccessiveRefiner.java">
+      <file leaf-file-name="JuliaSet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mandelbrot/JuliaSet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="88" selection-start-line="28" selection-start-column="88" selection-end-line="28" selection-end-column="88" />
+            <state relative-caret-position="176">
+              <caret line="147" column="32" selection-start-line="147" selection-start-column="32" selection-end-line="147" selection-end-column="32" />
+              <folding>
+                <element signature="e#7369#7370#0" expanded="true" />
+                <element signature="e#7396#7397#0" expanded="true" />
+                <element signature="e#7799#7800#0" expanded="true" />
+                <element signature="e#7882#7883#0" expanded="true" />
+                <element signature="e#8668#8669#0" expanded="true" />
+                <element signature="e#8701#8702#0" expanded="true" />
+                <element signature="e#9068#9069#0" expanded="true" />
+                <element signature="e#9101#9102#0" expanded="true" />
+                <element signature="e#9159#9160#0" expanded="true" />
+                <element signature="e#9204#9205#0" expanded="true" />
+                <element signature="e#9257#9258#0" expanded="true" />
+                <element signature="e#9301#9302#0" expanded="true" />
+                <element signature="e#9350#9351#0" expanded="true" />
+                <element signature="e#9384#9385#0" expanded="true" />
+                <element signature="e#9449#9450#0" expanded="true" />
+                <element signature="e#9495#9496#0" expanded="true" />
+                <element signature="e#9534#9535#0" expanded="true" />
+                <element signature="e#9564#9565#0" expanded="true" />
+                <element signature="e#9615#9616#0" expanded="true" />
+                <element signature="e#9653#9654#0" expanded="true" />
+                <element signature="e#9690#9691#0" expanded="true" />
+                <element signature="e#9726#9727#0" expanded="true" />
+                <element signature="e#9781#9782#0" expanded="true" />
+                <element signature="e#9831#9832#0" expanded="true" />
+                <element signature="e#9863#9864#0" expanded="true" />
+                <element signature="e#9891#9892#0" expanded="true" />
+                <element signature="e#9933#9934#0" expanded="true" />
+                <element signature="e#9967#9968#0" expanded="true" />
+                <element signature="e#10000#10001#0" expanded="true" />
+                <element signature="e#10037#10038#0" expanded="true" />
+                <element signature="e#10084#10085#0" expanded="true" />
+                <element signature="e#10126#10127#0" expanded="true" />
+                <element signature="e#10159#10160#0" expanded="true" />
+                <element signature="e#10196#10197#0" expanded="true" />
+                <element signature="e#10243#10244#0" expanded="true" />
+                <element signature="e#10285#10286#0" expanded="true" />
+                <element signature="e#10316#10317#0" expanded="true" />
+                <element signature="e#10343#10344#0" expanded="true" />
+                <element signature="e#10383#10384#0" expanded="true" />
+                <element signature="e#10415#10416#0" expanded="true" />
+                <element signature="e#10455#10456#0" expanded="true" />
+                <element signature="e#10484#10485#0" expanded="true" />
+                <element signature="e#10535#10536#0" expanded="true" />
+                <element signature="e#10571#10572#0" expanded="true" />
+                <element signature="e#10611#10612#0" expanded="true" />
+                <element signature="e#10640#10641#0" expanded="true" />
+                <element signature="e#10691#10692#0" expanded="true" />
+                <element signature="e#10727#10728#0" expanded="true" />
+                <element signature="e#10763#10764#0" expanded="true" />
+                <element signature="e#10787#10788#0" expanded="true" />
+                <element signature="e#10829#10830#0" expanded="true" />
+                <element signature="e#10855#10856#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GridArgandDiagram.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mandelbrot/GridArgandDiagram.java">
+      <file leaf-file-name="MandelbrotSet.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/mandelbrot/MandelbrotSet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="74">
-              <caret line="101" column="41" selection-start-line="101" selection-start-column="41" selection-end-line="101" selection-end-column="41" />
+            <state relative-caret-position="193">
+              <caret line="174" lean-forward="true" selection-start-line="174" selection-end-line="174" />
+              <folding>
+                <element signature="e#8157#8158#0" expanded="true" />
+                <element signature="e#8184#8185#0" expanded="true" />
+                <element signature="e#8665#8666#0" expanded="true" />
+                <element signature="e#8747#8748#0" expanded="true" />
+                <element signature="e#9538#9539#0" expanded="true" />
+                <element signature="e#9571#9572#0" expanded="true" />
+                <element signature="e#9938#9939#0" expanded="true" />
+                <element signature="e#9971#9972#0" expanded="true" />
+                <element signature="e#10029#10030#0" expanded="true" />
+                <element signature="e#10074#10075#0" expanded="true" />
+                <element signature="e#10127#10128#0" expanded="true" />
+                <element signature="e#10171#10172#0" expanded="true" />
+                <element signature="e#10220#10221#0" expanded="true" />
+                <element signature="e#10254#10255#0" expanded="true" />
+                <element signature="e#10319#10320#0" expanded="true" />
+                <element signature="e#10365#10366#0" expanded="true" />
+                <element signature="e#10404#10405#0" expanded="true" />
+                <element signature="e#10434#10435#0" expanded="true" />
+                <element signature="e#10485#10486#0" expanded="true" />
+                <element signature="e#10523#10524#0" expanded="true" />
+                <element signature="e#10560#10561#0" expanded="true" />
+                <element signature="e#10596#10597#0" expanded="true" />
+                <element signature="e#10651#10652#0" expanded="true" />
+                <element signature="e#10701#10702#0" expanded="true" />
+                <element signature="e#10733#10734#0" expanded="true" />
+                <element signature="e#10761#10762#0" expanded="true" />
+                <element signature="e#10803#10804#0" expanded="true" />
+                <element signature="e#10837#10838#0" expanded="true" />
+                <element signature="e#10870#10871#0" expanded="true" />
+                <element signature="e#10907#10908#0" expanded="true" />
+                <element signature="e#10954#10955#0" expanded="true" />
+                <element signature="e#10996#10997#0" expanded="true" />
+                <element signature="e#11029#11030#0" expanded="true" />
+                <element signature="e#11061#11062#0" expanded="true" />
+                <element signature="e#11108#11109#0" expanded="true" />
+                <element signature="e#11150#11151#0" expanded="true" />
+                <element signature="e#11181#11182#0" expanded="true" />
+                <element signature="e#11208#11209#0" expanded="true" />
+                <element signature="e#11248#11249#0" expanded="true" />
+                <element signature="e#11280#11281#0" expanded="true" />
+                <element signature="e#11320#11321#0" expanded="true" />
+                <element signature="e#11349#11350#0" expanded="true" />
+                <element signature="e#11400#11401#0" expanded="true" />
+                <element signature="e#11436#11437#0" expanded="true" />
+                <element signature="e#11476#11477#0" expanded="true" />
+                <element signature="e#11505#11506#0" expanded="true" />
+                <element signature="e#11556#11557#0" expanded="true" />
+                <element signature="e#11592#11593#0" expanded="true" />
+                <element signature="e#11627#11628#0" expanded="true" />
+                <element signature="e#11651#11652#0" expanded="true" />
+                <element signature="e#11692#11693#0" expanded="true" />
+                <element signature="e#11718#11719#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PopupManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/mandelbrot/PopupManager.java">
+      <file leaf-file-name="FractalSet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/mandelbrot/FractalSet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="61" column="77" selection-start-line="61" selection-start-column="77" selection-end-line="61" selection-end-column="77" />
+            <state relative-caret-position="301">
+              <caret line="29" column="36" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -81,10 +199,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/mandelbrot/MandelbrotFrame.java" />
-        <option value="$PROJECT_DIR$/src/mandelbrot/FractalSet.java" />
-        <option value="$PROJECT_DIR$/src/mandelbrot/MandelbrotSet.java" />
-        <option value="$PROJECT_DIR$/src/mandelbrot/JuliaSet.java" />
         <option value="$PROJECT_DIR$/src/mandelbrot/DrawingConditions.java" />
         <option value="$PROJECT_DIR$/src/mandelbrot/FractalController.java" />
         <option value="$PROJECT_DIR$/src/mandelbrot/ArgandDiagram.java" />
@@ -94,6 +208,10 @@
         <option value="$PROJECT_DIR$/src/mandelbrot/GridArgandDiagram.java" />
         <option value="$PROJECT_DIR$/src/mandelbrot/DimensionFrame.java" />
         <option value="$PROJECT_DIR$/src/mandelbrot/SuccessiveRefiner.java" />
+        <option value="$PROJECT_DIR$/src/mandelbrot/MandelbrotFrame.java" />
+        <option value="$PROJECT_DIR$/src/mandelbrot/FractalSet.java" />
+        <option value="$PROJECT_DIR$/src/mandelbrot/JuliaSet.java" />
+        <option value="$PROJECT_DIR$/src/mandelbrot/MandelbrotSet.java" />
       </list>
     </option>
   </component>
@@ -108,7 +226,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -131,11 +249,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="Succes&#9;PSI&#9;JAVA://mandelbrot.SuccessiveRefiner" />
+    <property name="full.screen.before.presentation.mode" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -179,18 +298,19 @@
     </recent_temporary>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" order="7" weight="0.32946146" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32946146" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32946146" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32946146" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.495671" visible="true" weight="0.13541667" />
+      <window_info id="Structure" order="1" sideWeight="0.504329" side_tool="true" weight="0.3382508" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39915523" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -205,19 +325,19 @@
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.40232313" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32946146" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.495671" visible="true" weight="0.1171875" />
+      <window_info id="Structure" order="1" sideWeight="0.504329" side_tool="true" weight="0.3382508" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32946146" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39915523" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32946146" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -239,7 +359,8 @@
     <MESSAGE value="New annotation and changes" />
     <MESSAGE value="Fractal dimension output with sensible popup" />
     <MESSAGE value="Narrowing conditions for box counting and fixing forgotten change to successive refinement" />
-    <option name="LAST_COMMIT_MESSAGE" value="Narrowing conditions for box counting and fixing forgotten change to successive refinement" />
+    <MESSAGE value="Missing unicode character changed to HTML" />
+    <option name="LAST_COMMIT_MESSAGE" value="Missing unicode character changed to HTML" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -247,48 +368,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/mandelbrot/MandelbrotViewer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mandelbrot/GridArgandDiagram.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mandelbrot/DimensionFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1581">
-          <caret line="93" lean-forward="true" selection-start-line="93" selection-end-line="93" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mandelbrot/MandelbrotViewer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mandelbrot/GridArgandDiagram.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mandelbrot/ArgandDiagram.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mandelbrot/FractalColours.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -471,13 +550,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mandelbrot/HelpFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="58" column="126" lean-forward="true" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="126" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mandelbrot/DoublyLinkedNode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -496,41 +568,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-12">
           <caret line="11" column="51" lean-forward="true" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mandelbrot/JuliaSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3179">
-          <caret line="189" column="35" selection-start-line="189" selection-start-column="35" selection-end-line="189" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mandelbrot/FractalSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="39" column="15" selection-start-line="39" selection-start-column="15" selection-end-line="39" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mandelbrot/MandelbrotSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3281">
-          <caret line="195" selection-start-line="195" selection-end-line="195" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mandelbrot/FractalController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2329">
-          <caret line="139" selection-start-line="139" selection-end-line="139" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mandelbrot/ArgandDiagram.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-238">
-          <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -553,13 +590,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mandelbrot/MandelbrotFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="221" column="66" lean-forward="true" selection-start-line="221" selection-start-column="66" selection-end-line="221" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/mandelbrot/GenericStack.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="301">
@@ -567,45 +597,297 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mandelbrot/MandelbrotViewer.java">
+    <entry file="file://$PROJECT_DIR$/src/mandelbrot/DimensionFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mandelbrot/RegressionCalculator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="55" lean-forward="true" selection-start-line="33" selection-start-column="55" selection-end-line="33" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mandelbrot/PopupManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="61" column="77" selection-start-line="61" selection-start-column="77" selection-end-line="61" selection-end-column="77" />
+        <state relative-caret-position="2278">
+          <caret line="136" column="34" selection-start-line="136" selection-start-column="34" selection-end-line="136" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mandelbrot/GridArgandDiagram.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="74">
+        <state relative-caret-position="862">
           <caret line="101" column="41" selection-start-line="101" selection-start-column="41" selection-end-line="101" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/mandelbrot/DimensionFrame.java">
+    <entry file="uml://JAVA/mandelbrot.MandelbrotSet">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>mandelbrot.MandelbrotSet</OriginalElement>
+          <nodes>
+            <node x="" y="">mandelbrot.MandelbrotSet</node>
+            <node x="" y="">mandelbrot.FractalSet</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="63.0" y="55.0" />
+          <SelectedNodes />
+          <Categories />
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mandelbrot/MandelbrotViewer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="136" column="34" selection-start-line="136" selection-start-column="34" selection-end-line="136" selection-end-column="34" />
+        <state relative-caret-position="272">
+          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mandelbrot/PopupManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2210">
+          <caret line="134" column="23" selection-start-line="134" selection-start-column="23" selection-end-line="134" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/mandelbrot">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>mandelbrot</OriginalElement>
+          <nodes>
+            <node x="" y="">mandelbrot.FractalContainer</node>
+            <node x="" y="">mandelbrot.SerializationManager</node>
+            <node x="" y="">mandelbrot.FractalDataSerializable</node>
+            <node x="" y="">mandelbrot.SettingsFrame</node>
+            <node x="" y="">mandelbrot.PopupManager</node>
+            <node x="" y="">mandelbrot.DoublyLinkedNode</node>
+            <node x="" y="">mandelbrot.FractalType</node>
+            <node x="" y="">mandelbrot.JuliaSet</node>
+            <node x="" y="">mandelbrot.GridArgandDiagram</node>
+            <node x="" y="">mandelbrot.MandelbrotFrame</node>
+            <node x="" y="">mandelbrot.RegressionCalculator</node>
+            <node x="" y="">mandelbrot.InfoItem</node>
+            <node x="" y="">mandelbrot.FractalSet</node>
+            <node x="" y="">mandelbrot.HelpFrame</node>
+            <node x="" y="">mandelbrot.GenericQueue</node>
+            <node x="" y="">mandelbrot.MandelbrotSet</node>
+            <node x="" y="">mandelbrot.GenericDataStructure</node>
+            <node x="" y="">mandelbrot.MandelbrotViewer</node>
+            <node x="" y="">mandelbrot.FractalColours</node>
+            <node x="" y="">mandelbrot.ComplexNumber</node>
+            <node x="" y="">mandelbrot.RegexManager</node>
+            <node x="" y="">mandelbrot.DrawingConditions</node>
+            <node x="" y="">mandelbrot.SuccessiveRefiner</node>
+            <node x="" y="">mandelbrot.ArgandDiagram</node>
+            <node x="" y="">mandelbrot.GenericQueue.QueueIterator</node>
+            <node x="" y="">mandelbrot.FractalController</node>
+            <node x="" y="">mandelbrot.DimensionFrame</node>
+            <node x="" y="">mandelbrot.GenericStack</node>
+            <node x="" y="">mandelbrot.InputPanel</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.5047268907563025" x="1430.0" y="873.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Inner Classes</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mandelbrot/SuccessiveRefiner.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
-          <caret line="28" column="88" selection-start-line="28" selection-start-column="88" selection-end-line="28" selection-end-column="88" />
+          <caret line="28" column="41" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mandelbrot/ArgandDiagram.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mandelbrot/FractalController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mandelbrot/RegexManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mandelbrot/RegressionCalculator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="33" column="47" selection-start-line="33" selection-start-column="47" selection-end-line="33" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mandelbrot/SerializationManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mandelbrot/SettingsFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="862">
+          <caret line="55" column="16" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mandelbrot/HelpFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-146">
+          <caret line="40" column="53" lean-forward="true" selection-start-line="40" selection-start-column="53" selection-end-line="40" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mandelbrot/FractalContainer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mandelbrot/FractalSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="29" column="36" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mandelbrot/MandelbrotFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="433" column="58" selection-start-line="433" selection-start-column="58" selection-end-line="433" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mandelbrot/JuliaSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="147" column="32" selection-start-line="147" selection-start-column="32" selection-end-line="147" selection-end-column="32" />
+          <folding>
+            <element signature="e#7369#7370#0" expanded="true" />
+            <element signature="e#7396#7397#0" expanded="true" />
+            <element signature="e#7799#7800#0" expanded="true" />
+            <element signature="e#7882#7883#0" expanded="true" />
+            <element signature="e#8668#8669#0" expanded="true" />
+            <element signature="e#8701#8702#0" expanded="true" />
+            <element signature="e#9068#9069#0" expanded="true" />
+            <element signature="e#9101#9102#0" expanded="true" />
+            <element signature="e#9159#9160#0" expanded="true" />
+            <element signature="e#9204#9205#0" expanded="true" />
+            <element signature="e#9257#9258#0" expanded="true" />
+            <element signature="e#9301#9302#0" expanded="true" />
+            <element signature="e#9350#9351#0" expanded="true" />
+            <element signature="e#9384#9385#0" expanded="true" />
+            <element signature="e#9449#9450#0" expanded="true" />
+            <element signature="e#9495#9496#0" expanded="true" />
+            <element signature="e#9534#9535#0" expanded="true" />
+            <element signature="e#9564#9565#0" expanded="true" />
+            <element signature="e#9615#9616#0" expanded="true" />
+            <element signature="e#9653#9654#0" expanded="true" />
+            <element signature="e#9690#9691#0" expanded="true" />
+            <element signature="e#9726#9727#0" expanded="true" />
+            <element signature="e#9781#9782#0" expanded="true" />
+            <element signature="e#9831#9832#0" expanded="true" />
+            <element signature="e#9863#9864#0" expanded="true" />
+            <element signature="e#9891#9892#0" expanded="true" />
+            <element signature="e#9933#9934#0" expanded="true" />
+            <element signature="e#9967#9968#0" expanded="true" />
+            <element signature="e#10000#10001#0" expanded="true" />
+            <element signature="e#10037#10038#0" expanded="true" />
+            <element signature="e#10084#10085#0" expanded="true" />
+            <element signature="e#10126#10127#0" expanded="true" />
+            <element signature="e#10159#10160#0" expanded="true" />
+            <element signature="e#10196#10197#0" expanded="true" />
+            <element signature="e#10243#10244#0" expanded="true" />
+            <element signature="e#10285#10286#0" expanded="true" />
+            <element signature="e#10316#10317#0" expanded="true" />
+            <element signature="e#10343#10344#0" expanded="true" />
+            <element signature="e#10383#10384#0" expanded="true" />
+            <element signature="e#10415#10416#0" expanded="true" />
+            <element signature="e#10455#10456#0" expanded="true" />
+            <element signature="e#10484#10485#0" expanded="true" />
+            <element signature="e#10535#10536#0" expanded="true" />
+            <element signature="e#10571#10572#0" expanded="true" />
+            <element signature="e#10611#10612#0" expanded="true" />
+            <element signature="e#10640#10641#0" expanded="true" />
+            <element signature="e#10691#10692#0" expanded="true" />
+            <element signature="e#10727#10728#0" expanded="true" />
+            <element signature="e#10763#10764#0" expanded="true" />
+            <element signature="e#10787#10788#0" expanded="true" />
+            <element signature="e#10829#10830#0" expanded="true" />
+            <element signature="e#10855#10856#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mandelbrot/MandelbrotSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="174" lean-forward="true" selection-start-line="174" selection-end-line="174" />
+          <folding>
+            <element signature="e#8157#8158#0" expanded="true" />
+            <element signature="e#8184#8185#0" expanded="true" />
+            <element signature="e#8665#8666#0" expanded="true" />
+            <element signature="e#8747#8748#0" expanded="true" />
+            <element signature="e#9538#9539#0" expanded="true" />
+            <element signature="e#9571#9572#0" expanded="true" />
+            <element signature="e#9938#9939#0" expanded="true" />
+            <element signature="e#9971#9972#0" expanded="true" />
+            <element signature="e#10029#10030#0" expanded="true" />
+            <element signature="e#10074#10075#0" expanded="true" />
+            <element signature="e#10127#10128#0" expanded="true" />
+            <element signature="e#10171#10172#0" expanded="true" />
+            <element signature="e#10220#10221#0" expanded="true" />
+            <element signature="e#10254#10255#0" expanded="true" />
+            <element signature="e#10319#10320#0" expanded="true" />
+            <element signature="e#10365#10366#0" expanded="true" />
+            <element signature="e#10404#10405#0" expanded="true" />
+            <element signature="e#10434#10435#0" expanded="true" />
+            <element signature="e#10485#10486#0" expanded="true" />
+            <element signature="e#10523#10524#0" expanded="true" />
+            <element signature="e#10560#10561#0" expanded="true" />
+            <element signature="e#10596#10597#0" expanded="true" />
+            <element signature="e#10651#10652#0" expanded="true" />
+            <element signature="e#10701#10702#0" expanded="true" />
+            <element signature="e#10733#10734#0" expanded="true" />
+            <element signature="e#10761#10762#0" expanded="true" />
+            <element signature="e#10803#10804#0" expanded="true" />
+            <element signature="e#10837#10838#0" expanded="true" />
+            <element signature="e#10870#10871#0" expanded="true" />
+            <element signature="e#10907#10908#0" expanded="true" />
+            <element signature="e#10954#10955#0" expanded="true" />
+            <element signature="e#10996#10997#0" expanded="true" />
+            <element signature="e#11029#11030#0" expanded="true" />
+            <element signature="e#11061#11062#0" expanded="true" />
+            <element signature="e#11108#11109#0" expanded="true" />
+            <element signature="e#11150#11151#0" expanded="true" />
+            <element signature="e#11181#11182#0" expanded="true" />
+            <element signature="e#11208#11209#0" expanded="true" />
+            <element signature="e#11248#11249#0" expanded="true" />
+            <element signature="e#11280#11281#0" expanded="true" />
+            <element signature="e#11320#11321#0" expanded="true" />
+            <element signature="e#11349#11350#0" expanded="true" />
+            <element signature="e#11400#11401#0" expanded="true" />
+            <element signature="e#11436#11437#0" expanded="true" />
+            <element signature="e#11476#11477#0" expanded="true" />
+            <element signature="e#11505#11506#0" expanded="true" />
+            <element signature="e#11556#11557#0" expanded="true" />
+            <element signature="e#11592#11593#0" expanded="true" />
+            <element signature="e#11627#11628#0" expanded="true" />
+            <element signature="e#11651#11652#0" expanded="true" />
+            <element signature="e#11692#11693#0" expanded="true" />
+            <element signature="e#11718#11719#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

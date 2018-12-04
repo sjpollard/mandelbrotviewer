@@ -155,14 +155,19 @@ public class MandelbrotSet implements FractalSet {
     }
 
     /**Moves the iterations forward from current max iterations a given value*/
-    public void iterateForwards(int newMaxIterations) {
+    public void partiallyIterate(int change) {
 
-        this.maxIterations = newMaxIterations;
+        maxIterations += change;
         for (int y = 0; y < lastResults.length; y += chunkSize) {
             for (int x = 0; x < lastResults[0].length; x += chunkSize) {
 
                 if (lastResults[y][x] != null) {
-                    lastResults[y][x] = stepUpIterations(lastResults[y][x], x, y, newMaxIterations - iterations[y][x]);
+                    if (change > 0) {
+                        lastResults[y][x] = stepIterationsUp(lastResults[y][x], x, y, maxIterations - iterations[y][x]);
+                    }
+                    else if (change < 0){
+                        lastResults[y][x] = stepIterationsDown(lastResults[y][x], x, y, change);
+                    }
                 }
                 else {
                     numIterations(zStart, pixelToComplexNumber(x, y), x, y);
@@ -173,12 +178,34 @@ public class MandelbrotSet implements FractalSet {
 
     }
 
+    public ComplexNumber stepIterationsDown(ComplexNumber zCurrent, int x, int y, int change) {
+
+        if (!(iterations[y][x] == maxIterations - change || iterations[y][x] < maxIterations)) {
+            change = iterations[y][x] - maxIterations;
+            ComplexNumber c = pixelToComplexNumber(x, y);
+            int i;
+            for (i = 0; i < change && zCurrent.sqrOfMagnitude() > 4; i++) {
+                if ((1/power) % 1 == 0) {
+                    zCurrent = zCurrent.subtract(c);
+                    zCurrent = zCurrent.pow((int)(1/power));
+                }
+                else  {
+                    zCurrent = zCurrent.subtract(c);
+                    zCurrent = zCurrent.pow((1/power));
+                }
+            }
+            if (i)
+            return zCurrent;
+        }
+        else return zCurrent;
+    }
+
     /**Calculates the number of iterations to be added on to this complex numbers bailout*/
-    public ComplexNumber stepUpIterations(ComplexNumber zCurrent, int x, int y, int steps) {
+    public ComplexNumber stepIterationsUp(ComplexNumber zCurrent, int x, int y, int steps) {
 
         ComplexNumber c = pixelToComplexNumber(x, y);
         int i;
-        for (i = 0; i < steps && zCurrent.sqrOfMagnitude() < 4; i++) {
+        for (i = 0; i < steps && zCurrent.sqrOfMagnitude() <= 4; i++) {
             if (power % 1 == 0) {
                 zCurrent = zCurrent.pow((int)power);
             }

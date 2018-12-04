@@ -40,14 +40,18 @@ public class HelpFrame extends JFrame {
     private JEditorPane glossaryTextPane;
     private SortedSet<InfoItem> defaultGlossaryItems;
 
-    private String mandelbrotEquation = "z<sub>n+1</sub> = z<sub>n</sub><sup>2</sup> + c";
-    private String argandDiagram = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Mandelset_hires.png/800px-Mandelset_hires.png";
-    private String douadyRabbit = "http://mathworld.wolfram.com/images/eps-gif/DouadysRabbitFractal_1000.gif";
+    private String mandelbrotEquation;
+    private String argandDiagram;
+    private String douadyRabbit;
 
     /**Constructs a HelpFrame*/
     public HelpFrame() {
 
         super("Help");
+
+        mandelbrotEquation = "z<sub>n+1</sub> = z<sub>n</sub><sup>2</sup> + c";
+        argandDiagram = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Mandelset_hires.png/800px-Mandelset_hires.png";
+        douadyRabbit = "http://mathworld.wolfram.com/images/eps-gif/DouadysRabbitFractal_1000.gif";
 
         this.setSize(800, 600);
         this.setResizable(true);
