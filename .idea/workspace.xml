@@ -1,16 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="58019ab7-003e-4151-9ea2-d6111521d58c" name="Default" comment="Missing unicode character changed to HTML">
+    <list default="true" id="58019ab7-003e-4151-9ea2-d6111521d58c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mandelbrot/ArgandDiagram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/ArgandDiagram.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mandelbrot/FractalContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/FractalContainer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mandelbrot/FractalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/FractalController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mandelbrot/FractalSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/FractalSet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mandelbrot/HelpFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/HelpFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mandelbrot/JuliaSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/JuliaSet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mandelbrot/MandelbrotFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/MandelbrotFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mandelbrot/MandelbrotSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mandelbrot/MandelbrotSet.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -299,7 +291,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -360,7 +351,8 @@
     <MESSAGE value="Fractal dimension output with sensible popup" />
     <MESSAGE value="Narrowing conditions for box counting and fixing forgotten change to successive refinement" />
     <MESSAGE value="Missing unicode character changed to HTML" />
-    <option name="LAST_COMMIT_MESSAGE" value="Missing unicode character changed to HTML" />
+    <MESSAGE value="Attempts to introduce undoing iteration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Attempts to introduce undoing iteration" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -685,7 +677,7 @@
           <settings layout="Hierarchic Group" zoom="0.5047268907563025" x="1430.0" y="873.0" />
           <SelectedNodes />
           <Categories>
-            <Category>Inner Classes</Category>
+            <Category />
           </Categories>
           <SCOPE>All</SCOPE>
           <VISIBILITY>private</VISIBILITY>

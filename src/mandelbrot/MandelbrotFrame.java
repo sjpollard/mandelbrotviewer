@@ -429,15 +429,17 @@ public class MandelbrotFrame extends JFrame {
         if (newValue != mandelbrotSet.getMaxIterations()) {
             maxIterationsLabel.setText("Max iterations: " + newValue);
             if (newValue == 0) newValue = 1;
-            int change = newValue - mandelbrotSet.getMaxIterations();
-            mandelbrotSet.partiallyIterate(change);
-            mandelbrotSet.juliaSet.partiallyIterate(change);
-            fractalContainer.conditions.readyToCreateImage = true;
-            /*else {
+            if (newValue > mandelbrotSet.getMaxIterations()) {
+                int change = newValue - mandelbrotSet.getMaxIterations();
+                mandelbrotSet.partiallyIterate(change);
+                mandelbrotSet.juliaSet.partiallyIterate(change);
+                fractalContainer.conditions.readyToCreateImage = true;
+            }
+            else {
                 mandelbrotSet.setMaxIterations(newValue);
                 mandelbrotSet.juliaSet.setMaxIterations(newValue);
                 calculateIterations();
-            }*/
+            }
         }
         draw();
 
